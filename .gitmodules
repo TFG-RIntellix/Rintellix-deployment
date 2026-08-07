@@ -1,0 +1,18 @@
+[submodule "ms-frontend"]
+	path = ms-frontend
+	url = https://github.com/TFG-RIntellix/ms-frontend.git
+[submodule "ms-sec-gateway"]
+	path = ms-sec-gateway
+	url = https://github.com/TFG-RIntellix/ms-sec-gateway.git
+[submodule "ms-core-data"]
+	path = ms-core-data
+	url = https://github.com/TFG-RIntellix/ms-core-data.git
+[submodule "ms-risk-engine"]
+	path = ms-risk-engine
+	url = https://github.com/TFG-RIntellix/ms-risk-engine.git
+[submodule "ms-model"]
+	path = ms-model
+	url = https://github.com/TFG-RIntellix/ms-model.git
+[submodule "ms-reporting"]
+	path = ms-reporting
+	url = https://github.com/TFG-RIntellix/ms-reporting.git

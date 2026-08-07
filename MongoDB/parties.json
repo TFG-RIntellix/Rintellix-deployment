@@ -1,0 +1,6902 @@
+[
+  {
+    "_id": {
+      "$oid": "e9a58545f26f4f8a8ba0ce7b"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESA0300259f",
+      "first_name": "Aarón",
+      "last_name": "Mayol Serra",
+      "gender": "OTRO",
+      "education": "POSGRADO",
+      "birth_date": {
+        "$date": "1964-10-21T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "SOLTERO",
+      "nr_dependants": 0
+    },
+    "contact_info": {
+      "phone_number": "+34702099191",
+      "email": "eligiasegovia@example.com",
+      "address": "Cañada Kike Rivera 61 Apt. 14 , Alicante, 33072"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "SECTOR PUBLICO",
+      "occupation": "TECNICO",
+      "employer_seniority_years": 19,
+      "total_work_experience_years": 39
+    },
+    "economic_data": {
+      "annual_income": 298447.31,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 939.57,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 5,
+      "previous_loans_amount": 7353.55,
+      "previous_repayments_amount": 20578.8,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "59b2c6a3bcf24fc485bdd74d"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESL8389331m",
+      "first_name": "Milagros",
+      "last_name": "Barba Ayllón",
+      "gender": "OTRO",
+      "education": "FORMACION PROFESIONAL",
+      "birth_date": {
+        "$date": "1992-07-30T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "CEDIDA",
+      "marital_status": "VIUDO",
+      "nr_dependants": 3
+    },
+    "contact_info": {
+      "phone_number": "+34618987126",
+      "email": "ana31@example.com",
+      "address": "Via de Marcelino Buendía 76, Tarragona, 02707"
+    },
+    "employment": {
+      "status": "INACTIVO",
+      "sector": "SALUD",
+      "occupation": "ADMINISTRATIVO",
+      "employer_seniority_years": 3,
+      "total_work_experience_years": 15
+    },
+    "economic_data": {
+      "annual_income": 29306.17,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 657.23,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 0,
+      "previous_loans_amount": 32733.82,
+      "previous_repayments_amount": 20395.77,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "74cfeedcc9a24211af610835"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES97280482C",
+      "first_name": "Isaura",
+      "last_name": "Nebot Frutos",
+      "gender": "OTRO",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1961-01-14T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "VIUDO",
+      "nr_dependants": 1
+    },
+    "contact_info": {
+      "phone_number": "+34744620247",
+      "email": "bzorrilla@example.net",
+      "address": "Calle de René Rocha 5, Ciudad, 06067"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "AGROPECUARIO",
+      "occupation": "DIRECTIVO",
+      "employer_seniority_years": 20,
+      "total_work_experience_years": 44
+    },
+    "economic_data": {
+      "annual_income": 208936.71,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 998.22,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 1,
+      "previous_loans_amount": 36348.76,
+      "previous_repayments_amount": 32785.98,
+      "previous_defaults_count": 3,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "df0b35faec4241c7b3a54379"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESo4413029s",
+      "first_name": "Candelario",
+      "last_name": "Verdejo Pellicer",
+      "gender": "HOMBRE",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1981-01-04T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "CASADO",
+      "nr_dependants": 2
+    },
+    "contact_info": {
+      "phone_number": "+34630376159",
+      "email": "felisa18@example.com",
+      "address": "Glorieta Cleto Montaña 77 Piso 4 , Córdoba, 29886"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "EDUCACION",
+      "occupation": "MANDOS_MEDIOS",
+      "employer_seniority_years": 16,
+      "total_work_experience_years": 27
+    },
+    "economic_data": {
+      "annual_income": 106066.32,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 774.62,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 4,
+      "previous_loans_amount": 13509.4,
+      "previous_repayments_amount": 46195.48,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "77f6103ae5d44d2ea0c09af0"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESD4507726M",
+      "first_name": "Gilberto",
+      "last_name": "Atienza Diego",
+      "gender": "OTRO",
+      "education": "SECUNDARIA",
+      "birth_date": {
+        "$date": "1976-11-21T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "ALQUILER",
+      "marital_status": "SOLTERO",
+      "nr_dependants": 2
+    },
+    "contact_info": {
+      "phone_number": "+34625425761",
+      "email": "benjamin62@example.com",
+      "address": "Acceso de Luis Garriga 34 Apt. 49 , Guadalajara, 19072"
+    },
+    "employment": {
+      "status": "AUTONOMO",
+      "sector": "HOSTELERIA",
+      "occupation": "MANDOS_MEDIOS",
+      "employer_seniority_years": 3,
+      "total_work_experience_years": 31
+    },
+    "economic_data": {
+      "annual_income": 73477.0,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 2285.56,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 2,
+      "previous_loans_amount": 5507.51,
+      "previous_repayments_amount": 46063.98,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "321134c1487c4170987c52d2"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESB13498433",
+      "first_name": "Bernarda",
+      "last_name": "Oliveras Cerdán",
+      "gender": "OTRO",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1978-05-02T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "CASADO",
+      "nr_dependants": 2
+    },
+    "contact_info": {
+      "phone_number": "+34622898773",
+      "email": "llorensmartina@example.org",
+      "address": "Glorieta de Hilda Castelló 61, Córdoba, 34652"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "OTROS",
+      "occupation": "ADMINISTRATIVO",
+      "employer_seniority_years": 14,
+      "total_work_experience_years": 26
+    },
+    "economic_data": {
+      "annual_income": 61777.03,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 105.48,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 2,
+      "previous_loans_amount": 35258.1,
+      "previous_repayments_amount": 38320.07,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "85adc22f51464e6daf0faf31"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES58865096J",
+      "first_name": "Clementina",
+      "last_name": "Giménez Ferrández",
+      "gender": "MUJER",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1969-12-13T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "VIUDO",
+      "nr_dependants": 1
+    },
+    "contact_info": {
+      "phone_number": "+34612003122",
+      "email": "abilio78@example.com",
+      "address": "Rambla de Faustino Terrón 21 Puerta 7 , Zamora, 02101"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "HOSTELERIA",
+      "occupation": "ADMINISTRATIVO",
+      "employer_seniority_years": 9,
+      "total_work_experience_years": 36
+    },
+    "economic_data": {
+      "annual_income": 77795.09,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 293.27,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 4,
+      "previous_loans_amount": 48584.84,
+      "previous_repayments_amount": 39527.37,
+      "previous_defaults_count": 2,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "3c5334ee83b74c37b58ca71d"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES32534289h",
+      "first_name": "Lucila",
+      "last_name": "Lucena Jara",
+      "gender": "MUJER",
+      "education": "POSGRADO",
+      "birth_date": {
+        "$date": "1987-03-05T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "SOLTERO",
+      "nr_dependants": 0
+    },
+    "contact_info": {
+      "phone_number": "+34749502713",
+      "email": "gabriela45@example.com",
+      "address": "Cuesta René Cortés 5 Apt. 69 , Girona, 41116"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "CONSTRUCCION",
+      "occupation": "MANDOS_MEDIOS",
+      "employer_seniority_years": 10,
+      "total_work_experience_years": 17
+    },
+    "economic_data": {
+      "annual_income": 264048.49,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 982.86,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 2,
+      "previous_loans_amount": 17428.12,
+      "previous_repayments_amount": 17615.05,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "4f2769082c624749a97c6d21"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESD9676204Z",
+      "first_name": "Diego",
+      "last_name": "Esparza Salom",
+      "gender": "HOMBRE",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1970-03-08T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "VIUDO",
+      "nr_dependants": 2
+    },
+    "contact_info": {
+      "phone_number": "+34732863778",
+      "email": "inigo55@example.com",
+      "address": "Camino de Angelino Borja 852 Apt. 19 , Córdoba, 25447"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "SALUD",
+      "occupation": "TECNICO",
+      "employer_seniority_years": 8,
+      "total_work_experience_years": 38
+    },
+    "economic_data": {
+      "annual_income": 59528.66,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 197.84,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 2,
+      "previous_loans_amount": 32435.28,
+      "previous_repayments_amount": 19361.59,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "f09b96f7e9e44c41a7b50dfd"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESM53111358",
+      "first_name": "Isabela",
+      "last_name": "Carretero Arroyo",
+      "gender": "MUJER",
+      "education": "BACHILLERATO",
+      "birth_date": {
+        "$date": "1983-06-28T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "ALQUILER",
+      "marital_status": "DIVORCIADO",
+      "nr_dependants": 1
+    },
+    "contact_info": {
+      "phone_number": "+34611906135",
+      "email": "nvalcarcel@example.com",
+      "address": "Ronda Cristian Chamorro 450, Ávila, 08178"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "CONSTRUCCION",
+      "occupation": "MANDOS_MEDIOS",
+      "employer_seniority_years": 5,
+      "total_work_experience_years": 21
+    },
+    "economic_data": {
+      "annual_income": 44390.54,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 6845.76,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 2,
+      "previous_loans_amount": 38510.93,
+      "previous_repayments_amount": 1942.8,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "83d3f9758d0f49ca921fdeea"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESa5831848S",
+      "first_name": "Baudelio",
+      "last_name": "Vilalta Coloma",
+      "gender": "HOMBRE",
+      "education": "POSGRADO",
+      "birth_date": {
+        "$date": "1966-04-04T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "DIVORCIADO",
+      "nr_dependants": 2
+    },
+    "contact_info": {
+      "phone_number": "+34692219432",
+      "email": "calistalillo@example.org",
+      "address": "Pasaje Félix Araujo 615, Murcia, 29957"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "AGROPECUARIO",
+      "occupation": "TECNICO",
+      "employer_seniority_years": 20,
+      "total_work_experience_years": 41
+    },
+    "economic_data": {
+      "annual_income": 216091.56,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 516.03,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 2,
+      "previous_loans_amount": 14574.13,
+      "previous_repayments_amount": 49111.72,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "165ae77ab6544f56a66d5347"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES62361003T",
+      "first_name": "Chita",
+      "last_name": "Pastor Jara",
+      "gender": "OTRO",
+      "education": "POSGRADO",
+      "birth_date": {
+        "$date": "1971-09-12T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "VIUDO",
+      "nr_dependants": 2
+    },
+    "contact_info": {
+      "phone_number": "+34718488683",
+      "email": "pontadora@example.net",
+      "address": "Paseo de Eusebia España 945, Lleida, 36064"
+    },
+    "employment": {
+      "status": "DESEMPLEADO",
+      "sector": "OTROS",
+      "occupation": "TECNICO",
+      "employer_seniority_years": 8,
+      "total_work_experience_years": 32
+    },
+    "economic_data": {
+      "annual_income": 248674.56,
+      "income_type": "AYUDAS",
+      "currency": "EUR",
+      "existing_obligations": 213.97,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 3,
+      "previous_loans_amount": 33992.9,
+      "previous_repayments_amount": 21299.02,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5c08043d9f414f7087c2faef"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES26495800e",
+      "first_name": "Genoveva",
+      "last_name": "Posada Cantón",
+      "gender": "MUJER",
+      "education": "POSGRADO",
+      "birth_date": {
+        "$date": "1979-04-09T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "CASADO",
+      "nr_dependants": 2
+    },
+    "contact_info": {
+      "phone_number": "+34712476319",
+      "email": "maria-luisareig@example.net",
+      "address": "Vial María Pilar Gárate 18, Segovia, 41905"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "VENTAS",
+      "occupation": "ADMINISTRATIVO",
+      "employer_seniority_years": 16,
+      "total_work_experience_years": 27
+    },
+    "economic_data": {
+      "annual_income": 295289.58,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 491.35,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 0,
+      "previous_loans_amount": 26517.19,
+      "previous_repayments_amount": 42662.69,
+      "previous_defaults_count": 3,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0dd8ba2f1e3e44efbe0e0d02"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESv7511090L",
+      "first_name": "Amada",
+      "last_name": "Cañizares Zurita",
+      "gender": "MUJER",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1977-08-28T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "CASADO",
+      "nr_dependants": 1
+    },
+    "contact_info": {
+      "phone_number": "+34691548223",
+      "email": "apolinar17@example.org",
+      "address": "Ronda de Edelmiro Zamorano 5, Madrid, 50402"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "AGROPECUARIO",
+      "occupation": "DIRECTIVO",
+      "employer_seniority_years": 20,
+      "total_work_experience_years": 27
+    },
+    "economic_data": {
+      "annual_income": 235012.43,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 656.31,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 4,
+      "previous_loans_amount": 35630.03,
+      "previous_repayments_amount": 17613.13,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "51134b2cdf784444b362f995"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESu21522058",
+      "first_name": "Maura",
+      "last_name": "Haro Pons",
+      "gender": "MUJER",
+      "education": "SECUNDARIA",
+      "birth_date": {
+        "$date": "1993-08-14T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "ALQUILER",
+      "marital_status": "SOLTERO",
+      "nr_dependants": 1
+    },
+    "contact_info": {
+      "phone_number": "+34683588921",
+      "email": "squerol@example.com",
+      "address": "Pasaje Andrea Tello 4 Apt. 90 , Ciudad, 40594"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "OTROS",
+      "occupation": "ADMINISTRATIVO",
+      "employer_seniority_years": 5,
+      "total_work_experience_years": 14
+    },
+    "economic_data": {
+      "annual_income": 34757.4,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 8767.84,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 0,
+      "previous_loans_amount": 30557.87,
+      "previous_repayments_amount": 35454.25,
+      "previous_defaults_count": 2,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "027b5ebd1cb3481d85142d0b"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESx3365390C",
+      "first_name": "Tiburcio",
+      "last_name": "Tirado Valcárcel",
+      "gender": "HOMBRE",
+      "education": "BACHILLERATO",
+      "birth_date": {
+        "$date": "2004-09-02T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "CEDIDA",
+      "marital_status": "SOLTERO",
+      "nr_dependants": 2
+    },
+    "contact_info": {
+      "phone_number": "+34789192289",
+      "email": "tpaniagua@example.net",
+      "address": "Alameda de Clotilde Cañizares 78 Puerta 4 , Asturias, 40927"
+    },
+    "employment": {
+      "status": "DESEMPLEADO",
+      "sector": "CONSTRUCCION",
+      "occupation": "OPERARIO",
+      "employer_seniority_years": 3,
+      "total_work_experience_years": 2
+    },
+    "economic_data": {
+      "annual_income": 23275.07,
+      "income_type": "AYUDAS",
+      "currency": "EUR",
+      "existing_obligations": 8285.9,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 2,
+      "previous_loans_amount": 48117.52,
+      "previous_repayments_amount": 40415.49,
+      "previous_defaults_count": 2,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "9bc005567549412a952fbae7"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES17568274s",
+      "first_name": "Luís",
+      "last_name": "Nicolau Ruiz",
+      "gender": "OTRO",
+      "education": "SECUNDARIA",
+      "birth_date": {
+        "$date": "1998-10-01T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "CEDIDA",
+      "marital_status": "VIUDO",
+      "nr_dependants": 2
+    },
+    "contact_info": {
+      "phone_number": "+34774964142",
+      "email": "zbriones@example.net",
+      "address": "Pasaje Olimpia Nebot 967, Tarragona, 41255"
+    },
+    "employment": {
+      "status": "TEMPORAL",
+      "sector": "TECNOLOGIA",
+      "occupation": "TECNICO",
+      "employer_seniority_years": 1,
+      "total_work_experience_years": 7
+    },
+    "economic_data": {
+      "annual_income": 28073.04,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 4975.18,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 4,
+      "previous_loans_amount": 47666.94,
+      "previous_repayments_amount": 30527.66,
+      "previous_defaults_count": 4,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "fd63300a1f28401988ef8bdb"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES85173462w",
+      "first_name": "Moisés",
+      "last_name": "Álamo Teruel",
+      "gender": "HOMBRE",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1978-01-25T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "DIVORCIADO",
+      "nr_dependants": 1
+    },
+    "contact_info": {
+      "phone_number": "+34723330139",
+      "email": "ccardenas@example.org",
+      "address": "Pasadizo Benigna Folch 41, Cádiz, 18330"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "SALUD",
+      "occupation": "MANDOS_MEDIOS",
+      "employer_seniority_years": 13,
+      "total_work_experience_years": 28
+    },
+    "economic_data": {
+      "annual_income": 87884.48,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 605.17,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 0,
+      "previous_loans_amount": 12597.3,
+      "previous_repayments_amount": 15270.22,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5849b9869a8d423b93aa4bff"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESZ22337712",
+      "first_name": "Noa",
+      "last_name": "Barceló Rocha",
+      "gender": "OTRO",
+      "education": "POSGRADO",
+      "birth_date": {
+        "$date": "1962-11-26T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "SOLTERO",
+      "nr_dependants": 1
+    },
+    "contact_info": {
+      "phone_number": "+34607392194",
+      "email": "colomerariadna@example.org",
+      "address": "Alameda de Vera Carbonell 6, Segovia, 18974"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "TECNOLOGIA",
+      "occupation": "DIRECTIVO",
+      "employer_seniority_years": 20,
+      "total_work_experience_years": 45
+    },
+    "economic_data": {
+      "annual_income": 237760.17,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 459.39,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 2,
+      "previous_loans_amount": 20107.75,
+      "previous_repayments_amount": 28722.65,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5cc710c3a84b482eae11032d"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES40731875y",
+      "first_name": "Miguela",
+      "last_name": "Puga Checa",
+      "gender": "MUJER",
+      "education": "FORMACION PROFESIONAL",
+      "birth_date": {
+        "$date": "1986-07-01T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "CEDIDA",
+      "marital_status": "CASADO",
+      "nr_dependants": 0
+    },
+    "contact_info": {
+      "phone_number": "+34742649200",
+      "email": "rosario67@example.com",
+      "address": "Calle de Encarnacion Arana 2, Santa Cruz de Tenerife, 31949"
+    },
+    "employment": {
+      "status": "INACTIVO",
+      "sector": "EDUCACION",
+      "occupation": "DIRECTIVO",
+      "employer_seniority_years": 3,
+      "total_work_experience_years": 20
+    },
+    "economic_data": {
+      "annual_income": 25506.29,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 6323.39,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 0,
+      "previous_loans_amount": 969.35,
+      "previous_repayments_amount": 32527.76,
+      "previous_defaults_count": 4,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "bc13ba58cadf4c7da708a341"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES35254464Y",
+      "first_name": "Clementina",
+      "last_name": "Palomar Tejada",
+      "gender": "MUJER",
+      "education": "POSGRADO",
+      "birth_date": {
+        "$date": "1963-11-18T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "CASADO",
+      "nr_dependants": 3
+    },
+    "contact_info": {
+      "phone_number": "+34714059165",
+      "email": "maribelcampoy@example.org",
+      "address": "Acceso Adoración Riquelme 30, Soria, 47011"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "AGROPECUARIO",
+      "occupation": "TECNICO",
+      "employer_seniority_years": 20,
+      "total_work_experience_years": 44
+    },
+    "economic_data": {
+      "annual_income": 114259.83,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 981.94,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 2,
+      "previous_loans_amount": 32686.84,
+      "previous_repayments_amount": 5389.38,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "818e671667a342209a3a381c"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESq15838859",
+      "first_name": "Gerardo",
+      "last_name": "Olmo Esteve",
+      "gender": "HOMBRE",
+      "education": "POSGRADO",
+      "birth_date": {
+        "$date": "1982-05-06T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "SOLTERO",
+      "nr_dependants": 2
+    },
+    "contact_info": {
+      "phone_number": "+34672938802",
+      "email": "lourdes61@example.net",
+      "address": "Pasaje Rosa Pinto 61 Apt. 59 , Toledo, 09939"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "EDUCACION",
+      "occupation": "ADMINISTRATIVO",
+      "employer_seniority_years": 7,
+      "total_work_experience_years": 24
+    },
+    "economic_data": {
+      "annual_income": 200630.06,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 162.44,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 0,
+      "previous_loans_amount": 34903.27,
+      "previous_repayments_amount": 39780.25,
+      "previous_defaults_count": 3,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "40a9e80aae9541ad96621f55"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESZ8938173S",
+      "first_name": "Brígida",
+      "last_name": "Castilla Ramón",
+      "gender": "MUJER",
+      "education": "BACHILLERATO",
+      "birth_date": {
+        "$date": "1984-05-24T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "ALQUILER",
+      "marital_status": "CASADO",
+      "nr_dependants": 3
+    },
+    "contact_info": {
+      "phone_number": "+34755201294",
+      "email": "marisafrancisco@example.org",
+      "address": "Paseo de Paula Reguera 86, León, 52029"
+    },
+    "employment": {
+      "status": "AUTONOMO",
+      "sector": "CONSTRUCCION",
+      "occupation": "DIRECTIVO",
+      "employer_seniority_years": 5,
+      "total_work_experience_years": 22
+    },
+    "economic_data": {
+      "annual_income": 35646.87,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 2383.58,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 5,
+      "previous_loans_amount": 43944.18,
+      "previous_repayments_amount": 34388.03,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0a12c499afea4702970ec223"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES58921878N",
+      "first_name": "Teodora",
+      "last_name": "Cruz Sastre",
+      "gender": "MUJER",
+      "education": "SECUNDARIA",
+      "birth_date": {
+        "$date": "1973-01-06T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "ALQUILER",
+      "marital_status": "SOLTERO",
+      "nr_dependants": 1
+    },
+    "contact_info": {
+      "phone_number": "+34624691353",
+      "email": "saurayessica@example.com",
+      "address": "Camino Custodia Gómez 51 Apt. 64 , Lleida, 28695"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "HOSTELERIA",
+      "occupation": "OPERARIO",
+      "employer_seniority_years": 0,
+      "total_work_experience_years": 31
+    },
+    "economic_data": {
+      "annual_income": 118688.85,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 11378.2,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 0,
+      "previous_loans_amount": 42656.62,
+      "previous_repayments_amount": 15284.66,
+      "previous_defaults_count": 1,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "f38c9fbe51a74f48bff58b90"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESw25941762",
+      "first_name": "Lupe",
+      "last_name": "Ribas Acero",
+      "gender": "MUJER",
+      "education": "BACHILLERATO",
+      "birth_date": {
+        "$date": "2006-05-14T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "ALQUILER",
+      "marital_status": "CASADO",
+      "nr_dependants": 1
+    },
+    "contact_info": {
+      "phone_number": "+34614855419",
+      "email": "ngallardo@example.org",
+      "address": "Pasadizo de Esteban Vall 49, Guadalajara, 48554"
+    },
+    "employment": {
+      "status": "DESEMPLEADO",
+      "sector": "VENTAS",
+      "occupation": "OPERARIO",
+      "employer_seniority_years": 4,
+      "total_work_experience_years": 2
+    },
+    "economic_data": {
+      "annual_income": 21456.09,
+      "income_type": "AYUDAS",
+      "currency": "EUR",
+      "existing_obligations": 1651.68,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 5,
+      "previous_loans_amount": 32398.71,
+      "previous_repayments_amount": 33084.93,
+      "previous_defaults_count": 1,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5b45424810c64563a1a16d06"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES28532422y",
+      "first_name": "Marc",
+      "last_name": "Ferrando Tejedor",
+      "gender": "OTRO",
+      "education": "POSGRADO",
+      "birth_date": {
+        "$date": "1962-02-08T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "DIVORCIADO",
+      "nr_dependants": 0
+    },
+    "contact_info": {
+      "phone_number": "+34724575721",
+      "email": "albert69@example.com",
+      "address": "Rambla de Horacio Martínez 50, Cáceres, 10617"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "EDUCACION",
+      "occupation": "DIRECTIVO",
+      "employer_seniority_years": 10,
+      "total_work_experience_years": 46
+    },
+    "economic_data": {
+      "annual_income": 168928.06,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 643.23,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 1,
+      "previous_loans_amount": 48997.6,
+      "previous_repayments_amount": 32866.02,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "bcd72e1d3a6f4cb1a89a0d11"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES58723631N",
+      "first_name": "Tomasa",
+      "last_name": "Cal Vallejo",
+      "gender": "OTRO",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1963-03-16T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "CASADO",
+      "nr_dependants": 3
+    },
+    "contact_info": {
+      "phone_number": "+34689291217",
+      "email": "khigueras@example.com",
+      "address": "Avenida de Desiderio Canales 553 Apt. 40 , La Rioja, 23167"
+    },
+    "employment": {
+      "status": "TEMPORAL",
+      "sector": "TECNOLOGIA",
+      "occupation": "OPERARIO",
+      "employer_seniority_years": 10,
+      "total_work_experience_years": 45
+    },
+    "economic_data": {
+      "annual_income": 17865.67,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 790.31,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 4,
+      "previous_loans_amount": 39089.43,
+      "previous_repayments_amount": 9472.23,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "d0bf4514c37e4eb6ae76b79d"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESe83380890",
+      "first_name": "Diana",
+      "last_name": "Villalobos Ferrán",
+      "gender": "OTRO",
+      "education": "POSGRADO",
+      "birth_date": {
+        "$date": "1988-05-22T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "CASADO",
+      "nr_dependants": 1
+    },
+    "contact_info": {
+      "phone_number": "+34747212936",
+      "email": "yagocoll@example.net",
+      "address": "Pasadizo de Gregorio Barco 6, Alicante, 10909"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "AGROPECUARIO",
+      "occupation": "ADMINISTRATIVO",
+      "employer_seniority_years": 10,
+      "total_work_experience_years": 17
+    },
+    "economic_data": {
+      "annual_income": 181526.15,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 832.04,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 2,
+      "previous_loans_amount": 12373.32,
+      "previous_repayments_amount": 3806.9,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5caa09906c864e13bca97cce"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESf7570655X",
+      "first_name": "Soledad",
+      "last_name": "Grande Vicente",
+      "gender": "MUJER",
+      "education": "FORMACION PROFESIONAL",
+      "birth_date": {
+        "$date": "1988-08-18T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "ALQUILER",
+      "marital_status": "CASADO",
+      "nr_dependants": 2
+    },
+    "contact_info": {
+      "phone_number": "+34768520610",
+      "email": "malenasantamaria@example.com",
+      "address": "C. de Quirino Diego 32, Lleida, 29109"
+    },
+    "employment": {
+      "status": "TEMPORAL",
+      "sector": "EDUCACION",
+      "occupation": "OPERARIO",
+      "employer_seniority_years": 2,
+      "total_work_experience_years": 17
+    },
+    "economic_data": {
+      "annual_income": 19665.88,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 6024.82,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 3,
+      "previous_loans_amount": 17357.0,
+      "previous_repayments_amount": 32197.33,
+      "previous_defaults_count": 3,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "08e5a6bf8869483c95b64a2a"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESd67715920",
+      "first_name": "José Ángel",
+      "last_name": "Camacho Viña",
+      "gender": "HOMBRE",
+      "education": "FORMACION PROFESIONAL",
+      "birth_date": {
+        "$date": "1983-10-31T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "DIVORCIADO",
+      "nr_dependants": 1
+    },
+    "contact_info": {
+      "phone_number": "+34664666905",
+      "email": "estebanadora@example.org",
+      "address": "Via Lorenzo Rocha 35 Piso 2 , Asturias, 01014"
+    },
+    "employment": {
+      "status": "AUTONOMO",
+      "sector": "SECTOR PUBLICO",
+      "occupation": "TECNICO",
+      "employer_seniority_years": 2,
+      "total_work_experience_years": 24
+    },
+    "economic_data": {
+      "annual_income": 64990.56,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 11060.28,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 1,
+      "previous_loans_amount": 49146.81,
+      "previous_repayments_amount": 16724.62,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "7443464aab7f43d0b137470a"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES81557593g",
+      "first_name": "Rosenda",
+      "last_name": "Cabello Perales",
+      "gender": "MUJER",
+      "education": "POSGRADO",
+      "birth_date": {
+        "$date": "1971-02-10T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "CASADO",
+      "nr_dependants": 0
+    },
+    "contact_info": {
+      "phone_number": "+34678040212",
+      "email": "humberto04@example.net",
+      "address": "Alameda de Aurelia Carreras 16, Burgos, 47618"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "AGROPECUARIO",
+      "occupation": "TECNICO",
+      "employer_seniority_years": 14,
+      "total_work_experience_years": 35
+    },
+    "economic_data": {
+      "annual_income": 271663.68,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 58.49,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 3,
+      "previous_loans_amount": 677.65,
+      "previous_repayments_amount": 34579.31,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "c562a3fcf3054735916f1b4f"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES11128748i",
+      "first_name": "Anna",
+      "last_name": "Sainz Soria",
+      "gender": "MUJER",
+      "education": "POSGRADO",
+      "birth_date": {
+        "$date": "1976-12-19T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "DIVORCIADO",
+      "nr_dependants": 1
+    },
+    "contact_info": {
+      "phone_number": "+34655430031",
+      "email": "zguardia@example.net",
+      "address": "Callejón de Haydée Gálvez 881 Piso 4 , Valencia, 16841"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "TECNOLOGIA",
+      "occupation": "DIRECTIVO",
+      "employer_seniority_years": 20,
+      "total_work_experience_years": 30
+    },
+    "economic_data": {
+      "annual_income": 101147.42,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 888.36,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 2,
+      "previous_loans_amount": 10945.02,
+      "previous_repayments_amount": 4825.4,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "8885d9bfd3ae46aca660e68d"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESE7194778P",
+      "first_name": "Casandra",
+      "last_name": "Lucena Páez",
+      "gender": "MUJER",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1967-03-14T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "CASADO",
+      "nr_dependants": 0
+    },
+    "contact_info": {
+      "phone_number": "+34612120104",
+      "email": "luis-miguel27@example.org",
+      "address": "C. Aurelia Expósito 80, Álava, 20258"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "TECNOLOGIA",
+      "occupation": "OPERARIO",
+      "employer_seniority_years": 9,
+      "total_work_experience_years": 40
+    },
+    "economic_data": {
+      "annual_income": 226738.77,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 643.59,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 4,
+      "previous_loans_amount": 42622.58,
+      "previous_repayments_amount": 2797.55,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "2f92e9c00b424a45bc210395"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESe37429132",
+      "first_name": "Dafne",
+      "last_name": "Calderón Ripoll",
+      "gender": "OTRO",
+      "education": "POSGRADO",
+      "birth_date": {
+        "$date": "1987-10-11T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "SOLTERO",
+      "nr_dependants": 0
+    },
+    "contact_info": {
+      "phone_number": "+34623863644",
+      "email": "lucas54@example.net",
+      "address": "Plaza de Noa Artigas 83 Puerta 9 , Navarra, 43704"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "OTROS",
+      "occupation": "OPERARIO",
+      "employer_seniority_years": 16,
+      "total_work_experience_years": 19
+    },
+    "economic_data": {
+      "annual_income": 111659.15,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 137.33,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 1,
+      "previous_loans_amount": 23310.43,
+      "previous_repayments_amount": 3813.24,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "c0eeabc7725745f7af13a1fd"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESZ1107125k",
+      "first_name": "Hortensia",
+      "last_name": "Tamarit Huerta",
+      "gender": "MUJER",
+      "education": "SECUNDARIA",
+      "birth_date": {
+        "$date": "2007-02-18T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "CEDIDA",
+      "marital_status": "CASADO",
+      "nr_dependants": 2
+    },
+    "contact_info": {
+      "phone_number": "+34686646023",
+      "email": "bonillarenata@example.com",
+      "address": "Glorieta Amalia Hervás 9 Apt. 98 , Almería, 15934"
+    },
+    "employment": {
+      "status": "TEMPORAL",
+      "sector": "HOSTELERIA",
+      "occupation": "DIRECTIVO",
+      "employer_seniority_years": 1,
+      "total_work_experience_years": 2
+    },
+    "economic_data": {
+      "annual_income": 19600.23,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 7385.03,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 5,
+      "previous_loans_amount": 44902.65,
+      "previous_repayments_amount": 6361.32,
+      "previous_defaults_count": 2,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "509b58f0c5094f3187767301"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESI4628926Z",
+      "first_name": "Eugenio",
+      "last_name": "Lobo Tapia",
+      "gender": "HOMBRE",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1975-08-08T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "DIVORCIADO",
+      "nr_dependants": 2
+    },
+    "contact_info": {
+      "phone_number": "+34778772074",
+      "email": "kprada@example.com",
+      "address": "C. de Jose Angel Llabrés 96 Piso 4 , Albacete, 46309"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "CONSTRUCCION",
+      "occupation": "TECNICO",
+      "employer_seniority_years": 16,
+      "total_work_experience_years": 28
+    },
+    "economic_data": {
+      "annual_income": 49788.61,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 889.19,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 0,
+      "previous_loans_amount": 49390.87,
+      "previous_repayments_amount": 47597.49,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "c0754bce73cb47ac82d59b0f"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES84749679A",
+      "first_name": "Juan Pablo",
+      "last_name": "Rovira Linares",
+      "gender": "OTRO",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1963-04-21T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "VIUDO",
+      "nr_dependants": 1
+    },
+    "contact_info": {
+      "phone_number": "+34600980389",
+      "email": "eloisa89@example.com",
+      "address": "Vial de Clotilde Cueto 9 Puerta 9 , Teruel, 15312"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "SALUD",
+      "occupation": "DIRECTIVO",
+      "employer_seniority_years": 6,
+      "total_work_experience_years": 43
+    },
+    "economic_data": {
+      "annual_income": 63384.03,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 608.28,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 0,
+      "previous_loans_amount": 48089.39,
+      "previous_repayments_amount": 44310.96,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "e869cd2671c14631a6a96a02"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESD2581943t",
+      "first_name": "Dionisio",
+      "last_name": "Barbero Pujadas",
+      "gender": "HOMBRE",
+      "education": "POSGRADO",
+      "birth_date": {
+        "$date": "1988-06-11T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "DIVORCIADO",
+      "nr_dependants": 3
+    },
+    "contact_info": {
+      "phone_number": "+34758200737",
+      "email": "patinorosa@example.com",
+      "address": "Pasadizo de Clara Alcolea 92 Apt. 18 , Ceuta, 27341"
+    },
+    "employment": {
+      "status": "TEMPORAL",
+      "sector": "OTROS",
+      "occupation": "TECNICO",
+      "employer_seniority_years": 7,
+      "total_work_experience_years": 19
+    },
+    "economic_data": {
+      "annual_income": 113131.88,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 678.75,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 1,
+      "previous_loans_amount": 20265.33,
+      "previous_repayments_amount": 18847.18,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "ca85def567d844bd8e5baf6c"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESu63416451",
+      "first_name": "Oriana",
+      "last_name": "Calatayud Llobet",
+      "gender": "MUJER",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1990-11-09T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "SOLTERO",
+      "nr_dependants": 2
+    },
+    "contact_info": {
+      "phone_number": "+34602060863",
+      "email": "casasnatanael@example.com",
+      "address": "Via Ester Escrivá 1 Piso 9 , Ávila, 46859"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "SALUD",
+      "occupation": "OPERARIO",
+      "employer_seniority_years": 11,
+      "total_work_experience_years": 16
+    },
+    "economic_data": {
+      "annual_income": 66812.08,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 31.15,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 2,
+      "previous_loans_amount": 6866.72,
+      "previous_repayments_amount": 9495.77,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ff07ab54c1544a89df4be39"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESV5031146c",
+      "first_name": "Luciano",
+      "last_name": "Abascal Aller",
+      "gender": "HOMBRE",
+      "education": "SECUNDARIA",
+      "birth_date": {
+        "$date": "1991-04-24T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "ALQUILER",
+      "marital_status": "SOLTERO",
+      "nr_dependants": 1
+    },
+    "contact_info": {
+      "phone_number": "+34673303744",
+      "email": "barrosciro@example.net",
+      "address": "Camino de Eleuterio Aguirre 31, Burgos, 05460"
+    },
+    "employment": {
+      "status": "INACTIVO",
+      "sector": "AGROPECUARIO",
+      "occupation": "DIRECTIVO",
+      "employer_seniority_years": 3,
+      "total_work_experience_years": 15
+    },
+    "economic_data": {
+      "annual_income": 39891.27,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 2975.4,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 1,
+      "previous_loans_amount": 28202.4,
+      "previous_repayments_amount": 2290.26,
+      "previous_defaults_count": 1,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "47cc17a485494e0d86291e57"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESX03263839",
+      "first_name": "Dimas",
+      "last_name": "Olivé Carmona",
+      "gender": "OTRO",
+      "education": "FORMACION PROFESIONAL",
+      "birth_date": {
+        "$date": "1989-09-02T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "ALQUILER",
+      "marital_status": "CASADO",
+      "nr_dependants": 3
+    },
+    "contact_info": {
+      "phone_number": "+34761165470",
+      "email": "leireborrell@example.org",
+      "address": "Camino Eladio Vendrell 91 Apt. 65 , Navarra, 12725"
+    },
+    "employment": {
+      "status": "DESEMPLEADO",
+      "sector": "SALUD",
+      "occupation": "TECNICO",
+      "employer_seniority_years": 0,
+      "total_work_experience_years": 17
+    },
+    "economic_data": {
+      "annual_income": 16911.94,
+      "income_type": "AYUDAS",
+      "currency": "EUR",
+      "existing_obligations": 5573.43,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 3,
+      "previous_loans_amount": 5325.94,
+      "previous_repayments_amount": 29475.55,
+      "previous_defaults_count": 4,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "7b5715fd6fdf44ee888578e2"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "EST9569234h",
+      "first_name": "Mar",
+      "last_name": "Figueroa Lucas",
+      "gender": "MUJER",
+      "education": "SECUNDARIA",
+      "birth_date": {
+        "$date": "1997-08-20T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "CEDIDA",
+      "marital_status": "DIVORCIADO",
+      "nr_dependants": 0
+    },
+    "contact_info": {
+      "phone_number": "+34767369474",
+      "email": "jesusa92@example.com",
+      "address": "Cuesta Wilfredo Echevarría 88 Piso 6 , Segovia, 14536"
+    },
+    "employment": {
+      "status": "DESEMPLEADO",
+      "sector": "TECNOLOGIA",
+      "occupation": "OPERARIO",
+      "employer_seniority_years": 5,
+      "total_work_experience_years": 9
+    },
+    "economic_data": {
+      "annual_income": 25628.98,
+      "income_type": "AYUDAS",
+      "currency": "EUR",
+      "existing_obligations": 10080.25,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 1,
+      "previous_loans_amount": 88.15,
+      "previous_repayments_amount": 26412.2,
+      "previous_defaults_count": 3,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5b472d029582419ebc667640"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESx08453498",
+      "first_name": "Javier",
+      "last_name": "Arévalo Nebot",
+      "gender": "HOMBRE",
+      "education": "POSGRADO",
+      "birth_date": {
+        "$date": "1979-06-06T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "DIVORCIADO",
+      "nr_dependants": 1
+    },
+    "contact_info": {
+      "phone_number": "+34683328582",
+      "email": "lopezpaulina@example.net",
+      "address": "Plaza Adelaida Manjón 83, Toledo, 46006"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "TECNOLOGIA",
+      "occupation": "OPERARIO",
+      "employer_seniority_years": 14,
+      "total_work_experience_years": 28
+    },
+    "economic_data": {
+      "annual_income": 209457.61,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 486.84,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 5,
+      "previous_loans_amount": 12411.09,
+      "previous_repayments_amount": 10943.93,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "38b85c91f223425a937134de"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES73042615s",
+      "first_name": "Yolanda",
+      "last_name": "Carro Álvaro",
+      "gender": "MUJER",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1964-04-07T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "SOLTERO",
+      "nr_dependants": 1
+    },
+    "contact_info": {
+      "phone_number": "+34640473831",
+      "email": "anacleto50@example.net",
+      "address": "Cañada Guiomar Salvador 2 Apt. 11 , Sevilla, 50299"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "SALUD",
+      "occupation": "MANDOS_MEDIOS",
+      "employer_seniority_years": 7,
+      "total_work_experience_years": 41
+    },
+    "economic_data": {
+      "annual_income": 202729.95,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 974.53,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 1,
+      "previous_loans_amount": 9227.29,
+      "previous_repayments_amount": 26737.0,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "7ed1a8e735764863a8e1cae5"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESa3499634r",
+      "first_name": "Donato",
+      "last_name": "Escobar Barrera",
+      "gender": "OTRO",
+      "education": "POSGRADO",
+      "birth_date": {
+        "$date": "1969-10-23T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "SOLTERO",
+      "nr_dependants": 0
+    },
+    "contact_info": {
+      "phone_number": "+34797215561",
+      "email": "wexposito@example.net",
+      "address": "Acceso de Rodolfo Sánchez 87 Piso 3 , Soria, 29214"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "HOSTELERIA",
+      "occupation": "DIRECTIVO",
+      "employer_seniority_years": 12,
+      "total_work_experience_years": 35
+    },
+    "economic_data": {
+      "annual_income": 153848.44,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 562.95,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 4,
+      "previous_loans_amount": 36241.31,
+      "previous_repayments_amount": 11521.7,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "f9a0da950142429e88ca2f97"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESs3403677B",
+      "first_name": "Odalys",
+      "last_name": "Segovia Ribes",
+      "gender": "OTRO",
+      "education": "FORMACION PROFESIONAL",
+      "birth_date": {
+        "$date": "1978-06-13T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "DIVORCIADO",
+      "nr_dependants": 2
+    },
+    "contact_info": {
+      "phone_number": "+34657034522",
+      "email": "joaquinapazos@example.org",
+      "address": "Acceso de Caridad Pedrero 32 Piso 1 , Burgos, 36577"
+    },
+    "employment": {
+      "status": "AUTONOMO",
+      "sector": "AGROPECUARIO",
+      "occupation": "DIRECTIVO",
+      "employer_seniority_years": 1,
+      "total_work_experience_years": 29
+    },
+    "economic_data": {
+      "annual_income": 20455.42,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 3806.52,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 1,
+      "previous_loans_amount": 20872.81,
+      "previous_repayments_amount": 36809.19,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "d6cc277b30cd4dc19540957d"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESU7039087Y",
+      "first_name": "Lorenzo",
+      "last_name": "Tolosa Díaz",
+      "gender": "HOMBRE",
+      "education": "FORMACION PROFESIONAL",
+      "birth_date": {
+        "$date": "1998-01-22T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "DIVORCIADO",
+      "nr_dependants": 2
+    },
+    "contact_info": {
+      "phone_number": "+34664018152",
+      "email": "baudelio73@example.net",
+      "address": "Rambla Hernando Pallarès 59, Huelva, 47968"
+    },
+    "employment": {
+      "status": "AUTONOMO",
+      "sector": "HOSTELERIA",
+      "occupation": "OPERARIO",
+      "employer_seniority_years": 4,
+      "total_work_experience_years": 7
+    },
+    "economic_data": {
+      "annual_income": 43944.44,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 9723.83,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 3,
+      "previous_loans_amount": 9351.88,
+      "previous_repayments_amount": 43461.13,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "f5f4e83dbe1540cb8ba18989"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES34036979C",
+      "first_name": "Odalys",
+      "last_name": "Guardia Manzanares",
+      "gender": "OTRO",
+      "education": "POSGRADO",
+      "birth_date": {
+        "$date": "1976-03-09T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "DIVORCIADO",
+      "nr_dependants": 2
+    },
+    "contact_info": {
+      "phone_number": "+34653540676",
+      "email": "scastells@example.com",
+      "address": "Vial de Abigaíl Arribas 9 Puerta 2 , Huelva, 44573"
+    },
+    "employment": {
+      "status": "AUTONOMO",
+      "sector": "OTROS",
+      "occupation": "TECNICO",
+      "employer_seniority_years": 20,
+      "total_work_experience_years": 28
+    },
+    "economic_data": {
+      "annual_income": 290454.96,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 299.62,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 5,
+      "previous_loans_amount": 23634.55,
+      "previous_repayments_amount": 10404.11,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "186cc140c58c493f88b9f94c"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES79025362v",
+      "first_name": "José Manuel",
+      "last_name": "Álamo Mayoral",
+      "gender": "HOMBRE",
+      "education": "SECUNDARIA",
+      "birth_date": {
+        "$date": "1972-08-09T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "ALQUILER",
+      "marital_status": "CASADO",
+      "nr_dependants": 2
+    },
+    "contact_info": {
+      "phone_number": "+34714869057",
+      "email": "benigno90@example.org",
+      "address": "Callejón Marita Sacristán 88, Valladolid, 34699"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "AGROPECUARIO",
+      "occupation": "TECNICO",
+      "employer_seniority_years": 1,
+      "total_work_experience_years": 31
+    },
+    "economic_data": {
+      "annual_income": 30922.91,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 1422.06,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 0,
+      "previous_loans_amount": 28291.77,
+      "previous_repayments_amount": 47074.59,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "54e9eb42000542d3bb7331cb"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESV74542250",
+      "first_name": "José Ángel",
+      "last_name": "Marti Izquierdo",
+      "gender": "HOMBRE",
+      "education": "POSGRADO",
+      "birth_date": {
+        "$date": "1988-06-21T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "CASADO",
+      "nr_dependants": 3
+    },
+    "contact_info": {
+      "phone_number": "+34775117016",
+      "email": "rosaura60@example.net",
+      "address": "Via Luciana Nevado 32 Apt. 15 , Palencia, 03271"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "TECNOLOGIA",
+      "occupation": "ADMINISTRATIVO",
+      "employer_seniority_years": 20,
+      "total_work_experience_years": 16
+    },
+    "economic_data": {
+      "annual_income": 115119.5,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 891.23,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 0,
+      "previous_loans_amount": 10281.76,
+      "previous_repayments_amount": 7092.06,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "e829588d80ba41ec8a6c66cf"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES04255470x",
+      "first_name": "Amelia",
+      "last_name": "Blanch Báez",
+      "gender": "MUJER",
+      "education": "POSGRADO",
+      "birth_date": {
+        "$date": "1987-04-23T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "CASADO",
+      "nr_dependants": 3
+    },
+    "contact_info": {
+      "phone_number": "+34705313161",
+      "email": "arceraimundo@example.net",
+      "address": "C. Ciro Sanchez 48 Apt. 47 , Granada, 15436"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "OTROS",
+      "occupation": "OPERARIO",
+      "employer_seniority_years": 19,
+      "total_work_experience_years": 18
+    },
+    "economic_data": {
+      "annual_income": 93192.62,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 272.54,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 4,
+      "previous_loans_amount": 19498.07,
+      "previous_repayments_amount": 42821.89,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "b747abdcca0e4c509d9763ad"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESq47190025",
+      "first_name": "Lola",
+      "last_name": "Peña Mancebo",
+      "gender": "MUJER",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1965-03-20T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "CASADO",
+      "nr_dependants": 0
+    },
+    "contact_info": {
+      "phone_number": "+34606027452",
+      "email": "galojauregui@example.com",
+      "address": "Acceso Bibiana Carbó 10, Palencia, 27252"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "OTROS",
+      "occupation": "TECNICO",
+      "employer_seniority_years": 12,
+      "total_work_experience_years": 40
+    },
+    "economic_data": {
+      "annual_income": 141180.27,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 832.39,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 0,
+      "previous_loans_amount": 3335.31,
+      "previous_repayments_amount": 31901.73,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "8f6856fab6844b2c9a215ca8"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES08159139D",
+      "first_name": "Víctor",
+      "last_name": "Carbajo Tejedor",
+      "gender": "HOMBRE",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1982-06-14T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "DIVORCIADO",
+      "nr_dependants": 3
+    },
+    "contact_info": {
+      "phone_number": "+34744081076",
+      "email": "wgamez@example.com",
+      "address": "Cuesta de Ariel Mesa 59, Sevilla, 20156"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "TECNOLOGIA",
+      "occupation": "ADMINISTRATIVO",
+      "employer_seniority_years": 20,
+      "total_work_experience_years": 25
+    },
+    "economic_data": {
+      "annual_income": 93598.19,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 184.61,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 2,
+      "previous_loans_amount": 29233.09,
+      "previous_repayments_amount": 24442.66,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "f28ae481e60e47e4a8c17583"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESQ29655093",
+      "first_name": "Salud",
+      "last_name": "Posada Ayuso",
+      "gender": "MUJER",
+      "education": "FORMACION PROFESIONAL",
+      "birth_date": {
+        "$date": "2000-11-30T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "SOLTERO",
+      "nr_dependants": 1
+    },
+    "contact_info": {
+      "phone_number": "+34745502852",
+      "email": "asalgado@example.org",
+      "address": "Ronda Sabina Prat 98, La Coruña, 29693"
+    },
+    "employment": {
+      "status": "AUTONOMO",
+      "sector": "AGROPECUARIO",
+      "occupation": "DIRECTIVO",
+      "employer_seniority_years": 3,
+      "total_work_experience_years": 7
+    },
+    "economic_data": {
+      "annual_income": 30239.45,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 4059.28,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 4,
+      "previous_loans_amount": 8962.64,
+      "previous_repayments_amount": 6341.46,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "d61d7949ac7e4439a8283aa0"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESu1504471b",
+      "first_name": "María Jesús",
+      "last_name": "Boada Elorza",
+      "gender": "MUJER",
+      "education": "POSGRADO",
+      "birth_date": {
+        "$date": "1991-05-14T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "VIUDO",
+      "nr_dependants": 0
+    },
+    "contact_info": {
+      "phone_number": "+34635370796",
+      "email": "pagesariel@example.net",
+      "address": "Pasaje Estrella Franco 66 Puerta 2 , León, 22806"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "OTROS",
+      "occupation": "ADMINISTRATIVO",
+      "employer_seniority_years": 10,
+      "total_work_experience_years": 17
+    },
+    "economic_data": {
+      "annual_income": 297487.25,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 718.39,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 3,
+      "previous_loans_amount": 26583.72,
+      "previous_repayments_amount": 21992.02,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "954dd65ba6424ec181c6a87f"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESH0619483W",
+      "first_name": "Ileana",
+      "last_name": "Alcaraz Segura",
+      "gender": "MUJER",
+      "education": "POSGRADO",
+      "birth_date": {
+        "$date": "1979-07-08T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "SOLTERO",
+      "nr_dependants": 1
+    },
+    "contact_info": {
+      "phone_number": "+34650068742",
+      "email": "villalobosvirginia@example.org",
+      "address": "Urbanización de Jorge Marco 4, León, 47796"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "HOSTELERIA",
+      "occupation": "ADMINISTRATIVO",
+      "employer_seniority_years": 11,
+      "total_work_experience_years": 26
+    },
+    "economic_data": {
+      "annual_income": 123105.06,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 371.19,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 3,
+      "previous_loans_amount": 39674.04,
+      "previous_repayments_amount": 13900.74,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "09e2e0ebecb14d579e88a035"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESS8137881z",
+      "first_name": "Teodosio",
+      "last_name": "Sureda Carranza",
+      "gender": "OTRO",
+      "education": "POSGRADO",
+      "birth_date": {
+        "$date": "1979-01-02T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "VIUDO",
+      "nr_dependants": 3
+    },
+    "contact_info": {
+      "phone_number": "+34717122956",
+      "email": "jarajuan-bautista@example.com",
+      "address": "Rambla Miriam Falcón 92, Barcelona, 13845"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "HOSTELERIA",
+      "occupation": "DIRECTIVO",
+      "employer_seniority_years": 16,
+      "total_work_experience_years": 26
+    },
+    "economic_data": {
+      "annual_income": 64335.47,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 91.7,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 2,
+      "previous_loans_amount": 12932.19,
+      "previous_repayments_amount": 19084.23,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "2f2a672f04854d62b97143c4"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES91731960Q",
+      "first_name": "Félix",
+      "last_name": "Cuenca Barco",
+      "gender": "HOMBRE",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1973-02-22T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "SOLTERO",
+      "nr_dependants": 0
+    },
+    "contact_info": {
+      "phone_number": "+34650883820",
+      "email": "liliana98@example.com",
+      "address": "Paseo Cloe Heras 10, Ciudad, 39411"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "HOSTELERIA",
+      "occupation": "TECNICO",
+      "employer_seniority_years": 17,
+      "total_work_experience_years": 35
+    },
+    "economic_data": {
+      "annual_income": 229447.33,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 429.16,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 1,
+      "previous_loans_amount": 10286.97,
+      "previous_repayments_amount": 7989.68,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6e61048c795e4d569b49e03f"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES69678847O",
+      "first_name": "Óscar",
+      "last_name": "Correa Fernandez",
+      "gender": "HOMBRE",
+      "education": "FORMACION PROFESIONAL",
+      "birth_date": {
+        "$date": "1993-01-04T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "SOLTERO",
+      "nr_dependants": 3
+    },
+    "contact_info": {
+      "phone_number": "+34613844952",
+      "email": "carreteroemiliano@example.net",
+      "address": "Via Emiliana Quiroga 96 Piso 3 , Huesca, 04597"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "HOSTELERIA",
+      "occupation": "ADMINISTRATIVO",
+      "employer_seniority_years": 1,
+      "total_work_experience_years": 13
+    },
+    "economic_data": {
+      "annual_income": 68496.32,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 4689.13,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 3,
+      "previous_loans_amount": 14271.77,
+      "previous_repayments_amount": 19207.7,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "073a858b8f2441e090b4fd52"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES04958979W",
+      "first_name": "Flora",
+      "last_name": "Piña Bonilla",
+      "gender": "OTRO",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1983-09-13T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "DIVORCIADO",
+      "nr_dependants": 1
+    },
+    "contact_info": {
+      "phone_number": "+34734422750",
+      "email": "bclemente@example.org",
+      "address": "Avenida Alejo Noriega 25 Piso 0 , Soria, 45833"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "SECTOR PUBLICO",
+      "occupation": "ADMINISTRATIVO",
+      "employer_seniority_years": 16,
+      "total_work_experience_years": 21
+    },
+    "economic_data": {
+      "annual_income": 114327.45,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 458.25,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 2,
+      "previous_loans_amount": 15006.36,
+      "previous_repayments_amount": 49373.77,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "dfade6819f6b47358ea2bee0"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES65578168F",
+      "first_name": "Eustaquio",
+      "last_name": "Manjón Navas",
+      "gender": "HOMBRE",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1981-04-22T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "SOLTERO",
+      "nr_dependants": 3
+    },
+    "contact_info": {
+      "phone_number": "+34697588211",
+      "email": "peralesmaricruz@example.com",
+      "address": "Callejón Jose Antonio Soto 45, Cádiz, 35327"
+    },
+    "employment": {
+      "status": "DESEMPLEADO",
+      "sector": "OTROS",
+      "occupation": "ADMINISTRATIVO",
+      "employer_seniority_years": 14,
+      "total_work_experience_years": 24
+    },
+    "economic_data": {
+      "annual_income": 253010.65,
+      "income_type": "AYUDAS",
+      "currency": "EUR",
+      "existing_obligations": 381.08,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 1,
+      "previous_loans_amount": 40515.87,
+      "previous_repayments_amount": 9173.04,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "b80d80bdcc124729b0552eaa"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES38882141f",
+      "first_name": "Cornelio",
+      "last_name": "Vilanova Haro",
+      "gender": "HOMBRE",
+      "education": "POSGRADO",
+      "birth_date": {
+        "$date": "1971-03-20T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "CASADO",
+      "nr_dependants": 2
+    },
+    "contact_info": {
+      "phone_number": "+34737972290",
+      "email": "nsolana@example.org",
+      "address": "Paseo Teodosio Marqués 67 Puerta 1 , Córdoba, 16794"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "SECTOR PUBLICO",
+      "occupation": "DIRECTIVO",
+      "employer_seniority_years": 17,
+      "total_work_experience_years": 34
+    },
+    "economic_data": {
+      "annual_income": 86484.17,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 164.15,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 2,
+      "previous_loans_amount": 24344.92,
+      "previous_repayments_amount": 632.09,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "1c300d79734c4131bbedff72"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESB50183930",
+      "first_name": "Angelino",
+      "last_name": "Valls Rovira",
+      "gender": "OTRO",
+      "education": "POSGRADO",
+      "birth_date": {
+        "$date": "1968-12-22T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "CASADO",
+      "nr_dependants": 0
+    },
+    "contact_info": {
+      "phone_number": "+34649428381",
+      "email": "gabrielatello@example.net",
+      "address": "Pasaje de Ramona Mateo 22 Apt. 93 , Soria, 45260"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "AGROPECUARIO",
+      "occupation": "DIRECTIVO",
+      "employer_seniority_years": 11,
+      "total_work_experience_years": 38
+    },
+    "economic_data": {
+      "annual_income": 264740.9,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 566.87,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 3,
+      "previous_loans_amount": 11126.17,
+      "previous_repayments_amount": 18670.04,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "7d3625d5bd774660b85ddfc0"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES73127976t",
+      "first_name": "José María",
+      "last_name": "Benavent Acosta",
+      "gender": "HOMBRE",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1971-03-03T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "CASADO",
+      "nr_dependants": 3
+    },
+    "contact_info": {
+      "phone_number": "+34756808596",
+      "email": "fernanda08@example.org",
+      "address": "Acceso de Jessica Vergara 9, Lleida, 34480"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "CONSTRUCCION",
+      "occupation": "TECNICO",
+      "employer_seniority_years": 6,
+      "total_work_experience_years": 33
+    },
+    "economic_data": {
+      "annual_income": 106249.16,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 687.8,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 3,
+      "previous_loans_amount": 39155.58,
+      "previous_repayments_amount": 23213.02,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "25eee0b630d24bc6b3835cf6"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESX9945066S",
+      "first_name": "Norberto",
+      "last_name": "Anglada Jiménez",
+      "gender": "HOMBRE",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1965-09-20T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "VIUDO",
+      "nr_dependants": 3
+    },
+    "contact_info": {
+      "phone_number": "+34637678542",
+      "email": "ojedajordana@example.com",
+      "address": "Paseo de Gaspar Vilanova 35 Apt. 76 , Ourense, 03321"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "OTROS",
+      "occupation": "OPERARIO",
+      "employer_seniority_years": 5,
+      "total_work_experience_years": 42
+    },
+    "economic_data": {
+      "annual_income": 265358.9,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 536.76,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 2,
+      "previous_loans_amount": 39892.07,
+      "previous_repayments_amount": 46607.82,
+      "previous_defaults_count": 1,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "ae8c6815340c4d6cb9c2a30f"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESE81041516",
+      "first_name": "Bernarda",
+      "last_name": "Ballester Salamanca",
+      "gender": "MUJER",
+      "education": "BACHILLERATO",
+      "birth_date": {
+        "$date": "1983-10-14T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "DIVORCIADO",
+      "nr_dependants": 0
+    },
+    "contact_info": {
+      "phone_number": "+34775399197",
+      "email": "ymuniz@example.org",
+      "address": "Acceso Martin Mármol 9, Cáceres, 38847"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "SECTOR PUBLICO",
+      "occupation": "OPERARIO",
+      "employer_seniority_years": 0,
+      "total_work_experience_years": 21
+    },
+    "economic_data": {
+      "annual_income": 75200.61,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 25420.14,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 1,
+      "previous_loans_amount": 19332.85,
+      "previous_repayments_amount": 10953.05,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "a52ff0dccdd841ec82350485"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES25993318o",
+      "first_name": "Yésica",
+      "last_name": "Zabaleta Ayuso",
+      "gender": "OTRO",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1969-08-02T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "DIVORCIADO",
+      "nr_dependants": 0
+    },
+    "contact_info": {
+      "phone_number": "+34778800325",
+      "email": "salcedomarcelino@example.com",
+      "address": "Pasaje Dionisia Morera 723 Apt. 59 , León, 46235"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "HOSTELERIA",
+      "occupation": "OPERARIO",
+      "employer_seniority_years": 14,
+      "total_work_experience_years": 36
+    },
+    "economic_data": {
+      "annual_income": 196991.54,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 423.91,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 3,
+      "previous_loans_amount": 40818.37,
+      "previous_repayments_amount": 7629.07,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "d5686be3d7204a20aa2e2766"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES95357883Z",
+      "first_name": "Esperanza",
+      "last_name": "Pereira Vallejo",
+      "gender": "MUJER",
+      "education": "BACHILLERATO",
+      "birth_date": {
+        "$date": "1984-05-15T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "ALQUILER",
+      "marital_status": "SOLTERO",
+      "nr_dependants": 2
+    },
+    "contact_info": {
+      "phone_number": "+34750325712",
+      "email": "amaliaalberola@example.net",
+      "address": "Via Josué Ibáñez 667 Apt. 52 , Córdoba, 04432"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "VENTAS",
+      "occupation": "ADMINISTRATIVO",
+      "employer_seniority_years": 1,
+      "total_work_experience_years": 23
+    },
+    "economic_data": {
+      "annual_income": 70356.84,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 22701.04,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 2,
+      "previous_loans_amount": 2592.52,
+      "previous_repayments_amount": 12218.35,
+      "previous_defaults_count": 1,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0cb78592d49d43a1b9d6e970"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES80710463h",
+      "first_name": "Nicodemo",
+      "last_name": "Valdés Cerezo",
+      "gender": "HOMBRE",
+      "education": "SECUNDARIA",
+      "birth_date": {
+        "$date": "1998-05-07T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "ALQUILER",
+      "marital_status": "VIUDO",
+      "nr_dependants": 1
+    },
+    "contact_info": {
+      "phone_number": "+34623641294",
+      "email": "belenjove@example.com",
+      "address": "Ronda Paz Berrocal 33 Puerta 1 , Ávila, 46457"
+    },
+    "employment": {
+      "status": "TEMPORAL",
+      "sector": "EDUCACION",
+      "occupation": "TECNICO",
+      "employer_seniority_years": 0,
+      "total_work_experience_years": 10
+    },
+    "economic_data": {
+      "annual_income": 44458.89,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 13629.1,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 4,
+      "previous_loans_amount": 5561.63,
+      "previous_repayments_amount": 2832.6,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "fbc85d35412b4b7aa987544f"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESp1822183q",
+      "first_name": "Régulo",
+      "last_name": "Quintero Roldán",
+      "gender": "HOMBRE",
+      "education": "POSGRADO",
+      "birth_date": {
+        "$date": "1981-09-11T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "VIUDO",
+      "nr_dependants": 0
+    },
+    "contact_info": {
+      "phone_number": "+34718700294",
+      "email": "fidel09@example.org",
+      "address": "Urbanización Águeda Galán 317 Piso 2 , Valladolid, 09865"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "VENTAS",
+      "occupation": "OPERARIO",
+      "employer_seniority_years": 6,
+      "total_work_experience_years": 22
+    },
+    "economic_data": {
+      "annual_income": 292575.98,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 639.6,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 2,
+      "previous_loans_amount": 48547.55,
+      "previous_repayments_amount": 48464.61,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "65464d64e315410d99dcb1c9"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESg25270369",
+      "first_name": "Cipriano",
+      "last_name": "Peña Mariño",
+      "gender": "HOMBRE",
+      "education": "BACHILLERATO",
+      "birth_date": {
+        "$date": "1991-06-14T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "ALQUILER",
+      "marital_status": "DIVORCIADO",
+      "nr_dependants": 1
+    },
+    "contact_info": {
+      "phone_number": "+34752085493",
+      "email": "gilsilvio@example.net",
+      "address": "Callejón de Xavier Ródenas 46 Puerta 3 , Ceuta, 28227"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "AGROPECUARIO",
+      "occupation": "MANDOS_MEDIOS",
+      "employer_seniority_years": 0,
+      "total_work_experience_years": 17
+    },
+    "economic_data": {
+      "annual_income": 50495.52,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 5388.99,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 5,
+      "previous_loans_amount": 3907.51,
+      "previous_repayments_amount": 8813.05,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "ec813292ffd64f0ca101588d"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESk10343864",
+      "first_name": "Jenaro",
+      "last_name": "Uribe Iriarte",
+      "gender": "HOMBRE",
+      "education": "POSGRADO",
+      "birth_date": {
+        "$date": "1975-03-13T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "CASADO",
+      "nr_dependants": 3
+    },
+    "contact_info": {
+      "phone_number": "+34722539580",
+      "email": "tvillar@example.org",
+      "address": "Camino Kike Cañete 635 Piso 2 , Cuenca, 06379"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "SECTOR PUBLICO",
+      "occupation": "MANDOS_MEDIOS",
+      "employer_seniority_years": 5,
+      "total_work_experience_years": 31
+    },
+    "economic_data": {
+      "annual_income": 189217.61,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 769.46,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 2,
+      "previous_loans_amount": 47403.7,
+      "previous_repayments_amount": 35614.35,
+      "previous_defaults_count": 1,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "8beb3300e49c4c76ad3d7dfd"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESp41030576",
+      "first_name": "Inocencio",
+      "last_name": "Sola Gimenez",
+      "gender": "OTRO",
+      "education": "POSGRADO",
+      "birth_date": {
+        "$date": "1968-05-17T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "DIVORCIADO",
+      "nr_dependants": 1
+    },
+    "contact_info": {
+      "phone_number": "+34632320331",
+      "email": "gema90@example.org",
+      "address": "Cañada Herminio Ordóñez 49, Álava, 16066"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "HOSTELERIA",
+      "occupation": "ADMINISTRATIVO",
+      "employer_seniority_years": 14,
+      "total_work_experience_years": 38
+    },
+    "economic_data": {
+      "annual_income": 159206.11,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 360.99,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 5,
+      "previous_loans_amount": 38939.71,
+      "previous_repayments_amount": 34445.66,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "556cb0b41dad41a3a98ee0ec"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES53187011T",
+      "first_name": "Lorena",
+      "last_name": "Alegria Madrigal",
+      "gender": "MUJER",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1963-03-01T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "SOLTERO",
+      "nr_dependants": 2
+    },
+    "contact_info": {
+      "phone_number": "+34611607927",
+      "email": "edelmiragaray@example.com",
+      "address": "C. de Lucas Figueroa 62, Asturias, 06009"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "SALUD",
+      "occupation": "DIRECTIVO",
+      "employer_seniority_years": 18,
+      "total_work_experience_years": 43
+    },
+    "economic_data": {
+      "annual_income": 80906.13,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 58.69,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 0,
+      "previous_loans_amount": 11057.94,
+      "previous_repayments_amount": 41858.02,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "a144d16b9f4f48dbbb9f7986"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES08661099G",
+      "first_name": "Evangelina",
+      "last_name": "León Diéguez",
+      "gender": "MUJER",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1974-11-13T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "CASADO",
+      "nr_dependants": 2
+    },
+    "contact_info": {
+      "phone_number": "+34699969374",
+      "email": "azucenacarpio@example.org",
+      "address": "Pasaje de Cebrián Morante 13 Piso 3 , Valladolid, 38953"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "VENTAS",
+      "occupation": "MANDOS_MEDIOS",
+      "employer_seniority_years": 20,
+      "total_work_experience_years": 32
+    },
+    "economic_data": {
+      "annual_income": 169124.39,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 859.11,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 2,
+      "previous_loans_amount": 2196.79,
+      "previous_repayments_amount": 33373.12,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "9d77a42815de4b2bb6482ebb"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESk3791457X",
+      "first_name": "Che",
+      "last_name": "Benavides Guillén",
+      "gender": "OTRO",
+      "education": "BACHILLERATO",
+      "birth_date": {
+        "$date": "1981-12-22T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "SOLTERO",
+      "nr_dependants": 1
+    },
+    "contact_info": {
+      "phone_number": "+34780861777",
+      "email": "rosa-mariasaenz@example.org",
+      "address": "Urbanización de Lucía Cordero 38, Granada, 03786"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "CONSTRUCCION",
+      "occupation": "DIRECTIVO",
+      "employer_seniority_years": 4,
+      "total_work_experience_years": 24
+    },
+    "economic_data": {
+      "annual_income": 53326.04,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 11197.93,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 4,
+      "previous_loans_amount": 18278.16,
+      "previous_repayments_amount": 45430.68,
+      "previous_defaults_count": 3,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "035dc4c5f3344620b5fd9a80"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES89996744C",
+      "first_name": "Cecilio",
+      "last_name": "Porcel Gimeno",
+      "gender": "OTRO",
+      "education": "SECUNDARIA",
+      "birth_date": {
+        "$date": "1991-12-28T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "SOLTERO",
+      "nr_dependants": 1
+    },
+    "contact_info": {
+      "phone_number": "+34750741181",
+      "email": "marcomarin@example.net",
+      "address": "Cañada de Crescencia Viana 5, Cantabria, 34405"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "TECNOLOGIA",
+      "occupation": "ADMINISTRATIVO",
+      "employer_seniority_years": 0,
+      "total_work_experience_years": 13
+    },
+    "economic_data": {
+      "annual_income": 92381.53,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 31678.06,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 4,
+      "previous_loans_amount": 15448.7,
+      "previous_repayments_amount": 41337.47,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "d21233e7c84b4e64a8202ef1"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES93392545U",
+      "first_name": "Fermín",
+      "last_name": "Bravo Borrego",
+      "gender": "OTRO",
+      "education": "BACHILLERATO",
+      "birth_date": {
+        "$date": "1996-08-05T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "ALQUILER",
+      "marital_status": "SOLTERO",
+      "nr_dependants": 1
+    },
+    "contact_info": {
+      "phone_number": "+34739529266",
+      "email": "matildequintana@example.org",
+      "address": "C. Apolonia Solana 372 Piso 6 , Lugo, 46722"
+    },
+    "employment": {
+      "status": "DESEMPLEADO",
+      "sector": "HOSTELERIA",
+      "occupation": "DIRECTIVO",
+      "employer_seniority_years": 2,
+      "total_work_experience_years": 10
+    },
+    "economic_data": {
+      "annual_income": 18640.86,
+      "income_type": "AYUDAS",
+      "currency": "EUR",
+      "existing_obligations": 5130.17,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 5,
+      "previous_loans_amount": 43696.21,
+      "previous_repayments_amount": 19769.25,
+      "previous_defaults_count": 3,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "35bc1573769c4ae0a1ae2af7"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES72829227H",
+      "first_name": "Octavia",
+      "last_name": "Alcalde Segura",
+      "gender": "MUJER",
+      "education": "SECUNDARIA",
+      "birth_date": {
+        "$date": "1989-03-05T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "CEDIDA",
+      "marital_status": "VIUDO",
+      "nr_dependants": 2
+    },
+    "contact_info": {
+      "phone_number": "+34761356331",
+      "email": "montenegroroxana@example.net",
+      "address": "Paseo Jose Francisco Pozo 714, Ourense, 05992"
+    },
+    "employment": {
+      "status": "DESEMPLEADO",
+      "sector": "CONSTRUCCION",
+      "occupation": "MANDOS_MEDIOS",
+      "employer_seniority_years": 4,
+      "total_work_experience_years": 19
+    },
+    "economic_data": {
+      "annual_income": 25947.7,
+      "income_type": "AYUDAS",
+      "currency": "EUR",
+      "existing_obligations": 2522.66,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 0,
+      "previous_loans_amount": 28577.87,
+      "previous_repayments_amount": 32757.3,
+      "previous_defaults_count": 4,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "df85ba198a284fa0b759eb2f"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES48551667U",
+      "first_name": "Rosenda",
+      "last_name": "Sabater Ramírez",
+      "gender": "MUJER",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1975-11-21T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "VIUDO",
+      "nr_dependants": 0
+    },
+    "contact_info": {
+      "phone_number": "+34640000876",
+      "email": "gasconmariano@example.org",
+      "address": "Vial Seve Echeverría 9, Pontevedra, 41402"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "OTROS",
+      "occupation": "MANDOS_MEDIOS",
+      "employer_seniority_years": 6,
+      "total_work_experience_years": 30
+    },
+    "economic_data": {
+      "annual_income": 91307.18,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 241.59,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 4,
+      "previous_loans_amount": 27550.01,
+      "previous_repayments_amount": 34112.4,
+      "previous_defaults_count": 1,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "c1257801eb744262b3087a15"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES06779484d",
+      "first_name": "Adela",
+      "last_name": "Villena Chaparro",
+      "gender": "MUJER",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1982-05-03T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "DIVORCIADO",
+      "nr_dependants": 3
+    },
+    "contact_info": {
+      "phone_number": "+34671284647",
+      "email": "pazcintia@example.com",
+      "address": "Urbanización de Pía Ferrero 67 Piso 2 , Guadalajara, 22033"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "AGROPECUARIO",
+      "occupation": "DIRECTIVO",
+      "employer_seniority_years": 19,
+      "total_work_experience_years": 22
+    },
+    "economic_data": {
+      "annual_income": 124472.12,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 672.96,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 4,
+      "previous_loans_amount": 49160.82,
+      "previous_repayments_amount": 37803.76,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "065a051d23e14b0d85625bcb"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES80288821f",
+      "first_name": "Angelita",
+      "last_name": "Rubio Segarra",
+      "gender": "OTRO",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1971-07-21T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "VIUDO",
+      "nr_dependants": 1
+    },
+    "contact_info": {
+      "phone_number": "+34699133895",
+      "email": "albinagascon@example.org",
+      "address": "Pasadizo de Severiano Catalán 22, Murcia, 19309"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "EDUCACION",
+      "occupation": "OPERARIO",
+      "employer_seniority_years": 18,
+      "total_work_experience_years": 36
+    },
+    "economic_data": {
+      "annual_income": 85780.66,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 727.64,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 0,
+      "previous_loans_amount": 19934.96,
+      "previous_repayments_amount": 27073.0,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "431f0d87cb1b4efbb3a97f3a"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESL45887811",
+      "first_name": "Jose Manuel",
+      "last_name": "Trillo Vallejo",
+      "gender": "OTRO",
+      "education": "FORMACION PROFESIONAL",
+      "birth_date": {
+        "$date": "1986-07-18T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "CEDIDA",
+      "marital_status": "DIVORCIADO",
+      "nr_dependants": 1
+    },
+    "contact_info": {
+      "phone_number": "+34779822582",
+      "email": "pascualsans@example.net",
+      "address": "Pasaje Ascensión Peñas 70, Toledo, 49439"
+    },
+    "employment": {
+      "status": "DESEMPLEADO",
+      "sector": "VENTAS",
+      "occupation": "TECNICO",
+      "employer_seniority_years": 3,
+      "total_work_experience_years": 19
+    },
+    "economic_data": {
+      "annual_income": 28798.81,
+      "income_type": "AYUDAS",
+      "currency": "EUR",
+      "existing_obligations": 9608.33,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 5,
+      "previous_loans_amount": 10534.52,
+      "previous_repayments_amount": 30900.43,
+      "previous_defaults_count": 3,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "e3d0c10e1e5e40ecb0ce231d"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES38445264b",
+      "first_name": "Gala",
+      "last_name": "Francisco Correa",
+      "gender": "OTRO",
+      "education": "SECUNDARIA",
+      "birth_date": {
+        "$date": "2002-05-30T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "ALQUILER",
+      "marital_status": "DIVORCIADO",
+      "nr_dependants": 1
+    },
+    "contact_info": {
+      "phone_number": "+34745723320",
+      "email": "xiriarte@example.com",
+      "address": "Camino Cornelio Romero 51 Piso 2 , Zamora, 18055"
+    },
+    "employment": {
+      "status": "TEMPORAL",
+      "sector": "SALUD",
+      "occupation": "TECNICO",
+      "employer_seniority_years": 2,
+      "total_work_experience_years": 2
+    },
+    "economic_data": {
+      "annual_income": 16964.2,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 6363.38,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 5,
+      "previous_loans_amount": 8330.72,
+      "previous_repayments_amount": 17219.87,
+      "previous_defaults_count": 4,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "cb9c457d995543dc9260e419"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES47967186m",
+      "first_name": "Patricia",
+      "last_name": "Cepeda Feijoo",
+      "gender": "MUJER",
+      "education": "POSGRADO",
+      "birth_date": {
+        "$date": "1970-12-23T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "VIUDO",
+      "nr_dependants": 3
+    },
+    "contact_info": {
+      "phone_number": "+34789590764",
+      "email": "rosalina54@example.com",
+      "address": "Alameda de Eugenio Toro 25 Puerta 2 , Asturias, 30651"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "SECTOR PUBLICO",
+      "occupation": "DIRECTIVO",
+      "employer_seniority_years": 12,
+      "total_work_experience_years": 37
+    },
+    "economic_data": {
+      "annual_income": 274411.8,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 504.97,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 1,
+      "previous_loans_amount": 18833.12,
+      "previous_repayments_amount": 2197.64,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "7adaf080970d402c804af3fc"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESF5639660k",
+      "first_name": "Ismael",
+      "last_name": "Blanch Navas",
+      "gender": "HOMBRE",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1972-05-07T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "DIVORCIADO",
+      "nr_dependants": 2
+    },
+    "contact_info": {
+      "phone_number": "+34678113780",
+      "email": "hipolitotellez@example.com",
+      "address": "Cuesta Luna Chacón 707 Puerta 1 , Navarra, 46312"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "HOSTELERIA",
+      "occupation": "OPERARIO",
+      "employer_seniority_years": 17,
+      "total_work_experience_years": 32
+    },
+    "economic_data": {
+      "annual_income": 198442.9,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 485.32,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 4,
+      "previous_loans_amount": 38874.53,
+      "previous_repayments_amount": 1162.03,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "c3a1890e8bc34d41a9818a52"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESL9941708d",
+      "first_name": "María Belén",
+      "last_name": "Lobo Palomares",
+      "gender": "OTRO",
+      "education": "SECUNDARIA",
+      "birth_date": {
+        "$date": "2005-06-03T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "CEDIDA",
+      "marital_status": "CASADO",
+      "nr_dependants": 0
+    },
+    "contact_info": {
+      "phone_number": "+34706065303",
+      "email": "aranaamaya@example.net",
+      "address": "Pasadizo de Tecla Boix 33, Huelva, 49449"
+    },
+    "employment": {
+      "status": "TEMPORAL",
+      "sector": "AGROPECUARIO",
+      "occupation": "TECNICO",
+      "employer_seniority_years": 2,
+      "total_work_experience_years": 0
+    },
+    "economic_data": {
+      "annual_income": 20408.75,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 6368.04,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 2,
+      "previous_loans_amount": 43209.35,
+      "previous_repayments_amount": 1927.42,
+      "previous_defaults_count": 2,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "b7b7bc7d02234d4b90e52145"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESr6300144e",
+      "first_name": "Olegario",
+      "last_name": "Marí Girona",
+      "gender": "HOMBRE",
+      "education": "FORMACION PROFESIONAL",
+      "birth_date": {
+        "$date": "1987-03-22T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "VIUDO",
+      "nr_dependants": 2
+    },
+    "contact_info": {
+      "phone_number": "+34691873197",
+      "email": "pastora59@example.net",
+      "address": "Vial Edgardo Diego 70, Valladolid, 08832"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "VENTAS",
+      "occupation": "MANDOS_MEDIOS",
+      "employer_seniority_years": 0,
+      "total_work_experience_years": 20
+    },
+    "economic_data": {
+      "annual_income": 69891.19,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 3858.08,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 4,
+      "previous_loans_amount": 44154.52,
+      "previous_repayments_amount": 44597.15,
+      "previous_defaults_count": 3,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5f9e2cb52e4e4ff185872f1e"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESd96312079",
+      "first_name": "Elisa",
+      "last_name": "Saldaña Murillo",
+      "gender": "MUJER",
+      "education": "POSGRADO",
+      "birth_date": {
+        "$date": "1961-05-27T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "DIVORCIADO",
+      "nr_dependants": 3
+    },
+    "contact_info": {
+      "phone_number": "+34679895970",
+      "email": "dorotea49@example.org",
+      "address": "C. de Rubén Baños 990, Ciudad, 05083"
+    },
+    "employment": {
+      "status": "TEMPORAL",
+      "sector": "OTROS",
+      "occupation": "TECNICO",
+      "employer_seniority_years": 18,
+      "total_work_experience_years": 47
+    },
+    "economic_data": {
+      "annual_income": 272495.01,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 656.08,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 3,
+      "previous_loans_amount": 19908.59,
+      "previous_repayments_amount": 35969.65,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "14b8d6ddc39748e3a98c0ba2"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES63484950n",
+      "first_name": "Américo",
+      "last_name": "Alegre Barrena",
+      "gender": "HOMBRE",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1990-03-20T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "DIVORCIADO",
+      "nr_dependants": 1
+    },
+    "contact_info": {
+      "phone_number": "+34721689456",
+      "email": "moises72@example.org",
+      "address": "Camino de Manolo Hervia 2 Piso 0 , Lleida, 04639"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "OTROS",
+      "occupation": "MANDOS_MEDIOS",
+      "employer_seniority_years": 15,
+      "total_work_experience_years": 16
+    },
+    "economic_data": {
+      "annual_income": 116867.95,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 759.97,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 4,
+      "previous_loans_amount": 15882.44,
+      "previous_repayments_amount": 22273.67,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "333273dd1ccf482daf206984"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESD14265576",
+      "first_name": "Pelayo",
+      "last_name": "Iriarte Sandoval",
+      "gender": "HOMBRE",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1977-08-16T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "DIVORCIADO",
+      "nr_dependants": 1
+    },
+    "contact_info": {
+      "phone_number": "+34760538437",
+      "email": "aluna@example.org",
+      "address": "Glorieta Rogelio Alberola 93 Puerta 4 , Cádiz, 28069"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "SALUD",
+      "occupation": "ADMINISTRATIVO",
+      "employer_seniority_years": 19,
+      "total_work_experience_years": 26
+    },
+    "economic_data": {
+      "annual_income": 73119.77,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 881.94,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 1,
+      "previous_loans_amount": 49588.14,
+      "previous_repayments_amount": 8702.45,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6247bf97a3604318be21c14b"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESL5349449q",
+      "first_name": "Darío",
+      "last_name": "Cano Cañete",
+      "gender": "HOMBRE",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1981-02-11T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "VIUDO",
+      "nr_dependants": 0
+    },
+    "contact_info": {
+      "phone_number": "+34618438768",
+      "email": "albasanmiguel@example.net",
+      "address": "Avenida Salomón Ibañez 84, Cuenca, 14297"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "VENTAS",
+      "occupation": "TECNICO",
+      "employer_seniority_years": 11,
+      "total_work_experience_years": 24
+    },
+    "economic_data": {
+      "annual_income": 92362.59,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 918.85,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 1,
+      "previous_loans_amount": 18778.04,
+      "previous_repayments_amount": 46592.85,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "dc198c4c2c7a4c438a1da423"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESm13080479",
+      "first_name": "Virgilio",
+      "last_name": "Sala Carranza",
+      "gender": "HOMBRE",
+      "education": "POSGRADO",
+      "birth_date": {
+        "$date": "1965-06-13T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "CASADO",
+      "nr_dependants": 2
+    },
+    "contact_info": {
+      "phone_number": "+34746143264",
+      "email": "abrilnereida@example.org",
+      "address": "Plaza Juan Carlos Palacios 58 Piso 1 , Girona, 42362"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "HOSTELERIA",
+      "occupation": "OPERARIO",
+      "employer_seniority_years": 6,
+      "total_work_experience_years": 41
+    },
+    "economic_data": {
+      "annual_income": 179180.18,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 642.44,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 0,
+      "previous_loans_amount": 1728.41,
+      "previous_repayments_amount": 13389.47,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "c81ff824837d49ceaec1ffa4"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESe5628102p",
+      "first_name": "Filomena",
+      "last_name": "Pedrero Torre",
+      "gender": "OTRO",
+      "education": "POSGRADO",
+      "birth_date": {
+        "$date": "1972-12-19T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "CASADO",
+      "nr_dependants": 1
+    },
+    "contact_info": {
+      "phone_number": "+34780550427",
+      "email": "isabela70@example.com",
+      "address": "Pasaje Ciríaco Recio 91 Piso 5 , Valencia, 39182"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "TECNOLOGIA",
+      "occupation": "TECNICO",
+      "employer_seniority_years": 8,
+      "total_work_experience_years": 34
+    },
+    "economic_data": {
+      "annual_income": 242820.41,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 996.47,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 2,
+      "previous_loans_amount": 42838.97,
+      "previous_repayments_amount": 11733.85,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "beb22ad09c1c45d9bf576be9"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES24039263p",
+      "first_name": "Concepción",
+      "last_name": "Aznar Paz",
+      "gender": "MUJER",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1964-05-30T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "DIVORCIADO",
+      "nr_dependants": 0
+    },
+    "contact_info": {
+      "phone_number": "+34618236176",
+      "email": "isaiasfalcon@example.net",
+      "address": "Cañada Osvaldo Palacio 3, Toledo, 13783"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "OTROS",
+      "occupation": "TECNICO",
+      "employer_seniority_years": 9,
+      "total_work_experience_years": 44
+    },
+    "economic_data": {
+      "annual_income": 242523.3,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 181.56,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 5,
+      "previous_loans_amount": 1700.59,
+      "previous_repayments_amount": 37798.94,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "4fb23839ce7742b6be67ff55"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES55359732S",
+      "first_name": "Yolanda",
+      "last_name": "Adadia Arellano",
+      "gender": "MUJER",
+      "education": "POSGRADO",
+      "birth_date": {
+        "$date": "1969-08-13T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "DIVORCIADO",
+      "nr_dependants": 3
+    },
+    "contact_info": {
+      "phone_number": "+34652746898",
+      "email": "goyoagustin@example.com",
+      "address": "C. Octavia Colom 52, Badajoz, 21038"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "VENTAS",
+      "occupation": "OPERARIO",
+      "employer_seniority_years": 20,
+      "total_work_experience_years": 35
+    },
+    "economic_data": {
+      "annual_income": 272596.21,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 639.61,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 4,
+      "previous_loans_amount": 49885.81,
+      "previous_repayments_amount": 3900.8,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "40f99862ca194ab882fbb80c"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESf4673381F",
+      "first_name": "Zaira",
+      "last_name": "Vega Poza",
+      "gender": "OTRO",
+      "education": "FORMACION PROFESIONAL",
+      "birth_date": {
+        "$date": "1999-06-12T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "ALQUILER",
+      "marital_status": "SOLTERO",
+      "nr_dependants": 0
+    },
+    "contact_info": {
+      "phone_number": "+34644541072",
+      "email": "ignaciavilalta@example.net",
+      "address": "Glorieta Petrona Calatayud 8, Granada, 22624"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "SECTOR PUBLICO",
+      "occupation": "OPERARIO",
+      "employer_seniority_years": 5,
+      "total_work_experience_years": 9
+    },
+    "economic_data": {
+      "annual_income": 54612.82,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 9026.62,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 2,
+      "previous_loans_amount": 18529.27,
+      "previous_repayments_amount": 14771.46,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "b946b8a01b064962bf586798"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESm9278987H",
+      "first_name": "Juanita",
+      "last_name": "Giménez Ordóñez",
+      "gender": "MUJER",
+      "education": "POSGRADO",
+      "birth_date": {
+        "$date": "1984-10-11T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "SOLTERO",
+      "nr_dependants": 0
+    },
+    "contact_info": {
+      "phone_number": "+34794627762",
+      "email": "eusebia92@example.org",
+      "address": "Callejón Benita Acosta 8, Pontevedra, 36036"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "SALUD",
+      "occupation": "OPERARIO",
+      "employer_seniority_years": 17,
+      "total_work_experience_years": 23
+    },
+    "economic_data": {
+      "annual_income": 134959.04,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 792.57,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 4,
+      "previous_loans_amount": 19088.54,
+      "previous_repayments_amount": 44015.83,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "089c3624a4ef4674aad84cf0"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES93319732J",
+      "first_name": "Eliseo",
+      "last_name": "Valle Boada",
+      "gender": "OTRO",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1981-09-06T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "CASADO",
+      "nr_dependants": 2
+    },
+    "contact_info": {
+      "phone_number": "+34685885255",
+      "email": "rosendo69@example.org",
+      "address": "Urbanización de Leandro Gálvez 72 Puerta 5 , Valladolid, 50425"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "HOSTELERIA",
+      "occupation": "DIRECTIVO",
+      "employer_seniority_years": 18,
+      "total_work_experience_years": 24
+    },
+    "economic_data": {
+      "annual_income": 260957.87,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 804.26,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 3,
+      "previous_loans_amount": 45589.96,
+      "previous_repayments_amount": 26050.17,
+      "previous_defaults_count": 1,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "9e18608be5fd4049a8f439e1"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESb69743031",
+      "first_name": "Mónica",
+      "last_name": "Castell Goicoechea",
+      "gender": "MUJER",
+      "education": "POSGRADO",
+      "birth_date": {
+        "$date": "1971-07-01T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "SOLTERO",
+      "nr_dependants": 1
+    },
+    "contact_info": {
+      "phone_number": "+34721046148",
+      "email": "lucilaescudero@example.com",
+      "address": "Urbanización de Gustavo Montes 4, Málaga, 12938"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "SECTOR PUBLICO",
+      "occupation": "ADMINISTRATIVO",
+      "employer_seniority_years": 8,
+      "total_work_experience_years": 35
+    },
+    "economic_data": {
+      "annual_income": 152642.21,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 841.84,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 0,
+      "previous_loans_amount": 45320.87,
+      "previous_repayments_amount": 42977.78,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "649f8d8e1ecc4d18a2e84c1c"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESo29620859",
+      "first_name": "Lupita",
+      "last_name": "Bárcena Galán",
+      "gender": "OTRO",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1985-09-10T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "DIVORCIADO",
+      "nr_dependants": 3
+    },
+    "contact_info": {
+      "phone_number": "+34641692367",
+      "email": "amormario@example.org",
+      "address": "Cuesta Luis Criado 57 Puerta 5 , Zaragoza, 30694"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "AGROPECUARIO",
+      "occupation": "OPERARIO",
+      "employer_seniority_years": 20,
+      "total_work_experience_years": 21
+    },
+    "economic_data": {
+      "annual_income": 285200.61,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 364.47,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 5,
+      "previous_loans_amount": 24453.84,
+      "previous_repayments_amount": 12315.32,
+      "previous_defaults_count": 2,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "bdc8cb0903364829a63aa29b"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESa61813083",
+      "first_name": "Dani",
+      "last_name": "Valle Alcázar",
+      "gender": "OTRO",
+      "education": "BACHILLERATO",
+      "birth_date": {
+        "$date": "2000-11-07T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "ALQUILER",
+      "marital_status": "DIVORCIADO",
+      "nr_dependants": 2
+    },
+    "contact_info": {
+      "phone_number": "+34693146836",
+      "email": "angelina33@example.com",
+      "address": "Pasadizo de Socorro Toro 444 Apt. 20 , Salamanca, 04032"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "AGROPECUARIO",
+      "occupation": "DIRECTIVO",
+      "employer_seniority_years": 5,
+      "total_work_experience_years": 7
+    },
+    "economic_data": {
+      "annual_income": 74404.05,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 14523.0,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 3,
+      "previous_loans_amount": 2349.65,
+      "previous_repayments_amount": 22179.19,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "afda6d0a7e164825ac55c234"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESb7513162L",
+      "first_name": "Brunilda",
+      "last_name": "Otero Guardiola",
+      "gender": "MUJER",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1965-10-02T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "SOLTERO",
+      "nr_dependants": 2
+    },
+    "contact_info": {
+      "phone_number": "+34603897647",
+      "email": "ismael61@example.com",
+      "address": "Via de Chuy Delgado 816 Piso 6 , Cuenca, 19486"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "CONSTRUCCION",
+      "occupation": "DIRECTIVO",
+      "employer_seniority_years": 11,
+      "total_work_experience_years": 41
+    },
+    "economic_data": {
+      "annual_income": 127470.0,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 866.78,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 3,
+      "previous_loans_amount": 16748.81,
+      "previous_repayments_amount": 1172.88,
+      "previous_defaults_count": 2,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "2bdb59b3d9654e3db2a1b8d3"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESC54027836",
+      "first_name": "José María",
+      "last_name": "Agustí Fernández",
+      "gender": "HOMBRE",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1973-06-08T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "CASADO",
+      "nr_dependants": 2
+    },
+    "contact_info": {
+      "phone_number": "+34779123125",
+      "email": "cobosonofre@example.net",
+      "address": "Pasaje Ceferino Francisco 50, Guipúzcoa, 50457"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "SECTOR PUBLICO",
+      "occupation": "OPERARIO",
+      "employer_seniority_years": 16,
+      "total_work_experience_years": 31
+    },
+    "economic_data": {
+      "annual_income": 276178.64,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 901.64,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 1,
+      "previous_loans_amount": 27602.4,
+      "previous_repayments_amount": 22825.11,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "3f55401d32d946de9895d6a1"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESR7425491w",
+      "first_name": "Eva",
+      "last_name": "Narváez Vicente",
+      "gender": "OTRO",
+      "education": "POSGRADO",
+      "birth_date": {
+        "$date": "1983-06-20T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "SOLTERO",
+      "nr_dependants": 1
+    },
+    "contact_info": {
+      "phone_number": "+34769024390",
+      "email": "moreno22@example.net",
+      "address": "Calle Luis Miguel Nogués 96, Cádiz, 22515"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "HOSTELERIA",
+      "occupation": "MANDOS_MEDIOS",
+      "employer_seniority_years": 11,
+      "total_work_experience_years": 23
+    },
+    "economic_data": {
+      "annual_income": 68997.58,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 820.07,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 1,
+      "previous_loans_amount": 23720.94,
+      "previous_repayments_amount": 5629.78,
+      "previous_defaults_count": 3,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0242b8a0a73d441c82d83f7d"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESs2138689T",
+      "first_name": "Jordi",
+      "last_name": "Álvaro Bastida",
+      "gender": "HOMBRE",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1980-02-22T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "DIVORCIADO",
+      "nr_dependants": 0
+    },
+    "contact_info": {
+      "phone_number": "+34667785933",
+      "email": "aitorespada@example.net",
+      "address": "Callejón de Silvio Cadenas 8, Lugo, 38739"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "OTROS",
+      "occupation": "ADMINISTRATIVO",
+      "employer_seniority_years": 18,
+      "total_work_experience_years": 26
+    },
+    "economic_data": {
+      "annual_income": 164119.24,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 44.5,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 5,
+      "previous_loans_amount": 22895.18,
+      "previous_repayments_amount": 16184.94,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "550b9a3746e848918c741d74"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES57442879v",
+      "first_name": "Ricardo",
+      "last_name": "Armengol López",
+      "gender": "HOMBRE",
+      "education": "FORMACION PROFESIONAL",
+      "birth_date": {
+        "$date": "1987-06-13T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "DIVORCIADO",
+      "nr_dependants": 1
+    },
+    "contact_info": {
+      "phone_number": "+34704369857",
+      "email": "adelaalcantara@example.net",
+      "address": "Cuesta de Julieta Plana 57, Ourense, 03279"
+    },
+    "employment": {
+      "status": "AUTONOMO",
+      "sector": "AGROPECUARIO",
+      "occupation": "DIRECTIVO",
+      "employer_seniority_years": 4,
+      "total_work_experience_years": 19
+    },
+    "economic_data": {
+      "annual_income": 111997.84,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 43123.63,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 0,
+      "previous_loans_amount": 28192.94,
+      "previous_repayments_amount": 40086.47,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "f44753e2b2ad4b889b33488d"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESH0076310S",
+      "first_name": "Abril",
+      "last_name": "Vallés Campillo",
+      "gender": "MUJER",
+      "education": "BACHILLERATO",
+      "birth_date": {
+        "$date": "1990-05-21T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "ALQUILER",
+      "marital_status": "DIVORCIADO",
+      "nr_dependants": 3
+    },
+    "contact_info": {
+      "phone_number": "+34788948674",
+      "email": "espanoljulio@example.org",
+      "address": "Paseo Dominga Ramis 20 Apt. 64 , Ourense, 32746"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "VENTAS",
+      "occupation": "ADMINISTRATIVO",
+      "employer_seniority_years": 5,
+      "total_work_experience_years": 17
+    },
+    "economic_data": {
+      "annual_income": 70211.59,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 14722.49,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 5,
+      "previous_loans_amount": 10152.3,
+      "previous_repayments_amount": 22877.86,
+      "previous_defaults_count": 2,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "95f415175a434734918d8c7a"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESv7161576B",
+      "first_name": "Lucho",
+      "last_name": "Lerma Seco",
+      "gender": "HOMBRE",
+      "education": "SECUNDARIA",
+      "birth_date": {
+        "$date": "2000-08-12T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "ALQUILER",
+      "marital_status": "CASADO",
+      "nr_dependants": 2
+    },
+    "contact_info": {
+      "phone_number": "+34608329931",
+      "email": "juliepi@example.org",
+      "address": "Vial de Rosa María Estevez 46, Cáceres, 39934"
+    },
+    "employment": {
+      "status": "AUTONOMO",
+      "sector": "HOSTELERIA",
+      "occupation": "MANDOS_MEDIOS",
+      "employer_seniority_years": 0,
+      "total_work_experience_years": 6
+    },
+    "economic_data": {
+      "annual_income": 125262.13,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 47556.11,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 4,
+      "previous_loans_amount": 8332.19,
+      "previous_repayments_amount": 21485.4,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "7ebc19b060624d829fe6e0e0"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES05059294h",
+      "first_name": "Eufemia",
+      "last_name": "Moles Alfaro",
+      "gender": "MUJER",
+      "education": "POSGRADO",
+      "birth_date": {
+        "$date": "1983-05-17T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "SOLTERO",
+      "nr_dependants": 2
+    },
+    "contact_info": {
+      "phone_number": "+34722630300",
+      "email": "lidia45@example.org",
+      "address": "Plaza de Loreto Barrio 98 Piso 6 , Guadalajara, 47470"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "SALUD",
+      "occupation": "MANDOS_MEDIOS",
+      "employer_seniority_years": 6,
+      "total_work_experience_years": 23
+    },
+    "economic_data": {
+      "annual_income": 183002.07,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 901.46,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 5,
+      "previous_loans_amount": 24930.44,
+      "previous_repayments_amount": 22046.36,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "52e486c1c0ee464bb1d1d145"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES66224537H",
+      "first_name": "Javier",
+      "last_name": "Querol Villar",
+      "gender": "OTRO",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1971-04-23T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "DIVORCIADO",
+      "nr_dependants": 0
+    },
+    "contact_info": {
+      "phone_number": "+34660041009",
+      "email": "nydiallanos@example.org",
+      "address": "Urbanización de Rafaela Palomino 628, Málaga, 25468"
+    },
+    "employment": {
+      "status": "AUTONOMO",
+      "sector": "TECNOLOGIA",
+      "occupation": "DIRECTIVO",
+      "employer_seniority_years": 20,
+      "total_work_experience_years": 33
+    },
+    "economic_data": {
+      "annual_income": 112170.94,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 89.72,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 2,
+      "previous_loans_amount": 31740.87,
+      "previous_repayments_amount": 14712.65,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "a86f6ed0ee414871bac4af14"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESv58730417",
+      "first_name": "Sergio",
+      "last_name": "Polo Palau",
+      "gender": "HOMBRE",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1988-06-07T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "SOLTERO",
+      "nr_dependants": 2
+    },
+    "contact_info": {
+      "phone_number": "+34747844775",
+      "email": "morantenoa@example.com",
+      "address": "Rambla de Paulina Melero 67, Valladolid, 41586"
+    },
+    "employment": {
+      "status": "TEMPORAL",
+      "sector": "SECTOR PUBLICO",
+      "occupation": "TECNICO",
+      "employer_seniority_years": 6,
+      "total_work_experience_years": 16
+    },
+    "economic_data": {
+      "annual_income": 141755.84,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 620.44,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 4,
+      "previous_loans_amount": 24521.43,
+      "previous_repayments_amount": 26192.32,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "d1338005f06d4939a84fe3dc"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESf0455241H",
+      "first_name": "Candelario",
+      "last_name": "Bermúdez Tovar",
+      "gender": "OTRO",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1990-12-12T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "SOLTERO",
+      "nr_dependants": 3
+    },
+    "contact_info": {
+      "phone_number": "+34688774486",
+      "email": "maria-cristinamedina@example.com",
+      "address": "Alameda Dan Villalonga 19 Puerta 7 , Ourense, 28076"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "SECTOR PUBLICO",
+      "occupation": "OPERARIO",
+      "employer_seniority_years": 19,
+      "total_work_experience_years": 17
+    },
+    "economic_data": {
+      "annual_income": 105676.7,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 675.16,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 5,
+      "previous_loans_amount": 9148.87,
+      "previous_repayments_amount": 41305.52,
+      "previous_defaults_count": 1,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "efa24c3b752e41f0848461a2"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESi63518270",
+      "first_name": "Eutimio",
+      "last_name": "Figueroa Camps",
+      "gender": "OTRO",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1969-03-18T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "CASADO",
+      "nr_dependants": 2
+    },
+    "contact_info": {
+      "phone_number": "+34629634702",
+      "email": "trilloirene@example.net",
+      "address": "Paseo Maribel Montero 43 Apt. 87 , Lleida, 17073"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "HOSTELERIA",
+      "occupation": "OPERARIO",
+      "employer_seniority_years": 17,
+      "total_work_experience_years": 39
+    },
+    "economic_data": {
+      "annual_income": 155660.34,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 755.18,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 4,
+      "previous_loans_amount": 41530.65,
+      "previous_repayments_amount": 45428.56,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "16e44a5adb8f4ea6bc22530d"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESv95560601",
+      "first_name": "Nilda",
+      "last_name": "Quesada Mate",
+      "gender": "MUJER",
+      "education": "POSGRADO",
+      "birth_date": {
+        "$date": "1975-07-26T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "SOLTERO",
+      "nr_dependants": 0
+    },
+    "contact_info": {
+      "phone_number": "+34656610426",
+      "email": "rufina14@example.org",
+      "address": "Acceso Reyes Valbuena 91 Piso 9 , Las Palmas, 17080"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "CONSTRUCCION",
+      "occupation": "OPERARIO",
+      "employer_seniority_years": 7,
+      "total_work_experience_years": 33
+    },
+    "economic_data": {
+      "annual_income": 94204.87,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 373.94,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 4,
+      "previous_loans_amount": 13376.95,
+      "previous_repayments_amount": 31241.82,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "35dd74a0af0c463ba0b58e9b"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESj67659535",
+      "first_name": "Aníbal",
+      "last_name": "Tirado Berrocal",
+      "gender": "HOMBRE",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1990-06-28T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "DIVORCIADO",
+      "nr_dependants": 1
+    },
+    "contact_info": {
+      "phone_number": "+34612240122",
+      "email": "horacio39@example.org",
+      "address": "Urbanización Amancio Nogués 24, Segovia, 31831"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "VENTAS",
+      "occupation": "ADMINISTRATIVO",
+      "employer_seniority_years": 11,
+      "total_work_experience_years": 17
+    },
+    "economic_data": {
+      "annual_income": 234794.11,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 962.78,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 3,
+      "previous_loans_amount": 279.36,
+      "previous_repayments_amount": 36332.62,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "600365b32e6f4cc299e5bcb6"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESD50859452",
+      "first_name": "Dolores",
+      "last_name": "Bauzà Torralba",
+      "gender": "MUJER",
+      "education": "POSGRADO",
+      "birth_date": {
+        "$date": "1976-12-04T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "CASADO",
+      "nr_dependants": 0
+    },
+    "contact_info": {
+      "phone_number": "+34742820098",
+      "email": "florentinomata@example.net",
+      "address": "Paseo Victoriano Amat 5 Apt. 03 , Córdoba, 11300"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "HOSTELERIA",
+      "occupation": "TECNICO",
+      "employer_seniority_years": 5,
+      "total_work_experience_years": 27
+    },
+    "economic_data": {
+      "annual_income": 144546.68,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 450.86,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 5,
+      "previous_loans_amount": 13030.56,
+      "previous_repayments_amount": 40577.9,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "f168ebe454e34c32a94a5df8"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES62716954C",
+      "first_name": "Cintia",
+      "last_name": "Rios Ramón",
+      "gender": "OTRO",
+      "education": "SECUNDARIA",
+      "birth_date": {
+        "$date": "1986-08-14T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "ALQUILER",
+      "marital_status": "SOLTERO",
+      "nr_dependants": 1
+    },
+    "contact_info": {
+      "phone_number": "+34760912953",
+      "email": "marta12@example.net",
+      "address": "Rambla Adelina Rios 28, Toledo, 42640"
+    },
+    "employment": {
+      "status": "TEMPORAL",
+      "sector": "SECTOR PUBLICO",
+      "occupation": "TECNICO",
+      "employer_seniority_years": 1,
+      "total_work_experience_years": 19
+    },
+    "economic_data": {
+      "annual_income": 26787.98,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 1800.66,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 2,
+      "previous_loans_amount": 11401.98,
+      "previous_repayments_amount": 1875.0,
+      "previous_defaults_count": 1,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "d6d1913170a7465f819832d7"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESB5276081k",
+      "first_name": "Anselma",
+      "last_name": "Giménez Benitez",
+      "gender": "OTRO",
+      "education": "POSGRADO",
+      "birth_date": {
+        "$date": "1982-09-03T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "SOLTERO",
+      "nr_dependants": 3
+    },
+    "contact_info": {
+      "phone_number": "+34600744767",
+      "email": "marioparra@example.org",
+      "address": "Acceso Vidal Farré 533 Puerta 0 , Zaragoza, 39382"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "EDUCACION",
+      "occupation": "MANDOS_MEDIOS",
+      "employer_seniority_years": 7,
+      "total_work_experience_years": 25
+    },
+    "economic_data": {
+      "annual_income": 82393.67,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 66.94,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 5,
+      "previous_loans_amount": 43589.56,
+      "previous_repayments_amount": 12768.37,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "b64c8d5962dc441dbd6be741"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES12733023F",
+      "first_name": "Visitación",
+      "last_name": "Ortiz Coll",
+      "gender": "OTRO",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1986-10-25T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "CASADO",
+      "nr_dependants": 2
+    },
+    "contact_info": {
+      "phone_number": "+34704882995",
+      "email": "evangelina12@example.org",
+      "address": "Avenida de Albina Portero 3 Puerta 8 , Guadalajara, 21738"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "HOSTELERIA",
+      "occupation": "MANDOS_MEDIOS",
+      "employer_seniority_years": 18,
+      "total_work_experience_years": 20
+    },
+    "economic_data": {
+      "annual_income": 107914.46,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 809.82,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 0,
+      "previous_loans_amount": 22898.08,
+      "previous_repayments_amount": 12132.74,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "ea06853281f148a49526da30"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES83445913w",
+      "first_name": "Benita",
+      "last_name": "Vendrell Velázquez",
+      "gender": "OTRO",
+      "education": "SECUNDARIA",
+      "birth_date": {
+        "$date": "1986-01-06T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "CEDIDA",
+      "marital_status": "CASADO",
+      "nr_dependants": 2
+    },
+    "contact_info": {
+      "phone_number": "+34655872375",
+      "email": "jafet88@example.org",
+      "address": "Avenida de Fernanda Caro 897 Puerta 8 , Zamora, 31366"
+    },
+    "employment": {
+      "status": "INACTIVO",
+      "sector": "SECTOR PUBLICO",
+      "occupation": "OPERARIO",
+      "employer_seniority_years": 3,
+      "total_work_experience_years": 21
+    },
+    "economic_data": {
+      "annual_income": 87626.69,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 28778.83,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 5,
+      "previous_loans_amount": 15922.74,
+      "previous_repayments_amount": 9497.35,
+      "previous_defaults_count": 4,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "4dfb90c60ca44ffdb4be1c32"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESp09248670",
+      "first_name": "Eligio",
+      "last_name": "Almazán Alberola",
+      "gender": "HOMBRE",
+      "education": "BACHILLERATO",
+      "birth_date": {
+        "$date": "1988-09-27T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "CASADO",
+      "nr_dependants": 1
+    },
+    "contact_info": {
+      "phone_number": "+34679539842",
+      "email": "corralruth@example.org",
+      "address": "Pasaje de Eli Ledesma 96, Guadalajara, 26460"
+    },
+    "employment": {
+      "status": "DESEMPLEADO",
+      "sector": "CONSTRUCCION",
+      "occupation": "MANDOS_MEDIOS",
+      "employer_seniority_years": 2,
+      "total_work_experience_years": 16
+    },
+    "economic_data": {
+      "annual_income": 79632.09,
+      "income_type": "AYUDAS",
+      "currency": "EUR",
+      "existing_obligations": 24646.53,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 0,
+      "previous_loans_amount": 36155.86,
+      "previous_repayments_amount": 41902.25,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "bfb8ea6ef4a7477fb8f6a26a"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESv42628423",
+      "first_name": "Sarita",
+      "last_name": "Hierro Lorenzo",
+      "gender": "MUJER",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1965-09-16T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "DIVORCIADO",
+      "nr_dependants": 3
+    },
+    "contact_info": {
+      "phone_number": "+34686176790",
+      "email": "cllano@example.com",
+      "address": "Camino de Fabián Echevarría 778, Badajoz, 20045"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "AGROPECUARIO",
+      "occupation": "DIRECTIVO",
+      "employer_seniority_years": 10,
+      "total_work_experience_years": 42
+    },
+    "economic_data": {
+      "annual_income": 136397.69,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 433.0,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 3,
+      "previous_loans_amount": 47048.29,
+      "previous_repayments_amount": 41024.97,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "ba33e62c39914a4c9cd81811"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES97173863Y",
+      "first_name": "Chema",
+      "last_name": "Noriega Soler",
+      "gender": "HOMBRE",
+      "education": "FORMACION PROFESIONAL",
+      "birth_date": {
+        "$date": "1997-10-07T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "CEDIDA",
+      "marital_status": "CASADO",
+      "nr_dependants": 1
+    },
+    "contact_info": {
+      "phone_number": "+34619118831",
+      "email": "regina99@example.net",
+      "address": "Via Yago Alarcón 63, Pontevedra, 21758"
+    },
+    "employment": {
+      "status": "DESEMPLEADO",
+      "sector": "HOSTELERIA",
+      "occupation": "DIRECTIVO",
+      "employer_seniority_years": 2,
+      "total_work_experience_years": 7
+    },
+    "economic_data": {
+      "annual_income": 78384.7,
+      "income_type": "AYUDAS",
+      "currency": "EUR",
+      "existing_obligations": 18149.86,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 0,
+      "previous_loans_amount": 47469.1,
+      "previous_repayments_amount": 12425.06,
+      "previous_defaults_count": 3,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "408bcc9e95114babbd4718bf"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESf0806541n",
+      "first_name": "Azeneth",
+      "last_name": "Piquer Cuéllar",
+      "gender": "MUJER",
+      "education": "BACHILLERATO",
+      "birth_date": {
+        "$date": "1990-05-20T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "CEDIDA",
+      "marital_status": "CASADO",
+      "nr_dependants": 1
+    },
+    "contact_info": {
+      "phone_number": "+34763178303",
+      "email": "ymontesinos@example.com",
+      "address": "Callejón de Vinicio Novoa 37 Puerta 7 , La Rioja, 19072"
+    },
+    "employment": {
+      "status": "DESEMPLEADO",
+      "sector": "TECNOLOGIA",
+      "occupation": "MANDOS_MEDIOS",
+      "employer_seniority_years": 5,
+      "total_work_experience_years": 15
+    },
+    "economic_data": {
+      "annual_income": 25243.2,
+      "income_type": "AYUDAS",
+      "currency": "EUR",
+      "existing_obligations": 6219.13,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 5,
+      "previous_loans_amount": 47265.17,
+      "previous_repayments_amount": 26909.17,
+      "previous_defaults_count": 4,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "8d2e264c0cd242ca9a3439b4"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESU82072531",
+      "first_name": "Aroa",
+      "last_name": "Barranco Llopis",
+      "gender": "MUJER",
+      "education": "POSGRADO",
+      "birth_date": {
+        "$date": "1978-02-18T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "DIVORCIADO",
+      "nr_dependants": 0
+    },
+    "contact_info": {
+      "phone_number": "+34737053950",
+      "email": "salome96@example.com",
+      "address": "Vial de Alondra Moliner 959, Ciudad, 08786"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "TECNOLOGIA",
+      "occupation": "MANDOS_MEDIOS",
+      "employer_seniority_years": 14,
+      "total_work_experience_years": 29
+    },
+    "economic_data": {
+      "annual_income": 16961.42,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 736.54,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 4,
+      "previous_loans_amount": 18483.12,
+      "previous_repayments_amount": 39471.65,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "cf4193185f4e475c811cdac2"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES58192996i",
+      "first_name": "Ale",
+      "last_name": "Zaragoza Cano",
+      "gender": "OTRO",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1987-07-11T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "DIVORCIADO",
+      "nr_dependants": 2
+    },
+    "contact_info": {
+      "phone_number": "+34725576545",
+      "email": "piedadbayona@example.org",
+      "address": "C. de Ester Antón 36 Piso 4 , León, 42089"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "EDUCACION",
+      "occupation": "TECNICO",
+      "employer_seniority_years": 16,
+      "total_work_experience_years": 19
+    },
+    "economic_data": {
+      "annual_income": 84110.04,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 584.0,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 0,
+      "previous_loans_amount": 38020.9,
+      "previous_repayments_amount": 41497.81,
+      "previous_defaults_count": 3,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "08d1abcd005d4f098cf66b12"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES40004809a",
+      "first_name": "Eugenia",
+      "last_name": "Manzanares Aguado",
+      "gender": "MUJER",
+      "education": "SECUNDARIA",
+      "birth_date": {
+        "$date": "1975-06-16T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "ALQUILER",
+      "marital_status": "DIVORCIADO",
+      "nr_dependants": 0
+    },
+    "contact_info": {
+      "phone_number": "+34713392072",
+      "email": "irmabenavides@example.net",
+      "address": "Pasadizo de María Pedro 920, Ciudad, 20159"
+    },
+    "employment": {
+      "status": "AUTONOMO",
+      "sector": "TECNOLOGIA",
+      "occupation": "MANDOS_MEDIOS",
+      "employer_seniority_years": 5,
+      "total_work_experience_years": 30
+    },
+    "economic_data": {
+      "annual_income": 70399.1,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 16513.92,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 2,
+      "previous_loans_amount": 33659.16,
+      "previous_repayments_amount": 20668.72,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "47c6f76efa1a4faba733fbf8"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESO83431454",
+      "first_name": "Montserrat",
+      "last_name": "Bueno Cifuentes",
+      "gender": "MUJER",
+      "education": "FORMACION PROFESIONAL",
+      "birth_date": {
+        "$date": "1987-05-02T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "SOLTERO",
+      "nr_dependants": 1
+    },
+    "contact_info": {
+      "phone_number": "+34761129639",
+      "email": "reinaldocanizares@example.com",
+      "address": "Cañada de Aureliano Terrón 51 Apt. 50 , Ceuta, 14501"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "OTROS",
+      "occupation": "MANDOS_MEDIOS",
+      "employer_seniority_years": 0,
+      "total_work_experience_years": 17
+    },
+    "economic_data": {
+      "annual_income": 78082.78,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 15259.35,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 0,
+      "previous_loans_amount": 12219.65,
+      "previous_repayments_amount": 21537.61,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "2d42e1ff431440a6bab28e2c"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESk22356616",
+      "first_name": "Hernando",
+      "last_name": "Montes Gisbert",
+      "gender": "HOMBRE",
+      "education": "POSGRADO",
+      "birth_date": {
+        "$date": "1971-07-17T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "VIUDO",
+      "nr_dependants": 2
+    },
+    "contact_info": {
+      "phone_number": "+34708582888",
+      "email": "dafnedominguez@example.net",
+      "address": "Cuesta Demetrio Comas 427, Ourense, 19808"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "AGROPECUARIO",
+      "occupation": "DIRECTIVO",
+      "employer_seniority_years": 10,
+      "total_work_experience_years": 33
+    },
+    "economic_data": {
+      "annual_income": 282288.23,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 481.04,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 3,
+      "previous_loans_amount": 868.46,
+      "previous_repayments_amount": 4731.44,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "8ba212667b774fafbce288b5"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESt27781678",
+      "first_name": "José Mari",
+      "last_name": "Rosell Comas",
+      "gender": "OTRO",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1965-03-06T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "SOLTERO",
+      "nr_dependants": 1
+    },
+    "contact_info": {
+      "phone_number": "+34718593462",
+      "email": "leirejerez@example.net",
+      "address": "Acceso Rafael Ibañez 66, Huelva, 05492"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "HOSTELERIA",
+      "occupation": "TECNICO",
+      "employer_seniority_years": 13,
+      "total_work_experience_years": 40
+    },
+    "economic_data": {
+      "annual_income": 294932.39,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 643.5,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 5,
+      "previous_loans_amount": 10208.06,
+      "previous_repayments_amount": 47793.73,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "038a4b784bbc4279b43b95c2"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES41936075J",
+      "first_name": "Marita",
+      "last_name": "Huertas Trillo",
+      "gender": "MUJER",
+      "education": "POSGRADO",
+      "birth_date": {
+        "$date": "1991-07-17T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "DIVORCIADO",
+      "nr_dependants": 3
+    },
+    "contact_info": {
+      "phone_number": "+34663150919",
+      "email": "gdominguez@example.org",
+      "address": "Cañada de Dionisio Sacristán 80, Barcelona, 24530"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "SALUD",
+      "occupation": "MANDOS_MEDIOS",
+      "employer_seniority_years": 10,
+      "total_work_experience_years": 17
+    },
+    "economic_data": {
+      "annual_income": 146427.3,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 997.2,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 2,
+      "previous_loans_amount": 41182.19,
+      "previous_repayments_amount": 6442.67,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "fcb21c8e7f1c4664b01f902c"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES25185622P",
+      "first_name": "Pastora",
+      "last_name": "Crespo Serra",
+      "gender": "OTRO",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1967-04-21T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "SOLTERO",
+      "nr_dependants": 2
+    },
+    "contact_info": {
+      "phone_number": "+34667478274",
+      "email": "roberta56@example.org",
+      "address": "Cañada de Maxi Alfonso 4 Piso 0 , Pontevedra, 51779"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "HOSTELERIA",
+      "occupation": "ADMINISTRATIVO",
+      "employer_seniority_years": 8,
+      "total_work_experience_years": 38
+    },
+    "economic_data": {
+      "annual_income": 70281.62,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 509.4,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 3,
+      "previous_loans_amount": 21131.8,
+      "previous_repayments_amount": 10034.98,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "3d1e52ddc2fd400c99a153a3"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESf1818915R",
+      "first_name": "Sol",
+      "last_name": "Garcia Amo",
+      "gender": "OTRO",
+      "education": "SECUNDARIA",
+      "birth_date": {
+        "$date": "1988-09-06T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "VIUDO",
+      "nr_dependants": 2
+    },
+    "contact_info": {
+      "phone_number": "+34761204479",
+      "email": "guadalupe32@example.com",
+      "address": "Pasadizo Domitila Hurtado 8 Puerta 2 , Cuenca, 32866"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "OTROS",
+      "occupation": "MANDOS_MEDIOS",
+      "employer_seniority_years": 3,
+      "total_work_experience_years": 15
+    },
+    "economic_data": {
+      "annual_income": 130104.2,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 40985.97,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 3,
+      "previous_loans_amount": 15951.3,
+      "previous_repayments_amount": 31927.92,
+      "previous_defaults_count": 1,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "497299e19fa04e88889a08f4"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESr1135561I",
+      "first_name": "Manuel",
+      "last_name": "Abad Cárdenas",
+      "gender": "OTRO",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1969-11-20T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "CASADO",
+      "nr_dependants": 2
+    },
+    "contact_info": {
+      "phone_number": "+34732721566",
+      "email": "plinio63@example.com",
+      "address": "Callejón de Haroldo Chaves 351 Apt. 23 , Burgos, 32747"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "HOSTELERIA",
+      "occupation": "DIRECTIVO",
+      "employer_seniority_years": 6,
+      "total_work_experience_years": 36
+    },
+    "economic_data": {
+      "annual_income": 119621.34,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 717.23,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 4,
+      "previous_loans_amount": 26106.7,
+      "previous_repayments_amount": 10396.42,
+      "previous_defaults_count": 3,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "aa193af08d63495490f238db"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES82832426a",
+      "first_name": "Susana",
+      "last_name": "Chamorro Escudero",
+      "gender": "MUJER",
+      "education": "BACHILLERATO",
+      "birth_date": {
+        "$date": "2005-10-22T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "ALQUILER",
+      "marital_status": "CASADO",
+      "nr_dependants": 3
+    },
+    "contact_info": {
+      "phone_number": "+34646639910",
+      "email": "florina65@example.org",
+      "address": "Cuesta de Calixta Querol 321, Cádiz, 15686"
+    },
+    "employment": {
+      "status": "DESEMPLEADO",
+      "sector": "TECNOLOGIA",
+      "occupation": "ADMINISTRATIVO",
+      "employer_seniority_years": 4,
+      "total_work_experience_years": 3
+    },
+    "economic_data": {
+      "annual_income": 23584.96,
+      "income_type": "AYUDAS",
+      "currency": "EUR",
+      "existing_obligations": 4952.53,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 4,
+      "previous_loans_amount": 25729.81,
+      "previous_repayments_amount": 1965.72,
+      "previous_defaults_count": 1,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "36ce44372b934ae2aa292d6e"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESv0472163W",
+      "first_name": "Mohamed",
+      "last_name": "Botella Alegria",
+      "gender": "OTRO",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1989-05-04T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "DIVORCIADO",
+      "nr_dependants": 0
+    },
+    "contact_info": {
+      "phone_number": "+34613794815",
+      "email": "eufemia40@example.com",
+      "address": "Ronda de Desiderio Palacio 85 Piso 0 , Ciudad, 26600"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "AGROPECUARIO",
+      "occupation": "DIRECTIVO",
+      "employer_seniority_years": 16,
+      "total_work_experience_years": 19
+    },
+    "economic_data": {
+      "annual_income": 190342.32,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 650.33,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 1,
+      "previous_loans_amount": 1812.9,
+      "previous_repayments_amount": 28962.65,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "a6020412a6944bdc8d778b37"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESm04136332",
+      "first_name": "Jacinta",
+      "last_name": "Puente Pastor",
+      "gender": "OTRO",
+      "education": "POSGRADO",
+      "birth_date": {
+        "$date": "1984-04-07T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "DIVORCIADO",
+      "nr_dependants": 2
+    },
+    "contact_info": {
+      "phone_number": "+34641846068",
+      "email": "emperatrizpulido@example.org",
+      "address": "Rambla de Calista Terrón 2 Puerta 3 , Ciudad, 41219"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "SECTOR PUBLICO",
+      "occupation": "TECNICO",
+      "employer_seniority_years": 19,
+      "total_work_experience_years": 22
+    },
+    "economic_data": {
+      "annual_income": 155474.76,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 91.61,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 1,
+      "previous_loans_amount": 24810.7,
+      "previous_repayments_amount": 16302.55,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0b235b3d3d10492889842ad9"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES37486615L",
+      "first_name": "Evita",
+      "last_name": "Manso Madrigal",
+      "gender": "OTRO",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1976-02-03T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "VIUDO",
+      "nr_dependants": 3
+    },
+    "contact_info": {
+      "phone_number": "+34738897458",
+      "email": "juan-manuelllobet@example.com",
+      "address": "Paseo Marco Baños 20, Córdoba, 19676"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "CONSTRUCCION",
+      "occupation": "DIRECTIVO",
+      "employer_seniority_years": 17,
+      "total_work_experience_years": 29
+    },
+    "economic_data": {
+      "annual_income": 243032.09,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 627.2,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 4,
+      "previous_loans_amount": 42078.81,
+      "previous_repayments_amount": 34344.28,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "96aecb83aff641fdbcebef29"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES76658164I",
+      "first_name": "María Dolores",
+      "last_name": "Torres Mateo",
+      "gender": "MUJER",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1989-05-11T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "DIVORCIADO",
+      "nr_dependants": 2
+    },
+    "contact_info": {
+      "phone_number": "+34699648959",
+      "email": "santamariajuan-antonio@example.com",
+      "address": "Glorieta de Santos Mata 88 Apt. 97 , Santa Cruz de Tenerife, 39847"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "SALUD",
+      "occupation": "TECNICO",
+      "employer_seniority_years": 18,
+      "total_work_experience_years": 17
+    },
+    "economic_data": {
+      "annual_income": 147906.01,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 996.51,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 1,
+      "previous_loans_amount": 8560.76,
+      "previous_repayments_amount": 32098.77,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0d1e5b47299649bdbae47e8c"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESq64335570",
+      "first_name": "Plácido",
+      "last_name": "Oliver Pozuelo",
+      "gender": "OTRO",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1986-05-05T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "DIVORCIADO",
+      "nr_dependants": 3
+    },
+    "contact_info": {
+      "phone_number": "+34627253270",
+      "email": "rosaura84@example.org",
+      "address": "Via de Victoriano Ribas 52 Apt. 53 , Burgos, 27346"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "VENTAS",
+      "occupation": "OPERARIO",
+      "employer_seniority_years": 6,
+      "total_work_experience_years": 18
+    },
+    "economic_data": {
+      "annual_income": 190156.22,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 146.33,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 1,
+      "previous_loans_amount": 22082.64,
+      "previous_repayments_amount": 24455.41,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "f481fce3a6924c5482f19a5d"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESR1783510s",
+      "first_name": "Matilde",
+      "last_name": "Sans Bou",
+      "gender": "MUJER",
+      "education": "POSGRADO",
+      "birth_date": {
+        "$date": "1970-03-08T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "VIUDO",
+      "nr_dependants": 2
+    },
+    "contact_info": {
+      "phone_number": "+34631634361",
+      "email": "jdieguez@example.net",
+      "address": "Paseo de Felipe Barragán 706 Apt. 27 , Zaragoza, 24886"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "VENTAS",
+      "occupation": "DIRECTIVO",
+      "employer_seniority_years": 9,
+      "total_work_experience_years": 34
+    },
+    "economic_data": {
+      "annual_income": 220169.62,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 302.27,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 1,
+      "previous_loans_amount": 46066.45,
+      "previous_repayments_amount": 11259.49,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "4cce6b57c22548e2b165c2b0"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESd49227640",
+      "first_name": "Carlos",
+      "last_name": "Berenguer Puig",
+      "gender": "HOMBRE",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1963-01-29T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "VIUDO",
+      "nr_dependants": 0
+    },
+    "contact_info": {
+      "phone_number": "+34624085438",
+      "email": "marcelinocanet@example.org",
+      "address": "Alameda de Clemente Viana 45 Apt. 05 , Madrid, 07230"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "OTROS",
+      "occupation": "DIRECTIVO",
+      "employer_seniority_years": 7,
+      "total_work_experience_years": 45
+    },
+    "economic_data": {
+      "annual_income": 127418.74,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 316.16,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 0,
+      "previous_loans_amount": 4231.67,
+      "previous_repayments_amount": 42606.01,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "966fe99f8b6f46b19a2eaec1"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESz0446621i",
+      "first_name": "Salud",
+      "last_name": "Alcalde Millán",
+      "gender": "MUJER",
+      "education": "FORMACION PROFESIONAL",
+      "birth_date": {
+        "$date": "1987-11-08T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "DIVORCIADO",
+      "nr_dependants": 0
+    },
+    "contact_info": {
+      "phone_number": "+34796943818",
+      "email": "dvaldes@example.org",
+      "address": "Ronda Reynaldo Agustí 20 Piso 5 , Burgos, 14549"
+    },
+    "employment": {
+      "status": "AUTONOMO",
+      "sector": "CONSTRUCCION",
+      "occupation": "ADMINISTRATIVO",
+      "employer_seniority_years": 3,
+      "total_work_experience_years": 19
+    },
+    "economic_data": {
+      "annual_income": 77873.97,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 3904.19,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 3,
+      "previous_loans_amount": 7330.84,
+      "previous_repayments_amount": 8953.69,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "18aaa9b6a3264903beab2e7e"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESV86300611",
+      "first_name": "Miguel",
+      "last_name": "Huertas Blanes",
+      "gender": "OTRO",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1984-09-21T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "SOLTERO",
+      "nr_dependants": 2
+    },
+    "contact_info": {
+      "phone_number": "+34629703585",
+      "email": "qaguirre@example.org",
+      "address": "Plaza Adela Lorenzo 784 Piso 4 , Cádiz, 06310"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "TECNOLOGIA",
+      "occupation": "OPERARIO",
+      "employer_seniority_years": 8,
+      "total_work_experience_years": 21
+    },
+    "economic_data": {
+      "annual_income": 152674.14,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 375.8,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 0,
+      "previous_loans_amount": 16424.68,
+      "previous_repayments_amount": 43866.28,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "931043be3f954c9cbb6698d6"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESx23106922",
+      "first_name": "Ruy",
+      "last_name": "Uribe López",
+      "gender": "HOMBRE",
+      "education": "SECUNDARIA",
+      "birth_date": {
+        "$date": "1992-07-28T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "DIVORCIADO",
+      "nr_dependants": 1
+    },
+    "contact_info": {
+      "phone_number": "+34608245966",
+      "email": "albino42@example.com",
+      "address": "Callejón de Ciriaco Ortiz 16 Apt. 88 , Baleares, 27248"
+    },
+    "employment": {
+      "status": "AUTONOMO",
+      "sector": "SECTOR PUBLICO",
+      "occupation": "MANDOS_MEDIOS",
+      "employer_seniority_years": 3,
+      "total_work_experience_years": 16
+    },
+    "economic_data": {
+      "annual_income": 74268.59,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 6631.23,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 3,
+      "previous_loans_amount": 28098.41,
+      "previous_repayments_amount": 37073.94,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "bfac2195c99c47ee872f515f"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESj0491256o",
+      "first_name": "Mateo",
+      "last_name": "Estevez Pereira",
+      "gender": "HOMBRE",
+      "education": "GRADO",
+      "birth_date": {
+        "$date": "1979-05-08T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "VIUDO",
+      "nr_dependants": 0
+    },
+    "contact_info": {
+      "phone_number": "+34752247457",
+      "email": "dorotea13@example.net",
+      "address": "Alameda Matilde Prado 8 Apt. 29 , Girona, 48392"
+    },
+    "employment": {
+      "status": "AUTONOMO",
+      "sector": "HOSTELERIA",
+      "occupation": "OPERARIO",
+      "employer_seniority_years": 17,
+      "total_work_experience_years": 28
+    },
+    "economic_data": {
+      "annual_income": 118991.75,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 243.56,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 2,
+      "previous_loans_amount": 7433.66,
+      "previous_repayments_amount": 39923.25,
+      "previous_defaults_count": 0,
+      "is_new_customer": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5fc3c76345b642e48cb6e2e2"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES46699773F",
+      "first_name": "Pacífica",
+      "last_name": "Angulo Duque",
+      "gender": "MUJER",
+      "education": "SECUNDARIA",
+      "birth_date": {
+        "$date": "1995-05-02T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "VIUDO",
+      "nr_dependants": 1
+    },
+    "contact_info": {
+      "phone_number": "+34670772250",
+      "email": "yagoarino@example.com",
+      "address": "Callejón Roberto Gonzalo 7 Puerta 5 , Córdoba, 23823"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "EDUCACION",
+      "occupation": "MANDOS_MEDIOS",
+      "employer_seniority_years": 5,
+      "total_work_experience_years": 9
+    },
+    "economic_data": {
+      "annual_income": 140451.48,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 50805.13,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 2,
+      "previous_loans_amount": 47587.53,
+      "previous_repayments_amount": 27922.3,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "c36c94e3edda4030bb71cfb2"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ES30189523y",
+      "first_name": "Joan",
+      "last_name": "Barberá Catalán",
+      "gender": "OTRO",
+      "education": "POSGRADO",
+      "birth_date": {
+        "$date": "1961-03-25T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_HIPOTECA",
+      "marital_status": "CASADO",
+      "nr_dependants": 1
+    },
+    "contact_info": {
+      "phone_number": "+34784819114",
+      "email": "cepedaiker@example.org",
+      "address": "Plaza René Cortina 5 Piso 8 , Valencia, 35303"
+    },
+    "employment": {
+      "status": "INDEFINIDO",
+      "sector": "EDUCACION",
+      "occupation": "MANDOS_MEDIOS",
+      "employer_seniority_years": 13,
+      "total_work_experience_years": 46
+    },
+    "economic_data": {
+      "annual_income": 266181.56,
+      "income_type": "SALARIO",
+      "currency": "EUR",
+      "existing_obligations": 314.06,
+      "has_mortgage": true
+    },
+    "credit_history": {
+      "previous_loans_count": 0,
+      "previous_loans_amount": 36708.63,
+      "previous_repayments_amount": 42079.57,
+      "previous_defaults_count": 1,
+      "is_new_customer": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "1f7d0844b8f44cf8a4a78c95"
+    },
+    "party_type": "INDIVIDUAL",
+    "demographics": {
+      "nif": "ESM65634072",
+      "first_name": "Clotilde",
+      "last_name": "Fabra Lara",
+      "gender": "MUJER",
+      "education": "POSGRADO",
+      "birth_date": {
+        "$date": "1961-08-10T00:00:00Z"
+      },
+      "country_of_residence": "ES",
+      "home_ownership": "PROPIA_PAGADA",
+      "marital_status": "SOLTERO",
+      "nr_dependants": 2
+    },
+    "contact_info": {
+      "phone_number": "+34715028695",
+      "email": "morena16@example.org",
+      "address": "Paseo Serafina Palacios 2 Puerta 6 , Madrid, 21629"
+    },
+    "employment": {
+      "status": "FUNCIONARIO",
+      "sector": "OTROS",
+      "occupation": "DIRECTIVO",
+      "employer_seniority_years": 11,
+      "total_work_experience_years": 45
+    },
+    "economic_data": {
+      "annual_income": 195710.15,
+      "income_type": "AUTONOMO",
+      "currency": "EUR",
+      "existing_obligations": 348.09,
+      "has_mortgage": false
+    },
+    "credit_history": {
+      "previous_loans_count": 1,
+      "previous_loans_amount": 10245.13,
+      "previous_repayments_amount": 24799.07,
+      "previous_defaults_count": 0,
+      "is_new_customer": false
+    }
+  }
+]

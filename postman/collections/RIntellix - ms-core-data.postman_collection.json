@@ -1,0 +1,1684 @@
+{
+  "info": {
+    "_postman_id": "b06cd309-93fb-4d1c-a8ed-7f465f1268d0",
+    "name": "RIntellix - ms-core-data",
+    "description": "Colección de pruebas para el microservicio de datos central (ms-core-data).\n\nIncluye endpoints de:\n- Requests (solicitudes de crédito)\n- Scoring (puntuación de riesgo)\n- Simulations (simulaciones what-if)\n- Reports (informes generados por IA)\n\nTodas las peticiones requieren un token Bearer válido con rol ANALISTA cuando se accede a través del Gateway.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "43052871"
+  },
+  "item": [
+    {
+      "name": "Autenticación",
+      "item": [
+        {
+          "name": "✅ Obtener Token Analista",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test('Token guardado', function () {",
+                  "    var jsonData = pm.response.json();",
+                  "    pm.expect(jsonData.access_token).to.be.a('string');",
+                  "    pm.environment.set('ACCESS_TOKEN', jsonData.access_token);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "grant_type",
+                  "value": "password"
+                },
+                {
+                  "key": "client_id",
+                  "value": "{{KEYCLOAK_CLIENT_ID}}"
+                },
+                {
+                  "key": "username",
+                  "value": "{{ANALISTA_USERNAME}}"
+                },
+                {
+                  "key": "password",
+                  "value": "{{ANALISTA_PASSWORD}}"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{KEYCLOAK_BASE_URL}}/realms/{{KEYCLOAK_REALM}}/protocol/openid-connect/token",
+              "host": [
+                "{{KEYCLOAK_BASE_URL}}"
+              ],
+              "path": [
+                "realms",
+                "{{KEYCLOAK_REALM}}",
+                "protocol",
+                "openid-connect",
+                "token"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Solicitudes",
+      "item": [
+        {
+          "name": "✅ Listar Requests - Sin filtros",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test('Response has paginated content', function () {",
+                  "    var json = pm.response.json();",
+                  "    pm.expect(json).to.have.property('content');",
+                  "    pm.expect(json.content).to.be.an('array');",
+                  "    pm.expect(json).to.have.property('totalElements');",
+                  "    pm.expect(json).to.have.property('totalPages');",
+                  "    pm.expect(json).to.have.property('page');",
+                  "    pm.expect(json).to.have.property('size');",
+                  "});",
+                  "// Guardar un requestId real para pruebas posteriores",
+                  "if (pm.response.json().content.length > 0) {",
+                  "    var firstReq = pm.response.json().content[0];",
+                  "    if (firstReq.requestId) {",
+                  "        pm.environment.set('DYNAMIC_REQUEST_ID', firstReq.requestId);",
+                  "    }",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{CORE_DATA_BASE_URL}}/api/requests?page=0&size=10&sortBy=creationDate&sortDir=desc",
+              "host": [
+                "{{CORE_DATA_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "requests"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "10"
+                },
+                {
+                  "key": "sortBy",
+                  "value": "creationDate"
+                },
+                {
+                  "key": "sortDir",
+                  "value": "desc"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "✅ Listar Requests - Filtro por status",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test('All returned requests have status PENDIENTE_DE_REVISION', function () {",
+                  "    var items = pm.response.json().content;",
+                  "    items.forEach(function(item) {",
+                  "        pm.expect(item.status).to.eql('PENDIENTE_DE_REVISION');",
+                  "    });",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{CORE_DATA_BASE_URL}}/api/requests?requestStatus=PENDIENTE_DE_REVISION&page=0&size=5",
+              "host": [
+                "{{CORE_DATA_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "requests"
+              ],
+              "query": [
+                {
+                  "key": "requestStatus",
+                  "value": "PENDIENTE_DE_REVISION"
+                },
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "5"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "✅ Listar Requests - Búsqueda por nombre",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test('Response is paginated', function () {",
+                  "    pm.expect(pm.response.json()).to.have.property('content');",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{CORE_DATA_BASE_URL}}/api/requests?search=REQ-2026&page=0&size=10",
+              "host": [
+                "{{CORE_DATA_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "requests"
+              ],
+              "query": [
+                {
+                  "key": "search",
+                  "value": "REQ-2026"
+                },
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "✅ Listar Requests - Ordenar ascendente",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{CORE_DATA_BASE_URL}}/api/requests?page=0&size=5&sortBy=creationDate&sortDir=asc",
+              "host": [
+                "{{CORE_DATA_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "requests"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "5"
+                },
+                {
+                  "key": "sortBy",
+                  "value": "creationDate"
+                },
+                {
+                  "key": "sortDir",
+                  "value": "asc"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "✅ Obtener Detalle Request (Préstamo)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test('Response has request details', function () {",
+                  "    var json = pm.response.json();",
+                  "    pm.expect(json).to.have.property('requestId');",
+                  "    pm.expect(json).to.have.property('requestType');",
+                  "    pm.expect(json).to.have.property('status');",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{CORE_DATA_BASE_URL}}/api/requests/{{SAMPLE_REQUEST_ID_LOAN}}",
+              "host": [
+                "{{CORE_DATA_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "requests",
+                "{{SAMPLE_REQUEST_ID_LOAN}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "✅ Obtener Detalle Request (Tarjeta Crédito)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test('Request type is TARJETA_CREDITO', function () {",
+                  "    pm.expect(pm.response.json().requestType).to.eql('TARJETA_CREDITO');",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{CORE_DATA_BASE_URL}}/api/requests/{{SAMPLE_REQUEST_ID_CC}}",
+              "host": [
+                "{{CORE_DATA_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "requests",
+                "{{SAMPLE_REQUEST_ID_CC}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "❌ Obtener Detalle Request - ID inexistente (404)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 404', function () {",
+                  "    pm.response.to.have.status(404);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{CORE_DATA_BASE_URL}}/api/requests/{{NONEXISTENT_ID}}",
+              "host": [
+                "{{CORE_DATA_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "requests",
+                "{{NONEXISTENT_ID}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "❌ Obtener Detalle Request - ID malformado (400)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 400', function () {",
+                  "    pm.response.to.have.status(400);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{CORE_DATA_BASE_URL}}/api/requests/invalid-id-!@#$",
+              "host": [
+                "{{CORE_DATA_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "requests",
+                "invalid-id-!@"
+              ],
+              "hash": "$"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "✅ Obtener Party de Request",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test('Response has partyId and partyName', function () {",
+                  "    var json = pm.response.json();",
+                  "    pm.expect(json).to.have.property('partyId');",
+                  "    pm.expect(json).to.have.property('partyName');",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{CORE_DATA_BASE_URL}}/api/requests/{{SAMPLE_REQUEST_ID_LOAN}}/party",
+              "host": [
+                "{{CORE_DATA_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "requests",
+                "{{SAMPLE_REQUEST_ID_LOAN}}",
+                "party"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "❌ Obtener Party - Request inexistente (404)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 404', function () {",
+                  "    pm.response.to.have.status(404);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{CORE_DATA_BASE_URL}}/api/requests/{{NONEXISTENT_ID}}/party",
+              "host": [
+                "{{CORE_DATA_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "requests",
+                "{{NONEXISTENT_ID}}",
+                "party"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "✅ Marcar Request como Revisada",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status code is 204', function () {",
+                  "    pm.response.to.have.status(204);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"requestStatus\": \"REVISADO\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{CORE_DATA_BASE_URL}}/api/requests/{{SAMPLE_REQUEST_ID_LOAN}}",
+              "host": [
+                "{{CORE_DATA_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "requests",
+                "{{SAMPLE_REQUEST_ID_LOAN}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "❌ Marcar como Revisada - Request inexistente (404)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status code is 404', function () {",
+                  "    pm.response.to.have.status(404);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "{{CORE_DATA_BASE_URL}}/api/requests/{{NONEXISTENT_ID}}/review",
+              "host": [
+                "{{CORE_DATA_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "requests",
+                "{{NONEXISTENT_ID}}",
+                "review"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "❌ Marcar como Revisada - requestStatus inválido (400)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"requestStatus\": \"ESTADO_INVENTADO\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{CORE_DATA_BASE_URL}}/api/requests/{{SAMPLE_REQUEST_ID_LOAN}}",
+              "host": [
+                "{{CORE_DATA_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "requests",
+                "{{SAMPLE_REQUEST_ID_LOAN}}"
+              ]
+            },
+            "description": "Generated from cURL: curl --request PUT '{{CORE_DATA_BASE_URL}}/api/requests/{{SAMPLE_REQUEST_ID_LOAN}}' --header 'Content-Type: application/json' --data-raw '{\n  \"requestStatus\": \"ESTADO_INVENTADO\"\n}'"
+          },
+          "response": []
+        },
+        {
+          "name": "❌ Marcar como Revisada - transición inválida (409)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"requestStatus\": \"REVISADO\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{CORE_DATA_BASE_URL}}/api/requests/{{SAMPLE_REQUEST_ID_LOAN}}",
+              "host": [
+                "{{CORE_DATA_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "requests",
+                "{{SAMPLE_REQUEST_ID_LOAN}}"
+              ]
+            },
+            "description": "Generated from cURL: curl --request PUT '{{CORE_DATA_BASE_URL}}/api/requests/{{SAMPLE_REQUEST_ID_LOAN}}' --header 'Content-Type: application/json' --data-raw '{\n  \"requestStatus\": \"REVISADO\"\n}'"
+          },
+          "response": []
+        }
+      ],
+      "description": "Endpoints CRUD sobre solicitudes de crédito (préstamos y tarjetas de crédito)."
+    },
+    {
+      "name": "Scoring",
+      "item": [
+        {
+          "name": "✅ Obtener Scoring por Request ID",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test('Response has scoring fields', function () {",
+                  "    var json = pm.response.json();",
+                  "    pm.expect(json).to.have.property('scoringId');",
+                  "    pm.expect(json).to.have.property('requestId');",
+                  "    // Guardar scoringId para usar en simulaciones",
+                  "    pm.environment.set('SAMPLE_SCORING_ID', json.scoringId);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{CORE_DATA_BASE_URL}}/api/requests/{{SAMPLE_REQUEST_ID_LOAN}}/scoring",
+              "host": [
+                "{{CORE_DATA_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "requests",
+                "{{SAMPLE_REQUEST_ID_LOAN}}",
+                "scoring"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "❌ Obtener Scoring - Request inexistente (404)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 404', function () {",
+                  "    pm.response.to.have.status(404);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{CORE_DATA_BASE_URL}}/api/requests/{{NONEXISTENT_ID}}/scoring",
+              "host": [
+                "{{CORE_DATA_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "requests",
+                "{{NONEXISTENT_ID}}",
+                "scoring"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "✅ Obtener Scoring - Tarjeta Crédito",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test('Response has scoring fields', function () {",
+                  "    var json = pm.response.json();",
+                  "    pm.expect(json).to.have.property('scoringId');",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{CORE_DATA_BASE_URL}}/api/requests/{{SAMPLE_REQUEST_ID_CC}}/scoring",
+              "host": [
+                "{{CORE_DATA_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "requests",
+                "{{SAMPLE_REQUEST_ID_CC}}",
+                "scoring"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "description": "Endpoint para obtener el scoring (puntuación de riesgo) asociado a una solicitud."
+    },
+    {
+      "name": "Simulaciones",
+      "item": [
+        {
+          "name": "✅ Listar Simulaciones - Sin filtros",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test('Response is paginated', function () {",
+                  "    var json = pm.response.json();",
+                  "    pm.expect(json).to.have.property('content');",
+                  "    pm.expect(json).to.have.property('totalElements');",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{CORE_DATA_BASE_URL}}/api/simulations?page=0&size=10",
+              "host": [
+                "{{CORE_DATA_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "simulations"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "✅ Listar Simulaciones - Solo archivadas",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{CORE_DATA_BASE_URL}}/api/simulations?archived=true&page=0&size=10",
+              "host": [
+                "{{CORE_DATA_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "simulations"
+              ],
+              "query": [
+                {
+                  "key": "archived",
+                  "value": "true"
+                },
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "✅ Listar Simulaciones - Búsqueda",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{CORE_DATA_BASE_URL}}/api/simulations?search=Escenario&page=0&size=10",
+              "host": [
+                "{{CORE_DATA_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "simulations"
+              ],
+              "query": [
+                {
+                  "key": "search",
+                  "value": "Escenario"
+                },
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "✅ Crear Simulación",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status code is 201', function () {",
+                  "    pm.response.to.have.status(201);",
+                  "});",
+                  "pm.test('Location header present', function () {",
+                  "    pm.expect(pm.response.headers.has('Location')).to.be.true;",
+                  "    var location = pm.response.headers.get('Location');",
+                  "    var simId = location.split('/').pop();",
+                  "    pm.environment.set('CREATED_SIMULATION_ID', simId);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"scenarioName\": \"Test Postman - Reducción tasa interés\",\n  \"requestId\": \"{{SAMPLE_REQUEST_ID_LOAN}}\",\n  \"partyId\": \"{{SAMPLE_PARTY_ID}}\",\n  \"baseScoringId\": \"{{SAMPLE_SCORING_ID}}\",\n  \"formChanges\": {\n    \"interestRate\": 3.5,\n    \"termMonths\": 48\n  },\n  \"simulatedResults\": {\n    \"pd\": 0.12,\n    \"lgd\": 0.45,\n    \"ead\": 15000.0,\n    \"ecl\": 810.0,\n    \"riskGrade\": \"Medium\",\n    \"decision\": \"APPROVE_WITH_CONDITIONS\",\n    \"monthlyPayment\": 340.25,\n    \"dti\": 0.28,\n    \"totalPayment\": 16332.0,\n    \"totalInterest\": 1332.0,\n    \"disposableIncome\": 2100.0\n  },\n  \"delta\": {\n    \"pdChange\": -0.03,\n    \"eclChange\": -120.0,\n    \"riskGradeChange\": \"UNCHANGED\",\n    \"monthlyPaymentChange\": -45.0,\n    \"dtiChange\": -0.02,\n    \"totalPaymentChange\": -1500.0,\n    \"totalInterestChange\": -800.0,\n    \"monthlyDisposableIncomeChange\": 45.0\n  }\n}"
+            },
+            "url": {
+              "raw": "{{CORE_DATA_BASE_URL}}/api/simulations",
+              "host": [
+                "{{CORE_DATA_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "simulations"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "❌ Crear Simulación - Body vacío (400)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 400', function () {",
+                  "    pm.response.to.have.status(400);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{CORE_DATA_BASE_URL}}/api/simulations",
+              "host": [
+                "{{CORE_DATA_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "simulations"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "❌ Crear Simulación - Campos requeridos faltantes (400)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 400', function () {",
+                  "    pm.response.to.have.status(400);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"scenarioName\": \"Test sin campos requeridos\"\n}"
+            },
+            "url": {
+              "raw": "{{CORE_DATA_BASE_URL}}/api/simulations",
+              "host": [
+                "{{CORE_DATA_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "simulations"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "✅ Obtener Detalle Simulación",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test('Response has simulation details', function () {",
+                  "    var json = pm.response.json();",
+                  "    pm.expect(json).to.have.property('simulationId');",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{CORE_DATA_BASE_URL}}/api/simulations/{{CREATED_SIMULATION_ID}}",
+              "host": [
+                "{{CORE_DATA_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "simulations",
+                "{{CREATED_SIMULATION_ID}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "❌ Obtener Detalle Simulación - ID inexistente (404)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 404', function () {",
+                  "    pm.response.to.have.status(404);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{CORE_DATA_BASE_URL}}/api/simulations/{{NONEXISTENT_ID}}",
+              "host": [
+                "{{CORE_DATA_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "simulations",
+                "{{NONEXISTENT_ID}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "✅ Actualizar Simulación (PUT)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"partyId\": \"{{SAMPLE_PARTY_ID}}\",\n  \"baseScoringId\": \"{{SAMPLE_SCORING_ID}}\",\n  \"formChanges\": {\n    \"interestRate\": 2.9,\n    \"termMonths\": 60\n  },\n  \"simulatedResults\": {\n    \"pd\": 0.10,\n    \"lgd\": 0.42,\n    \"ead\": 15000.0,\n    \"ecl\": 630.0,\n    \"riskGrade\": \"Low\",\n    \"decision\": \"APPROVE\",\n    \"monthlyPayment\": 270.0,\n    \"dti\": 0.22,\n    \"totalPayment\": 16200.0,\n    \"totalInterest\": 1200.0,\n    \"disposableIncome\": 2300.0\n  },\n  \"delta\": {\n    \"pdChange\": -0.05,\n    \"eclChange\": -300.0,\n    \"riskGradeChange\": \"IMPROVED\",\n    \"monthlyPaymentChange\": -115.25,\n    \"dtiChange\": -0.08,\n    \"totalPaymentChange\": -1632.0,\n    \"totalInterestChange\": -932.0,\n    \"monthlyDisposableIncomeChange\": 115.25\n  }\n}"
+            },
+            "url": {
+              "raw": "{{CORE_DATA_BASE_URL}}/api/simulations/{{CREATED_SIMULATION_ID}}",
+              "host": [
+                "{{CORE_DATA_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "simulations",
+                "{{CREATED_SIMULATION_ID}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "✅ Archivar Simulación (PATCH)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"isArchived\": true\n}"
+            },
+            "url": {
+              "raw": "{{CORE_DATA_BASE_URL}}/api/simulations/{{CREATED_SIMULATION_ID}}",
+              "host": [
+                "{{CORE_DATA_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "simulations",
+                "{{CREATED_SIMULATION_ID}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "❌ Archivar Simulación - Sin isArchived (400)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 400', function () {",
+                  "    pm.response.to.have.status(400);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{CORE_DATA_BASE_URL}}/api/simulations/{{CREATED_SIMULATION_ID}}",
+              "host": [
+                "{{CORE_DATA_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "simulations",
+                "{{CREATED_SIMULATION_ID}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "✅ Eliminar Simulación archivada (DELETE)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{CORE_DATA_BASE_URL}}/api/simulations/{{CREATED_SIMULATION_ID}}",
+              "host": [
+                "{{CORE_DATA_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "simulations",
+                "{{CREATED_SIMULATION_ID}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "❌ Eliminar Simulación - ID inexistente (404)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 404', function () {",
+                  "    pm.response.to.have.status(404);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{CORE_DATA_BASE_URL}}/api/simulations/{{NONEXISTENT_ID}}",
+              "host": [
+                "{{CORE_DATA_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "simulations",
+                "{{NONEXISTENT_ID}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "description": "Endpoints CRUD sobre simulaciones what-if."
+    },
+    {
+      "name": "Informes",
+      "item": [
+        {
+          "name": "✅ Listar Reports",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test('Response is paginated', function () {",
+                  "    var json = pm.response.json();",
+                  "    pm.expect(json).to.have.property('content');",
+                  "    pm.expect(json).to.have.property('totalElements');",
+                  "});",
+                  "// Guardar un reportId si existe",
+                  "if (pm.response.json().content && pm.response.json().content.length > 0) {",
+                  "    pm.environment.set('SAMPLE_REPORT_ID', pm.response.json().content[0].reportId);",
+                  "}"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{CORE_DATA_BASE_URL}}/api/reports?page=4&size=10",
+              "host": [
+                "{{CORE_DATA_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "reports"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "4"
+                },
+                {
+                  "key": "size",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "✅ Listar Reports - Con búsqueda",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{CORE_DATA_BASE_URL}}/api/reports?search=riesgo&page=0&size=5",
+              "host": [
+                "{{CORE_DATA_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "reports"
+              ],
+              "query": [
+                {
+                  "key": "search",
+                  "value": "riesgo"
+                },
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "5"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "✅ Obtener Report por Request ID",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "// Puede ser 200 o 404 según si existe un report para este request",
+                  "pm.test('Status code is 200 or 404', function () {",
+                  "    pm.expect(pm.response.code).to.be.oneOf([200, 404]);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{CORE_DATA_BASE_URL}}/api/reports?requestId={{SAMPLE_REQUEST_ID_LOAN}}",
+              "host": [
+                "{{CORE_DATA_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "reports"
+              ],
+              "query": [
+                {
+                  "key": "requestId",
+                  "value": "{{SAMPLE_REQUEST_ID_LOAN}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "❌ Obtener Report por Request ID inexistente (404)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 404', function () {",
+                  "    pm.response.to.have.status(404);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{CORE_DATA_BASE_URL}}/api/reports?requestId={{NONEXISTENT_ID}}",
+              "host": [
+                "{{CORE_DATA_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "reports"
+              ],
+              "query": [
+                {
+                  "key": "requestId",
+                  "value": "{{NONEXISTENT_ID}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "✅ Crear Report (POST)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status code is 201', function () {",
+                  "    pm.response.to.have.status(201);",
+                  "});",
+                  "pm.test('Location header present', function () {",
+                  "    pm.expect(pm.response.headers.has('Location')).to.be.true;",
+                  "    var location = pm.response.headers.get('Location');",
+                  "    pm.environment.set('CREATED_REPORT_ID', location.split('/').pop());",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"party_id\": \"{{SAMPLE_PARTY_ID}}\",\n  \"request_id\": \"{{SAMPLE_REQUEST_ID_LOAN}}\",\n  \"scoring_id\": \"{{SAMPLE_SCORING_ID}}\",\n  \"report_type\": \"RISK_ANALYSIS\",\n  \"title\": \"Informe de Riesgo - Test Postman\",\n  \"ai_summary\": \"Análisis de riesgo crediticio completo generado automáticamente para pruebas.\",\n  \"risk_analysis\": \"El solicitante presenta un perfil de riesgo moderado con indicadores financieros estables.\",\n  \"risk_factors\": [\n    {\n      \"factor\": \"Ratio DTI\",\n      \"severity\": \"MEDIO\",\n      \"description\": \"El ratio deuda-ingreso se encuentra en niveles moderados.\"\n    },\n    {\n      \"factor\": \"Historial crediticio\",\n      \"severity\": \"BAJO\",\n      \"description\": \"Sin incumplimientos previos registrados.\"\n    }\n  ],\n  \"recommendations\": [\n    \"Aprobar con condiciones de seguimiento trimestral\",\n    \"Solicitar garantía adicional si el monto supera los 50.000€\"\n  ],\n  \"file_path\": \"/app/reports/test_report.pdf\",\n  \"file_size_bytes\": 125000,\n  \"generated_by\": \"gemini-3.1-flash-lite\",\n  \"generated_date\": \"2026-08-05T10:00:00.000Z\",\n  \"generation_time_ms\": 3500,\n  \"model_version\": \"gemini-3.1-flash-lite\",\n  \"language\": \"es\"\n}"
+            },
+            "url": {
+              "raw": "{{CORE_DATA_BASE_URL}}/api/reports",
+              "host": [
+                "{{CORE_DATA_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "reports"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "❌ Crear Report - Body vacío (400)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 400', function () {",
+                  "    pm.response.to.have.status(400);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{CORE_DATA_BASE_URL}}/api/reports",
+              "host": [
+                "{{CORE_DATA_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "reports"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "✅ Descargar fichero PDF de Report",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "// 200 si existe el PDF, 404 si no se ha generado aún",
+                  "pm.test('Status code is 200 or 404', function () {",
+                  "    pm.expect(pm.response.code).to.be.oneOf([200, 404]);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{CORE_DATA_BASE_URL}}/api/reports/{{SAMPLE_REPORT_ID}}/file",
+              "host": [
+                "{{CORE_DATA_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "reports",
+                "{{SAMPLE_REPORT_ID}}",
+                "file"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "❌ Descargar PDF - Report inexistente (404)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 404', function () {",
+                  "    pm.response.to.have.status(404);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{CORE_DATA_BASE_URL}}/api/reports/{{NONEXISTENT_ID}}/file",
+              "host": [
+                "{{CORE_DATA_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "reports",
+                "{{NONEXISTENT_ID}}",
+                "file"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "description": "Endpoints de informes de riesgo generados por IA."
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{ACCESS_TOKEN}}",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          "// ─── Auto-renovar token si no existe ───",
+          "const token = pm.environment.get('ACCESS_TOKEN');",
+          "if (!token || token.length < 10) {",
+          "    const keycloakUrl = pm.environment.get('KEYCLOAK_BASE_URL');",
+          "    const realm = pm.environment.get('KEYCLOAK_REALM');",
+          "    const clientId = pm.environment.get('KEYCLOAK_CLIENT_ID');",
+          "    const username = pm.environment.get('ANALISTA_USERNAME');",
+          "    const password = pm.environment.get('ANALISTA_PASSWORD');",
+          "",
+          "    pm.sendRequest({",
+          "        url: keycloakUrl + '/realms/' + realm + '/protocol/openid-connect/token',",
+          "        method: 'POST',",
+          "        header: { 'Content-Type': 'application/x-www-form-urlencoded' },",
+          "        body: {",
+          "            mode: 'urlencoded',",
+          "            urlencoded: [",
+          "                { key: 'grant_type', value: 'password' },",
+          "                { key: 'client_id', value: clientId },",
+          "                { key: 'username', value: username },",
+          "                { key: 'password', value: password }",
+          "            ]",
+          "        }",
+          "    }, function (err, res) {",
+          "        if (!err && res.code === 200) {",
+          "            pm.environment.set('ACCESS_TOKEN', res.json().access_token);",
+          "        }",
+          "    });",
+          "}"
+        ]
+      }
+    }
+  ]
+}

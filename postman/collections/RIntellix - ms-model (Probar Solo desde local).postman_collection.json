@@ -1,0 +1,800 @@
+{
+  "info": {
+    "_postman_id": "87e59e25-2d17-4b13-9dc4-9496d8d075c9",
+    "name": "RIntellix - ms-model (Probar Solo desde local)",
+    "description": "Colección de pruebas para el microservicio de modelo de ML (ms-model).\n\nFastAPI con XGBoost + SHAP.\n\nIncluye:\n- Health check y API info\n- Información del modelo cargado\n- Predicción de riesgo para préstamos (predict-loan)\n- Predicción de riesgo para tarjetas de crédito (predict-credit-card)\n- Validaciones de entrada\n\nNOTA: Este microservicio NO pasa por el gateway en entorno local. En Docker, solo es accesible por la red interna (no tiene puerto expuesto).",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "43052871"
+  },
+  "item": [
+    {
+      "name": "Health & Info",
+      "item": [
+        {
+          "name": "✅ Health Check",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test('Status is healthy or degraded', function () {",
+                  "    var json = pm.response.json();",
+                  "    pm.expect(json.status).to.be.oneOf(['healthy', 'degraded']);",
+                  "});",
+                  "pm.test('Model loaded flag present', function () {",
+                  "    pm.expect(pm.response.json()).to.have.property('model_loaded');",
+                  "});",
+                  "pm.test('Scaler loaded flag present', function () {",
+                  "    pm.expect(pm.response.json()).to.have.property('scaler_loaded');",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{MODEL_BASE_URL}}/health",
+              "host": [
+                "{{MODEL_BASE_URL}}"
+              ],
+              "path": [
+                "health"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "✅ API Root Info",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test('Response has app info', function () {",
+                  "    var json = pm.response.json();",
+                  "    pm.expect(json).to.have.property('name');",
+                  "    pm.expect(json).to.have.property('version');",
+                  "    pm.expect(json).to.have.property('docs');",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{MODEL_BASE_URL}}/",
+              "host": [
+                "{{MODEL_BASE_URL}}"
+              ],
+              "path": [
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "✅ Model Info",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test('Response has model metadata', function () {",
+                  "    var json = pm.response.json();",
+                  "    pm.expect(json).to.have.property('app_version');",
+                  "    pm.expect(json).to.have.property('model_loaded');",
+                  "    pm.expect(json).to.have.property('feature_names');",
+                  "    pm.expect(json.feature_names).to.be.an('array');",
+                  "    pm.expect(json).to.have.property('risk_thresholds');",
+                  "    pm.expect(json).to.have.property('scaler_loaded');",
+                  "    pm.expect(json).to.have.property('encoder_loaded');",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{MODEL_BASE_URL}}/api/v1/risk/model-info",
+              "host": [
+                "{{MODEL_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "risk",
+                "model-info"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "✅ OpenAPI Schema",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test('Response is OpenAPI spec', function () {",
+                  "    var json = pm.response.json();",
+                  "    pm.expect(json).to.have.property('openapi');",
+                  "    pm.expect(json).to.have.property('paths');",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{MODEL_BASE_URL}}/openapi.json",
+              "host": [
+                "{{MODEL_BASE_URL}}"
+              ],
+              "path": [
+                "openapi.json"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "description": "Endpoints de utilidad del servicio FastAPI."
+    },
+    {
+      "name": "Predict Loan (Préstamos)",
+      "item": [
+        {
+          "name": "✅ Predict Loan - Perfil bajo riesgo",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test('Response has PD and risk_segment', function () {",
+                  "    var json = pm.response.json();",
+                  "    pm.expect(json).to.have.property('probability_of_default');",
+                  "    pm.expect(json.probability_of_default).to.be.a('number');",
+                  "    pm.expect(json.probability_of_default).to.be.at.least(0);",
+                  "    pm.expect(json.probability_of_default).to.be.at.most(1);",
+                  "    pm.expect(json).to.have.property('risk_segment');",
+                  "    pm.expect(json.risk_segment).to.be.oneOf(['Low', 'Medium', 'High']);",
+                  "});",
+                  "pm.test('Response has SHAP explanations', function () {",
+                  "    var json = pm.response.json();",
+                  "    pm.expect(json).to.have.property('shap_explanations');",
+                  "    pm.expect(json.shap_explanations).to.be.an('array');",
+                  "    pm.expect(json.shap_explanations.length).to.be.greaterThan(0);",
+                  "    var firstExpl = json.shap_explanations[0];",
+                  "    pm.expect(firstExpl).to.have.property('feature');",
+                  "    pm.expect(firstExpl).to.have.property('impact');",
+                  "    pm.expect(firstExpl).to.have.property('direction');",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"age\": 35,\n  \"gender\": \"Mujer\",\n  \"maritalStatus\": \"Casado\",\n  \"education\": \"Grado\",\n  \"employmentStatus\": \"Indefinido\",\n  \"occupationSector\": \"Tecnologia\",\n  \"dependents\": 1,\n  \"homeOwnership\": \"Propia_Hipoteca\",\n  \"hasMortgage\": \"Si\",\n  \"annualIncome\": 55000.0,\n  \"loanType\": \"Personal\",\n  \"purpose\": \"Consolidacion_Deuda\",\n  \"loanAmount\": 10000.0,\n  \"termMonths\": 24,\n  \"interestRate\": 4.5,\n  \"ltv\": 0.30,\n  \"dti\": 0.20,\n  \"previousLoansCount\": 1,\n  \"previousDefaultsCount\": 0\n}"
+            },
+            "url": {
+              "raw": "{{MODEL_BASE_URL}}/api/v1/risk/predict-loan",
+              "host": [
+                "{{MODEL_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "risk",
+                "predict-loan"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "✅ Predict Loan - Perfil alto riesgo",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test('Response has valid PD', function () {",
+                  "    var json = pm.response.json();",
+                  "    pm.expect(json.probability_of_default).to.be.a('number');",
+                  "    pm.expect(json.risk_segment).to.be.oneOf(['Low', 'Medium', 'High']);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"age\": 22,\n  \"gender\": \"Hombre\",\n  \"maritalStatus\": \"Soltero\",\n  \"education\": \"Secundaria\",\n  \"employmentStatus\": \"Temporal\",\n  \"occupationSector\": \"Hosteleria\",\n  \"dependents\": 0,\n  \"homeOwnership\": \"Alquiler\",\n  \"hasMortgage\": \"No\",\n  \"annualIncome\": 15000.0,\n  \"loanType\": \"Consumo\",\n  \"purpose\": \"Viajes\",\n  \"loanAmount\": 25000.0,\n  \"termMonths\": 60,\n  \"interestRate\": 12.0,\n  \"ltv\": 0.85,\n  \"dti\": 0.65,\n  \"previousLoansCount\": 3,\n  \"previousDefaultsCount\": 2\n}"
+            },
+            "url": {
+              "raw": "{{MODEL_BASE_URL}}/api/v1/risk/predict-loan",
+              "host": [
+                "{{MODEL_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "risk",
+                "predict-loan"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "❌ Predict Loan - Campo faltante (422)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 422', function () {",
+                  "    pm.response.to.have.status(422);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"age\": 35,\n  \"gender\": \"Mujer\"\n}"
+            },
+            "url": {
+              "raw": "{{MODEL_BASE_URL}}/api/v1/risk/predict-loan",
+              "host": [
+                "{{MODEL_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "risk",
+                "predict-loan"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "❌ Predict Loan - Edad fuera de rango (422)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 422', function () {",
+                  "    pm.response.to.have.status(422);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"age\": 15,\n  \"gender\": \"Mujer\",\n  \"maritalStatus\": \"Soltero\",\n  \"education\": \"Grado\",\n  \"employmentStatus\": \"Indefinido\",\n  \"occupationSector\": \"Tecnologia\",\n  \"dependents\": 0,\n  \"homeOwnership\": \"Alquiler\",\n  \"hasMortgage\": \"No\",\n  \"annualIncome\": 30000.0,\n  \"loanType\": \"Personal\",\n  \"purpose\": \"Otros\",\n  \"loanAmount\": 5000.0,\n  \"termMonths\": 12,\n  \"interestRate\": 5.0,\n  \"ltv\": 0.40,\n  \"dti\": 0.25,\n  \"previousLoansCount\": 0,\n  \"previousDefaultsCount\": 0\n}"
+            },
+            "url": {
+              "raw": "{{MODEL_BASE_URL}}/api/v1/risk/predict-loan",
+              "host": [
+                "{{MODEL_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "risk",
+                "predict-loan"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "❌ Predict Loan - Enum inválido (422)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 422', function () {",
+                  "    pm.response.to.have.status(422);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"age\": 30,\n  \"gender\": \"INVALID_GENDER\",\n  \"maritalStatus\": \"Casado\",\n  \"education\": \"Grado\",\n  \"employmentStatus\": \"Indefinido\",\n  \"occupationSector\": \"Tecnologia\",\n  \"dependents\": 0,\n  \"homeOwnership\": \"Alquiler\",\n  \"hasMortgage\": \"No\",\n  \"annualIncome\": 40000.0,\n  \"loanType\": \"Personal\",\n  \"purpose\": \"Otros\",\n  \"loanAmount\": 8000.0,\n  \"termMonths\": 24,\n  \"interestRate\": 6.0,\n  \"ltv\": 0.35,\n  \"dti\": 0.20,\n  \"previousLoansCount\": 0,\n  \"previousDefaultsCount\": 0\n}"
+            },
+            "url": {
+              "raw": "{{MODEL_BASE_URL}}/api/v1/risk/predict-loan",
+              "host": [
+                "{{MODEL_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "risk",
+                "predict-loan"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "❌ Predict Loan - Body vacío (422)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 422', function () {",
+                  "    pm.response.to.have.status(422);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{MODEL_BASE_URL}}/api/v1/risk/predict-loan",
+              "host": [
+                "{{MODEL_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "risk",
+                "predict-loan"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "❌ Predict Loan - DTI fuera de rango (422)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 422', function () {",
+                  "    pm.response.to.have.status(422);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"age\": 35,\n  \"gender\": \"Mujer\",\n  \"maritalStatus\": \"Casado\",\n  \"education\": \"Grado\",\n  \"employmentStatus\": \"Indefinido\",\n  \"occupationSector\": \"Tecnologia\",\n  \"dependents\": 1,\n  \"homeOwnership\": \"Propia_Hipoteca\",\n  \"hasMortgage\": \"Si\",\n  \"annualIncome\": 55000.0,\n  \"loanType\": \"Personal\",\n  \"purpose\": \"Consolidacion_Deuda\",\n  \"loanAmount\": 10000.0,\n  \"termMonths\": 24,\n  \"interestRate\": 4.5,\n  \"ltv\": 0.30,\n  \"dti\": 5.0,\n  \"previousLoansCount\": 1,\n  \"previousDefaultsCount\": 0\n}"
+            },
+            "url": {
+              "raw": "{{MODEL_BASE_URL}}/api/v1/risk/predict-loan",
+              "host": [
+                "{{MODEL_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "risk",
+                "predict-loan"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "description": "Predicción de riesgo de impago para solicitudes de préstamo."
+    },
+    {
+      "name": "Predict Credit Card (Tarjetas)",
+      "item": [
+        {
+          "name": "✅ Predict CC - Perfil bajo riesgo",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test('Response has PD and risk_segment', function () {",
+                  "    var json = pm.response.json();",
+                  "    pm.expect(json).to.have.property('probability_of_default');",
+                  "    pm.expect(json.probability_of_default).to.be.at.least(0);",
+                  "    pm.expect(json.probability_of_default).to.be.at.most(1);",
+                  "    pm.expect(json).to.have.property('risk_segment');",
+                  "});",
+                  "pm.test('SHAP explanations present', function () {",
+                  "    pm.expect(pm.response.json().shap_explanations).to.be.an('array');",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"age\": 41,\n  \"gender\": \"Hombre\",\n  \"maritalStatus\": \"Soltero\",\n  \"employmentStatus\": \"Indefinido\",\n  \"employmentSeniorityYears\": 12,\n  \"annualIncome\": 56079.61,\n  \"incomeType\": \"Salario\",\n  \"homeOwnership\": \"Propia_Hipoteca\",\n  \"dependents\": 0,\n  \"creditLimit\": 19000.0,\n  \"isRevolving\": \"Si\",\n  \"interestRate\": 0.2489,\n  \"lti\": 0.3388,\n  \"dti\": 0.1626,\n  \"previousDefaultsCount\": 0\n}"
+            },
+            "url": {
+              "raw": "{{MODEL_BASE_URL}}/api/v1/risk/predict-credit-card",
+              "host": [
+                "{{MODEL_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "risk",
+                "predict-credit-card"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "✅ Predict CC - Perfil alto riesgo",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test('Response has PD', function () {",
+                  "    pm.expect(pm.response.json().probability_of_default).to.be.a('number');",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"age\": 23,\n  \"gender\": \"Mujer\",\n  \"maritalStatus\": \"Soltero\",\n  \"employmentStatus\": \"Temporal\",\n  \"employmentSeniorityYears\": 1,\n  \"annualIncome\": 14000.0,\n  \"incomeType\": \"Ayudas\",\n  \"homeOwnership\": \"Alquiler\",\n  \"dependents\": 3,\n  \"creditLimit\": 8000.0,\n  \"isRevolving\": \"No\",\n  \"interestRate\": 0.35,\n  \"lti\": 0.8,\n  \"dti\": 0.75,\n  \"previousDefaultsCount\": 3\n}"
+            },
+            "url": {
+              "raw": "{{MODEL_BASE_URL}}/api/v1/risk/predict-credit-card",
+              "host": [
+                "{{MODEL_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "risk",
+                "predict-credit-card"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "❌ Predict CC - Campos faltantes (422)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 422', function () {",
+                  "    pm.response.to.have.status(422);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"age\": 30,\n  \"gender\": \"Hombre\"\n}"
+            },
+            "url": {
+              "raw": "{{MODEL_BASE_URL}}/api/v1/risk/predict-credit-card",
+              "host": [
+                "{{MODEL_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "risk",
+                "predict-credit-card"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "❌ Predict CC - Enum inválido (422)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 422', function () {",
+                  "    pm.response.to.have.status(422);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"age\": 30,\n  \"gender\": \"Hombre\",\n  \"maritalStatus\": \"Soltero\",\n  \"employmentStatus\": \"INVALIDO\",\n  \"employmentSeniorityYears\": 5,\n  \"annualIncome\": 30000.0,\n  \"incomeType\": \"Salario\",\n  \"homeOwnership\": \"Alquiler\",\n  \"dependents\": 0,\n  \"creditLimit\": 5000.0,\n  \"isRevolving\": \"No\",\n  \"interestRate\": 0.20,\n  \"lti\": 0.5,\n  \"dti\": 0.3,\n  \"previousDefaultsCount\": 0\n}"
+            },
+            "url": {
+              "raw": "{{MODEL_BASE_URL}}/api/v1/risk/predict-credit-card",
+              "host": [
+                "{{MODEL_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "risk",
+                "predict-credit-card"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "❌ Predict CC - Body vacío (422)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 422', function () {",
+                  "    pm.response.to.have.status(422);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{MODEL_BASE_URL}}/api/v1/risk/predict-credit-card",
+              "host": [
+                "{{MODEL_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "risk",
+                "predict-credit-card"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "❌ Predict CC - Income negativo (422)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 422', function () {",
+                  "    pm.response.to.have.status(422);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"age\": 30,\n  \"gender\": \"Hombre\",\n  \"maritalStatus\": \"Soltero\",\n  \"employmentStatus\": \"Indefinido\",\n  \"employmentSeniorityYears\": 5,\n  \"annualIncome\": -5000.0,\n  \"incomeType\": \"Salario\",\n  \"homeOwnership\": \"Alquiler\",\n  \"dependents\": 0,\n  \"creditLimit\": 5000.0,\n  \"isRevolving\": \"No\",\n  \"interestRate\": 0.20,\n  \"lti\": 0.5,\n  \"dti\": 0.3,\n  \"previousDefaultsCount\": 0\n}"
+            },
+            "url": {
+              "raw": "{{MODEL_BASE_URL}}/api/v1/risk/predict-credit-card",
+              "host": [
+                "{{MODEL_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "risk",
+                "predict-credit-card"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "description": "Predicción de riesgo de impago para solicitudes de tarjeta de crédito."
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{ACCESS_TOKEN}}",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ]
+}

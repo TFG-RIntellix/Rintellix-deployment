@@ -1,0 +1,639 @@
+{
+  "info": {
+    "_postman_id": "9bb0cc5a-535f-49f3-855b-d289d2ffd12e",
+    "name": "RIntellix - ms-sec-gateway",
+    "description": "Colección de pruebas para el microservicio API Gateway de seguridad (ms-sec-gateway).\n\nIncluye:\n- Autenticación con Keycloak (obtención de token OAuth2)\n- Pruebas de acceso autorizado/no autorizado\n- Health checks del gateway\n- Pruebas de rate limiting y seguridad",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "43052871"
+  },
+  "item": [
+    {
+      "name": "Autenticación",
+      "item": [
+        {
+          "name": "✅ Login Analista - Éxito",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test('Response contains access_token', function () {",
+                  "    var jsonData = pm.response.json();",
+                  "    pm.expect(jsonData).to.have.property('access_token');",
+                  "    pm.expect(jsonData.access_token).to.be.a('string').and.not.empty;",
+                  "    // Guardar token para las siguientes requests",
+                  "    pm.environment.set('ACCESS_TOKEN', jsonData.access_token);",
+                  "});",
+                  "",
+                  "pm.test('Response contains refresh_token', function () {",
+                  "    var jsonData = pm.response.json();",
+                  "    pm.expect(jsonData).to.have.property('refresh_token');",
+                  "});",
+                  "",
+                  "pm.test('Token type is Bearer', function () {",
+                  "    var jsonData = pm.response.json();",
+                  "    pm.expect(jsonData.token_type).to.eql('Bearer');",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "grant_type",
+                  "value": "password"
+                },
+                {
+                  "key": "client_id",
+                  "value": "{{KEYCLOAK_CLIENT_ID}}"
+                },
+                {
+                  "key": "username",
+                  "value": "{{ANALISTA_USERNAME}}"
+                },
+                {
+                  "key": "password",
+                  "value": "{{ANALISTA_PASSWORD}}"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{KEYCLOAK_BASE_URL}}/realms/{{KEYCLOAK_REALM}}/protocol/openid-connect/token",
+              "host": [
+                "{{KEYCLOAK_BASE_URL}}"
+              ],
+              "path": [
+                "realms",
+                "{{KEYCLOAK_REALM}}",
+                "protocol",
+                "openid-connect",
+                "token"
+              ]
+            },
+            "description": "Obtiene un access_token JWT para el usuario 'analista' con rol ANALISTA. Este token se guarda automáticamente en la variable ACCESS_TOKEN."
+          },
+          "response": []
+        },
+        {
+          "name": "❌ Login con credenciales incorrectas",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 401', function () {",
+                  "    pm.response.to.have.status(401);",
+                  "});",
+                  "",
+                  "pm.test('Error indicates invalid credentials', function () {",
+                  "    var jsonData = pm.response.json();",
+                  "    pm.expect(jsonData.error).to.eql('invalid_grant');",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "grant_type",
+                  "value": "password"
+                },
+                {
+                  "key": "client_id",
+                  "value": "{{KEYCLOAK_CLIENT_ID}}"
+                },
+                {
+                  "key": "username",
+                  "value": "analista"
+                },
+                {
+                  "key": "password",
+                  "value": "wrong_password"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{KEYCLOAK_BASE_URL}}/realms/{{KEYCLOAK_REALM}}/protocol/openid-connect/token",
+              "host": [
+                "{{KEYCLOAK_BASE_URL}}"
+              ],
+              "path": [
+                "realms",
+                "{{KEYCLOAK_REALM}}",
+                "protocol",
+                "openid-connect",
+                "token"
+              ]
+            },
+            "description": "Intenta autenticarse con una contraseña incorrecta. Se espera HTTP 401."
+          },
+          "response": []
+        },
+        {
+          "name": "❌ Login con client_id inválido",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 400', function () {",
+                  "    pm.response.to.have.status(400);",
+                  "});",
+                  "",
+                  "pm.test('Error indicates invalid client', function () {",
+                  "    var jsonData = pm.response.json();",
+                  "    pm.expect(jsonData.error).to.be.oneOf(['invalid_client', 'unauthorized_client']);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "grant_type",
+                  "value": "password"
+                },
+                {
+                  "key": "client_id",
+                  "value": "nonexistent-client"
+                },
+                {
+                  "key": "username",
+                  "value": "analista"
+                },
+                {
+                  "key": "password",
+                  "value": "analista"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{KEYCLOAK_BASE_URL}}/realms/{{KEYCLOAK_REALM}}/protocol/openid-connect/token",
+              "host": [
+                "{{KEYCLOAK_BASE_URL}}"
+              ],
+              "path": [
+                "realms",
+                "{{KEYCLOAK_REALM}}",
+                "protocol",
+                "openid-connect",
+                "token"
+              ]
+            },
+            "description": "Intenta autenticarse con un client_id que no existe en Keycloak."
+          },
+          "response": []
+        },
+        {
+          "name": "⚠️ Login Viewer (sin rol ANALISTA)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 200 (login succeeds)', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test('Response contains access_token', function () {",
+                  "    var jsonData = pm.response.json();",
+                  "    pm.expect(jsonData).to.have.property('access_token');",
+                  "    pm.environment.set('VIEWER_TOKEN', jsonData.access_token);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "grant_type",
+                  "value": "password"
+                },
+                {
+                  "key": "client_id",
+                  "value": "{{KEYCLOAK_CLIENT_ID}}"
+                },
+                {
+                  "key": "username",
+                  "value": "{{VIEWER_USERNAME}}"
+                },
+                {
+                  "key": "password",
+                  "value": "{{VIEWER_PASSWORD}}"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{KEYCLOAK_BASE_URL}}/realms/{{KEYCLOAK_REALM}}/protocol/openid-connect/token",
+              "host": [
+                "{{KEYCLOAK_BASE_URL}}"
+              ],
+              "path": [
+                "realms",
+                "{{KEYCLOAK_REALM}}",
+                "protocol",
+                "openid-connect",
+                "token"
+              ]
+            },
+            "description": "Obtiene un token para el usuario 'viewer' que NO tiene el rol ANALISTA. Login exitoso pero luego las peticiones al gateway serán denegadas (403)."
+          },
+          "response": []
+        }
+      ],
+      "description": "Flujo de autenticación OAuth2 con Keycloak usando Resource Owner Password Credentials (Direct Access Grant)."
+    },
+    {
+      "name": "Autorización Gateway",
+      "item": [
+        {
+          "name": "✅ Request con token ANALISTA - Éxito",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test('Response is JSON with content', function () {",
+                  "    var jsonData = pm.response.json();",
+                  "    pm.expect(jsonData).to.have.property('content');",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{ACCESS_TOKEN}}"
+              }
+            ],
+            "url": {
+              "raw": "{{GATEWAY_BASE_URL}}/api/requests?page=0&size=5",
+              "host": [
+                "{{GATEWAY_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "requests"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "5"
+                }
+              ]
+            },
+            "description": "Verifica que un usuario con rol ANALISTA puede acceder a los endpoints del gateway."
+          },
+          "response": []
+        },
+        {
+          "name": "❌ Request sin token - 401",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 401', function () {",
+                  "    pm.response.to.have.status(401);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{GATEWAY_BASE_URL}}/api/requests",
+              "host": [
+                "{{GATEWAY_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "requests"
+              ]
+            },
+            "description": "Intenta acceder al gateway sin proporcionar un token Bearer. Se espera HTTP 401 Unauthorized."
+          },
+          "response": []
+        },
+        {
+          "name": "❌ Request con token inválido - 401",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 401', function () {",
+                  "    pm.response.to.have.status(401);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer invalidtoken123456"
+              }
+            ],
+            "url": {
+              "raw": "{{GATEWAY_BASE_URL}}/api/requests",
+              "host": [
+                "{{GATEWAY_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "requests"
+              ]
+            },
+            "description": "Intenta acceder al gateway con un token JWT malformado. Se espera HTTP 401."
+          },
+          "response": []
+        },
+        {
+          "name": "❌ Request con token VIEWER (sin rol) - 403",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 403', function () {",
+                  "    pm.response.to.have.status(403);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{VIEWER_TOKEN}}"
+              }
+            ],
+            "url": {
+              "raw": "{{GATEWAY_BASE_URL}}/api/requests",
+              "host": [
+                "{{GATEWAY_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "requests"
+              ]
+            },
+            "description": "Intenta acceder con el token del usuario 'viewer' que no tiene rol ANALISTA. Se espera HTTP 403 Forbidden."
+          },
+          "response": []
+        }
+      ],
+      "description": "Pruebas de autorización a través del gateway. Verifica que solo los usuarios con rol ANALISTA pueden acceder a los recursos."
+    },
+    {
+      "name": "Health & Actuator",
+      "item": [
+        {
+          "name": "✅ Health Check - Éxito",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test('Status is UP', function () {",
+                  "    var jsonData = pm.response.json();",
+                  "    pm.expect(jsonData.status).to.eql('UP');",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{GATEWAY_BASE_URL}}/actuator/health",
+              "host": [
+                "{{GATEWAY_BASE_URL}}"
+              ],
+              "path": [
+                "actuator",
+                "health"
+              ]
+            },
+            "description": "Health check público del gateway. No requiere autenticación."
+          },
+          "response": []
+        },
+        {
+          "name": "❌ Actuator endpoint no expuesto - 404",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 404', function () {",
+                  "    pm.response.to.have.status(404);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{GATEWAY_BASE_URL}}/actuator/env",
+              "host": [
+                "{{GATEWAY_BASE_URL}}"
+              ],
+              "path": [
+                "actuator",
+                "env"
+              ]
+            },
+            "description": "Intenta acceder a un endpoint de actuator no expuesto. Solo health e info están habilitados."
+          },
+          "response": []
+        }
+      ],
+      "description": "Endpoints de salud del gateway (públicos, no requieren autenticación)."
+    },
+    {
+      "name": "Seguridad - Cabeceras",
+      "item": [
+        {
+          "name": "✅ Cabeceras de seguridad presentes",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test('X-Frame-Options is DENY', function () {",
+                  "    pm.expect(pm.response.headers.get('X-Frame-Options')).to.eql('DENY');",
+                  "});",
+                  "",
+                  "pm.test('Referrer-Policy is no-referrer', function () {",
+                  "    pm.expect(pm.response.headers.get('Referrer-Policy')).to.eql('no-referrer');",
+                  "});",
+                  "",
+                  "pm.test('Content-Security-Policy is set', function () {",
+                  "    pm.expect(pm.response.headers.has('Content-Security-Policy')).to.be.true;",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{ACCESS_TOKEN}}"
+              }
+            ],
+            "url": {
+              "raw": "{{GATEWAY_BASE_URL}}/api/requests?page=0&size=1",
+              "host": [
+                "{{GATEWAY_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "requests"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "1"
+                }
+              ]
+            },
+            "description": "Verifica que las cabeceras de seguridad (X-Frame-Options, Referrer-Policy, CSP, HSTS) están presentes en la respuesta."
+          },
+          "response": []
+        }
+      ],
+      "description": "Pruebas de las medidas de seguridad del gateway: cabeceras stripping, CORS, rate limit."
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{ACCESS_TOKEN}}",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "requests": {},
+        "exec": [
+          "// Pre-request script global: no hace nada por defecto.",
+          "// Las requests individuales manejan su propia autenticación."
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "TOKEN_ENDPOINT",
+      "value": "{{KEYCLOAK_BASE_URL}}/realms/{{KEYCLOAK_REALM}}/protocol/openid-connect/token"
+    }
+  ]
+}

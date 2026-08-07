@@ -1,0 +1,255 @@
+{
+  "info": {
+    "_postman_id": "e0e78754-e2ba-42ca-961b-02a0268f7c58",
+    "name": "RIntellix - ms-reporting",
+    "description": "Colección de pruebas para el microservicio de reporting (ms-reporting).\n\nEste microservicio es COMPLETAMENTE EVENT-DRIVEN: no expone endpoints REST propios.\nSu flujo es:\n1. Escucha el topic Kafka 'PersistScoring' cuando se genera un scoring\n2. Obtiene datos del scoring y del party desde ms-core-data\n3. Genera un informe de riesgo con Gemini AI\n4. Genera un PDF del informe\n5. Persiste el informe vía POST /api/reports en ms-core-data\n\nLas pruebas aquí se centran en:\n- Health check del servicio\n- Verificar que el informe se genera correctamente consultando ms-core-data\n- Pruebas de flujo end-to-end consultando los reports creados\n\nNOTA: Para probar el flujo completo, se debe activar el scoring de una request y esperar a que Kafka propague el evento.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "43052871"
+  },
+  "item": [
+    {
+      "name": "Health & Actuator",
+      "item": [
+        {
+          "name": "✅ Health Check ms-reporting",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test('Status is UP', function () {",
+                  "    pm.expect(pm.response.json().status).to.eql('UP');",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{REPORTING_BASE_URL}}/actuator/health",
+              "host": [
+                "{{REPORTING_BASE_URL}}"
+              ],
+              "path": [
+                "actuator",
+                "health"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "description": "Health checks del microservicio de reporting."
+    },
+    {
+      "name": "Verificación Reports (vía ms-core-data)",
+      "item": [
+        {
+          "name": "✅ Listar Reports generados",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test('Response is paginated', function () {",
+                  "    var json = pm.response.json();",
+                  "    pm.expect(json).to.have.property('content');",
+                  "    pm.expect(json).to.have.property('totalElements');",
+                  "});",
+                  "// Si hay reports, guardar el primero para pruebas",
+                  "if (pm.response.json().content && pm.response.json().content.length > 0) {",
+                  "    var report = pm.response.json().content[0];",
+                  "    pm.environment.set('SAMPLE_REPORT_ID', report.reportId);",
+                  "    console.log('Report encontrado: ' + report.reportId + ' - ' + report.title);",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{CORE_DATA_BASE_URL}}/api/reports?page=0&size=5&sortBy=generationDate&sortDir=desc",
+              "host": [
+                "{{CORE_DATA_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "reports"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "5"
+                },
+                {
+                  "key": "sortBy",
+                  "value": "generationDate"
+                },
+                {
+                  "key": "sortDir",
+                  "value": "desc"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "✅ Verificar Report por Request ID (Préstamo)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "// El report puede existir o no según si el scoring ya fue procesado",
+                  "pm.test('Status code is 200 or 404', function () {",
+                  "    pm.expect(pm.response.code).to.be.oneOf([200, 404]);",
+                  "});",
+                  "if (pm.response.code === 200) {",
+                  "    pm.test('Report has expected structure', function () {",
+                  "        var json = pm.response.json();",
+                  "        pm.expect(json).to.have.property('reportId');",
+                  "        pm.expect(json).to.have.property('title');",
+                  "        pm.expect(json).to.have.property('reportType');",
+                  "    });",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{CORE_DATA_BASE_URL}}/api/reports?requestId={{SAMPLE_REQUEST_ID_LOAN}}",
+              "host": [
+                "{{CORE_DATA_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "reports"
+              ],
+              "query": [
+                {
+                  "key": "requestId",
+                  "value": "{{SAMPLE_REQUEST_ID_LOAN}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "✅ Descargar PDF de Report generado",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status is 200 or 404', function () {",
+                  "    pm.expect(pm.response.code).to.be.oneOf([200, 404]);",
+                  "});",
+                  "if (pm.response.code === 200) {",
+                  "    pm.test('Content-Type is PDF', function () {",
+                  "        pm.expect(pm.response.headers.get('Content-Type')).to.include('application/pdf');",
+                  "    });",
+                  "    pm.test('Content-Disposition is attachment', function () {",
+                  "        pm.expect(pm.response.headers.get('Content-Disposition')).to.include('attachment');",
+                  "    });",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{CORE_DATA_BASE_URL}}/api/reports/{{SAMPLE_REPORT_ID}}/file",
+              "host": [
+                "{{CORE_DATA_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "reports",
+                "{{SAMPLE_REPORT_ID}}",
+                "file"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "description": "Pruebas de verificación del flujo completo: después de que ms-reporting procese un evento Kafka, el informe debería estar disponible en ms-core-data.\n\nEstas pruebas verifican que el flujo event-driven completo funciona consultando los resultados finales en ms-core-data."
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{ACCESS_TOKEN}}",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          "// ─── Auto-renovar token si no existe ───",
+          "const token = pm.environment.get('ACCESS_TOKEN');",
+          "if (!token || token.length < 10) {",
+          "    const keycloakUrl = pm.environment.get('KEYCLOAK_BASE_URL');",
+          "    const realm = pm.environment.get('KEYCLOAK_REALM');",
+          "    const clientId = pm.environment.get('KEYCLOAK_CLIENT_ID');",
+          "    const username = pm.environment.get('ANALISTA_USERNAME');",
+          "    const password = pm.environment.get('ANALISTA_PASSWORD');",
+          "",
+          "    pm.sendRequest({",
+          "        url: keycloakUrl + '/realms/' + realm + '/protocol/openid-connect/token',",
+          "        method: 'POST',",
+          "        header: { 'Content-Type': 'application/x-www-form-urlencoded' },",
+          "        body: {",
+          "            mode: 'urlencoded',",
+          "            urlencoded: [",
+          "                { key: 'grant_type', value: 'password' },",
+          "                { key: 'client_id', value: clientId },",
+          "                { key: 'username', value: username },",
+          "                { key: 'password', value: password }",
+          "            ]",
+          "        }",
+          "    }, function (err, res) {",
+          "        if (!err && res.code === 200) {",
+          "            pm.environment.set('ACCESS_TOKEN', res.json().access_token);",
+          "        }",
+          "    });",
+          "}"
+        ]
+      }
+    }
+  ]
+}

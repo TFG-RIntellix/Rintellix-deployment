@@ -1,0 +1,658 @@
+{
+  "info": {
+    "_postman_id": "32df2d99-f78c-47a5-a893-2f5a53be3be3",
+    "name": "RIntellix - ms-risk-engine",
+    "description": "Colección de pruebas para el microservicio de motor de riesgo (ms-risk-engine).\n\nIncluye:\n- Cálculo de borradores de simulación (Simulation Draft)\n- Pruebas con tipos de solicitud PRESTAMO y TARJETA_CREDITO\n- Validación de campos obligatorios y formatos\n\nEste microservicio se comunica internamente con ms-model y ms-core-data vía Kafka y REST.\nSu único endpoint REST expuesto es POST /api/v1/simulations/draft.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "43052871"
+  },
+  "item": [
+    {
+      "name": "Autenticación",
+      "item": [
+        {
+          "name": "✅ Obtener Token Analista",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test('Token guardado', function () {",
+                  "    var jsonData = pm.response.json();",
+                  "    pm.environment.set('ACCESS_TOKEN', jsonData.access_token);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "grant_type",
+                  "value": "password"
+                },
+                {
+                  "key": "client_id",
+                  "value": "{{KEYCLOAK_CLIENT_ID}}"
+                },
+                {
+                  "key": "username",
+                  "value": "{{ANALISTA_USERNAME}}"
+                },
+                {
+                  "key": "password",
+                  "value": "{{ANALISTA_PASSWORD}}"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{KEYCLOAK_BASE_URL}}/realms/{{KEYCLOAK_REALM}}/protocol/openid-connect/token",
+              "host": [
+                "{{KEYCLOAK_BASE_URL}}"
+              ],
+              "path": [
+                "realms",
+                "{{KEYCLOAK_REALM}}",
+                "protocol",
+                "openid-connect",
+                "token"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Simulation Draft (Préstamo)",
+      "item": [
+        {
+          "name": "✅ Calcular Draft - Préstamo - Éxito",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test('Response has simulatedResults', function () {",
+                  "    var json = pm.response.json();",
+                  "    pm.expect(json).to.have.property('simulatedResults');",
+                  "    pm.expect(json.simulatedResults).to.have.property('pd');",
+                  "    pm.expect(json.simulatedResults).to.have.property('lgd');",
+                  "    pm.expect(json.simulatedResults).to.have.property('ead');",
+                  "    pm.expect(json.simulatedResults).to.have.property('ecl');",
+                  "    pm.expect(json.simulatedResults).to.have.property('riskGrade');",
+                  "    pm.expect(json.simulatedResults).to.have.property('decision');",
+                  "});",
+                  "pm.test('Response has deltas', function () {",
+                  "    var json = pm.response.json();",
+                  "    pm.expect(json).to.have.property('deltas');",
+                  "});",
+                  "pm.test('Response has metrics', function () {",
+                  "    var json = pm.response.json();",
+                  "    pm.expect(json).to.have.property('metrics');",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"requestId\": \"{{SAMPLE_REQUEST_ID_LOAN}}\",\n  \"requestType\": \"PRESTAMO\",\n  \"formChanges\": {\n    \"interestRate\": 3.5,\n    \"termMonths\": 48,\n    \"loanAmount\": 50000\n  }\n}"
+            },
+            "url": {
+              "raw": "{{RISK_ENGINE_BASE_URL}}/api/v1/simulations/draft",
+              "host": [
+                "{{RISK_ENGINE_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "simulations",
+                "draft"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "✅ Calcular Draft - Préstamo - Solo cambiar tasa interés",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test('Response has simulatedResults', function () {",
+                  "    pm.expect(pm.response.json()).to.have.property('simulatedResults');",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"requestId\": \"{{SAMPLE_REQUEST_ID_LOAN}}\",\n  \"requestType\": \"PRESTAMO\",\n  \"formChanges\": {\n    \"interestRate\": 7.5\n  }\n}"
+            },
+            "url": {
+              "raw": "{{RISK_ENGINE_BASE_URL}}/api/v1/simulations/draft",
+              "host": [
+                "{{RISK_ENGINE_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "simulations",
+                "draft"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "❌ Calcular Draft - Sin requestId (400)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 400', function () {",
+                  "    pm.response.to.have.status(400);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"requestType\": \"PRESTAMO\",\n  \"formChanges\": {\n    \"interestRate\": 3.5\n  }\n}"
+            },
+            "url": {
+              "raw": "{{RISK_ENGINE_BASE_URL}}/api/v1/simulations/draft",
+              "host": [
+                "{{RISK_ENGINE_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "simulations",
+                "draft"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "❌ Calcular Draft - Sin requestType (400)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 400', function () {",
+                  "    pm.response.to.have.status(400);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"requestId\": \"{{SAMPLE_REQUEST_ID_LOAN}}\",\n  \"formChanges\": {\n    \"interestRate\": 3.5\n  }\n}"
+            },
+            "url": {
+              "raw": "{{RISK_ENGINE_BASE_URL}}/api/v1/simulations/draft",
+              "host": [
+                "{{RISK_ENGINE_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "simulations",
+                "draft"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "❌ Calcular Draft - Body vacío (400)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status code is 400', function () {",
+                  "    pm.response.to.have.status(400);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"requestId\": \"{{SAMPLE_REQUEST_ID_LOAN}}\",\r\n  \"requestType\": \"PRESTAMO\"\r\n  }"
+            },
+            "url": {
+              "raw": "{{RISK_ENGINE_BASE_URL}}/api/v1/simulations/draft",
+              "host": [
+                "{{RISK_ENGINE_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "simulations",
+                "draft"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "❌ Calcular Draft - Request inexistente (404)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 404 or 500', function () {",
+                  "    pm.expect(pm.response.code).to.be.oneOf([404, 500]);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"requestId\": \"{{NONEXISTENT_ID}}\",\n  \"requestType\": \"PRESTAMO\",\n  \"formChanges\": {\n    \"interestRate\": 3.5\n  }\n}"
+            },
+            "url": {
+              "raw": "{{RISK_ENGINE_BASE_URL}}/api/v1/simulations/draft",
+              "host": [
+                "{{RISK_ENGINE_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "simulations",
+                "draft"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "description": "Pruebas del cálculo de borrador de simulación para solicitudes de tipo PRESTAMO."
+    },
+    {
+      "name": "Simulation Draft (Tarjeta Crédito)",
+      "item": [
+        {
+          "name": "✅ Calcular Draft - Tarjeta Crédito - Éxito",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test('Response has simulatedResults', function () {",
+                  "    var json = pm.response.json();",
+                  "    pm.expect(json).to.have.property('simulatedResults');",
+                  "    pm.expect(json.simulatedResults).to.have.property('pd');",
+                  "    pm.expect(json.simulatedResults).to.have.property('riskGrade');",
+                  "});",
+                  "pm.test('Response has deltas', function () {",
+                  "    pm.expect(pm.response.json()).to.have.property('deltas');",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"requestId\": \"{{SAMPLE_REQUEST_ID_CC}}\",\n  \"requestType\": \"TARJETA_CREDITO\",\n  \"formChanges\": {\n    \"creditLimit\": 5000,\n    \"interestRate\": 0.18\n  }\n}"
+            },
+            "url": {
+              "raw": "{{RISK_ENGINE_BASE_URL}}/api/v1/simulations/draft",
+              "host": [
+                "{{RISK_ENGINE_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "simulations",
+                "draft"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "✅ Calcular Draft - Tarjeta Crédito - Cambiar límite",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"requestId\": \"{{SAMPLE_REQUEST_ID_CC}}\",\n  \"requestType\": \"TARJETA_CREDITO\",\n  \"formChanges\": {\n    \"creditLimit\": 10000\n  }\n}"
+            },
+            "url": {
+              "raw": "{{RISK_ENGINE_BASE_URL}}/api/v1/simulations/draft",
+              "host": [
+                "{{RISK_ENGINE_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "simulations",
+                "draft"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "❌ Calcular Draft - Tarjeta Crédito - No form changes (400)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{  \"requestId\": \"{{SAMPLE_REQUEST_ID_CC}}\",\r\n  \"requestType\": \"TARJETA_CREDITO\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{RISK_ENGINE_BASE_URL}}/api/v1/simulations/draft",
+              "host": [
+                "{{RISK_ENGINE_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "simulations",
+                "draft"
+              ]
+            },
+            "description": "Prueba negativa del endpoint POST /api/v1/simulations/draft para solicitudes de tipo TARJETA_CREDITO con body vacío. Debe responder 400."
+          },
+          "response": []
+        },
+        {
+          "name": "❌ Calcular Draft - Tarjeta Crédito - Sin requestId (400)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"requestType\":\"TARJETA_CREDITO\",\"requestData\":{\"creditLimit\":3000}}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{RISK_ENGINE_BASE_URL}}/api/v1/simulations/draft",
+              "host": [
+                "{{RISK_ENGINE_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "simulations",
+                "draft"
+              ]
+            },
+            "description": "Prueba negativa del endpoint POST /api/v1/simulations/draft para solicitudes de tipo TARJETA_CREDITO sin requestId. Debe responder 400."
+          },
+          "response": []
+        },
+        {
+          "name": "❌ Calcular Draft - Tarjeta Crédito - Sin requestType (400)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"requestId\":\"{{SAMPLE_REQUEST_ID_CC}}\",\"requestData\":{\"creditLimit\":3000}}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{RISK_ENGINE_BASE_URL}}/api/v1/simulations/draft",
+              "host": [
+                "{{RISK_ENGINE_BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "simulations",
+                "draft"
+              ]
+            },
+            "description": "Prueba negativa del endpoint POST /api/v1/simulations/draft para solicitudes de tipo TARJETA_CREDITO sin requestType. Debe responder 400."
+          },
+          "response": []
+        }
+      ],
+      "description": "Pruebas del cálculo de borrador de simulación para solicitudes de tipo TARJETA_CREDITO."
+    },
+    {
+      "name": "Health & Actuator",
+      "item": [
+        {
+          "name": "✅ Health Check ms-risk-engine",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test('Status is UP', function () {",
+                  "    pm.expect(pm.response.json().status).to.eql('UP');",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{RISK_ENGINE_BASE_URL}}/actuator/health",
+              "host": [
+                "{{RISK_ENGINE_BASE_URL}}"
+              ],
+              "path": [
+                "actuator",
+                "health"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{ACCESS_TOKEN}}",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          "// ─── Auto-renovar token si no existe ───",
+          "const token = pm.environment.get('ACCESS_TOKEN');",
+          "if (!token || token.length < 10) {",
+          "    const keycloakUrl = pm.environment.get('KEYCLOAK_BASE_URL');",
+          "    const realm = pm.environment.get('KEYCLOAK_REALM');",
+          "    const clientId = pm.environment.get('KEYCLOAK_CLIENT_ID');",
+          "    const username = pm.environment.get('ANALISTA_USERNAME');",
+          "    const password = pm.environment.get('ANALISTA_PASSWORD');",
+          "",
+          "    pm.sendRequest({",
+          "        url: keycloakUrl + '/realms/' + realm + '/protocol/openid-connect/token',",
+          "        method: 'POST',",
+          "        header: { 'Content-Type': 'application/x-www-form-urlencoded' },",
+          "        body: {",
+          "            mode: 'urlencoded',",
+          "            urlencoded: [",
+          "                { key: 'grant_type', value: 'password' },",
+          "                { key: 'client_id', value: clientId },",
+          "                { key: 'username', value: username },",
+          "                { key: 'password', value: password }",
+          "            ]",
+          "        }",
+          "    }, function (err, res) {",
+          "        if (!err && res.code === 200) {",
+          "            pm.environment.set('ACCESS_TOKEN', res.json().access_token);",
+          "        }",
+          "    });",
+          "}"
+        ]
+      }
+    }
+  ]
+}
