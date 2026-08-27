@@ -1,4 +1,4 @@
-﻿#!/bin/bash
+#!/bin/bash
 set -e
 
 echo "Starting MongoDB initialization..."
@@ -24,17 +24,37 @@ if (db.getUser('$MONGO_APP_USER') == null) {
 }
 "
 
-echo "User created. Starting mongorestore..."
+echo "Cleaning up obsolete collections..."
+mongosh --username "$MONGO_INITDB_ROOT_USERNAME" \
+        --password "$MONGO_INITDB_ROOT_PASSWORD" \
+        --authenticationDatabase admin \
+        --host mongodb \
+        --eval "
+db = db.getSiblingDB('$MONGO_DB_NAME');
+db.simulations.drop();
+db.scorings.drop();
+db.reports.drop();
+"
 
-# Restore data from the dump directory (mounted at /dump/RIntellix)
-# Use the newly created app credentials or root. Here we use root to ensure permissions.
-mongorestore --username "$MONGO_INITDB_ROOT_USERNAME" \
-             --password "$MONGO_INITDB_ROOT_PASSWORD" \
-             --authenticationDatabase admin \
-             --host mongodb \
-             --db "$MONGO_DB_NAME" \
-             --nsExclude="${MONGO_DB_NAME}.reports" \
-             --drop \
-             /dump/RIntellix
+echo "Importing fresh JSON data..."
+mongoimport --username "$MONGO_INITDB_ROOT_USERNAME" \
+            --password "$MONGO_INITDB_ROOT_PASSWORD" \
+            --authenticationDatabase admin \
+            --host mongodb \
+            --db "$MONGO_DB_NAME" \
+            --collection parties \
+            --drop \
+            --jsonArray \
+            --file /dump/parties.json
+
+mongoimport --username "$MONGO_INITDB_ROOT_USERNAME" \
+            --password "$MONGO_INITDB_ROOT_PASSWORD" \
+            --authenticationDatabase admin \
+            --host mongodb \
+            --db "$MONGO_DB_NAME" \
+            --collection requests \
+            --drop \
+            --jsonArray \
+            --file /dump/requests.json
 
 echo "MongoDB initialization completed successfully!"

@@ -44,6 +44,9 @@ Responsabilidades principales:
 git clone --recurse-submodules https://github.com/TFG-RIntellix/rintellix-deployment.git
 cd rintellix-deployment
 
+# 2. Actualizar el contenido de los submódulos a la última versión
+git submodule update --remote --merge
+
 # 2. Configurar el entorno
 cp .env.example .env
 # Edita el fichero .env e introduce tu clave real de la API de Google Gemini en GEMINI_API_KEY.
